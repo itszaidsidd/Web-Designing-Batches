@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .main{
+            margin: 50px auto;
+            width: 600px;
+            height: 600px;
+            border:2px solid black;
+            padding: 200px;
+        }
+        .main .box{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            border:2px solid darkred;
+            color:white;
+            /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+            /* animation-name: abc;
+            animation-duration: 3s;
+            animation-timing-function: linear; */
+            /* animation: abc 2s linear 1s infinite alternate-reverse; */
+            /* animation: xyz 4s linear infinite; */
+            /* animation: pqr 1s linear infinite; */
+        }
+        .main:hover .box{
+            animation: pqr 1s linear infinite;
+        }
+
+        @keyframes pqr{
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes xyz{
+            0%{
+                transform: translate(0);
+            }
+            25%{
+                transform: translate(500px);
+            }
+            50%{
+                transform: translate(500px,500px);
+            }
+            75%{
+                transform: translate(0,500px);
+            }   
+        }
+        @keyframes abc{
+            from{
+
+            }
+            to{
+                transform: translate(500px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="box">Box</div>
+    </div>
+</body>
+</html>

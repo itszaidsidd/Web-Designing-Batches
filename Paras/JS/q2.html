@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Enter length <input type="number" id="l"><br><br>
+    Enter Breadht <input type="number" id="b"><br><br>
+    <button id="btn">OK</button>
+    <hr>
+    <script>
+        let btn=document.querySelector('#btn')
+        btn.addEventListener('click',()=>{
+            let l=document.querySelector('#l').value;
+            let b=document.querySelector('#b').value;
+            let ar=l*b;
+            let p=2*(l+b);
+            document.write('Area of ractangle : ',ar);
+            document.write('<br>Parameter of Ractangle : ',p);
+        })
+    </script>
+</body>
+</html>

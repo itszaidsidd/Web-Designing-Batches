@@ -1,0 +1,22 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+form{
+  margin: 200px auto;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap:10px;
+}
+input{
+  line-height: 1.6rem;
+  padding: 5px 10px;
+}
+input[type=submit]{
+  padding: .6rem 0;
+}
+.red{
+  color: red;
+}

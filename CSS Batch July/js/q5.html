@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="start">Start Value</label>
+    <input type="number" name="" id="start"><br><br>
+    <label for="last">Last Value</label>
+    <input type="number" name="" id="last"><br><br>
+    <label for="list">Select Order</label>
+    <select name="" id="list">
+        <option value="increasing">increasing</option>
+        <option value="decreasing">decreasing</option>
+    </select>
+    <button onclick="abc()">Submit</button>
+    <script>
+        function abc(){
+            let s=document.getElementById("start").value;
+            s=parseInt(s)
+            let l=document.getElementById("last").value;
+            l=parseInt(l)
+            let o=document.getElementById("list").value;
+            if(o=='increasing'){
+                console.log("inc")
+                for(let i=s;i<=l;i++){
+                    console.log("inc loop")
+                    document.write(i+"<br>");
+                }
+            }
+            else{
+                console.log("dec")
+                for(let i=l;i>=s;i--){
+                    document.write(i+"<br>");
+                }
+            }
+        }
+    </script>
+</body>
+</html>

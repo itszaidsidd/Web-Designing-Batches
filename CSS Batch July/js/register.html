@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="register.css">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(90deg, #e2e2e2, #c9d6ff);
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        .container {
+            width: 900px;
+            height: 550px;
+            background: #fff;
+            margin: 20px;
+            border-radius: 30px;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+            padding: 1px;
+            overflow: hidden;
+            padding: 20px;
+        }
+
+        .form-box {
+            text-align: center;
+            font-weight: bolder;
+            float: right;
+            color: #333;
+
+        }
+
+        #login {
+            float: right;
+            margin: auto;
+            position: relative;
+            top: 10px;
+            right: 10px;
+        }
+
+        #register {
+            float: left;
+            position: relative;
+            top: 10px;
+            left: 10px;
+        }
+
+        .comtainer h1 {
+            font-size: 100px;
+            font-weight: bolder;
+        }
+
+        .container p {
+            font-size: 18px;
+            font-weight: 200;
+        }
+
+        form {
+            width: 100%;
+        }
+
+        .continer.active.form-box {
+            right: 50%;
+        }
+
+        .login-box i {
+            position: absolute;
+            font-size: 17px;
+        }
+
+        .register-box i {
+            position: absolute;
+            right: px;
+            padding: px;
+            font-size: 17px;
+        }
+
+        input {
+            width: 350px;
+            padding: 10px;
+            text-align: center;
+            border: transparent;
+            outline: none;
+            border-bottom: 1px solid;
+
+        }
+
+        .logo1 img {
+            width: 50px;
+            height: 50px;
+            display: inline-flex;
+            padding: 5px;
+            margin: 7px;
+            border: 1px solid black;
+
+
+        }
+
+        .logo2 img {
+            width: 50px;
+            height: 50px;
+            display: inline-flex;
+            padding: 5px;
+            margin: 7px;
+            border: 1px solid black;
+        }
+
+        button {
+            width: 300px;
+            height: 45px;
+            border-radius: 6px;
+            border: none;
+            background-color: rgb(75, 143, 247);
+            color: white;
+            font-size: 23px;
+            font-weight: 500;
+        }
+
+        input::placeholder {
+            color: rgb(32, 32, 32);
+            font-size: 15px;
+            font-weight: 400;
+        }
+
+        .register {
+            border: 2px solid white;
+        }
+
+        .login {
+            border: 2px solid white;
+        }
+
+        .toggle-box {
+            width: 432px;
+            height: 550px;
+            /* border-radius: 10px 80px 80px 10px; */
+            background-color: rgb(93, 157, 252);
+            z-index: 1;
+            position: relative;
+            
+            top: -458px;
+           
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            transition: all 0.5s ease;
+        }
+        
+        .xyz{
+            left:-391px;
+            
+        }
+        .abc {
+            /* position: relative; */
+            left: 77px;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!----login form ----->
+        <div class="form-box" id="login">
+            <form action="#"></form>
+            <h1>Login</h1><br><br>
+            <input type="text" name="" id="username1" placeholder="username" required>
+            <i class="fa fa-user" aria-hidden="true"></i><br><br><br>
+            <input type="text" name="" id="password1" placeholder="password" required>
+            <i class="fa fa-lock" aria-hidden="true"></i><br><br><br>
+            <p1>forget password ?</p1><br><br>
+            <button onclick="login()" class="btn1">login</button><br><br>
+            <p2>or login with special platforms </p2><br><br>
+            <div class="logo1">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6K6IoIJgODdNyhVuaxM_TQF8byKR_VcjEKA&s"
+                    alt="">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTPRCJta_U3PhkTgs9J6-DxpRvLBRZ7zx7EA&s">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSD_bSX17WslRYRGY30jd23m8_nd6V8-v4whw&s"
+                    alt="">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5ePOur61n5OnC4nNL5yBjlAOj-h4WGJBm3g&s"
+                    alt="">
+
+            </div>
+            </form>
+        </div>
+        <!----ragister -box----->
+        <div class="form-box" id="register">
+            <form action="#">
+                <h1>Registration</h1><br><br>
+                <input type="text" name="" id="username2" placeholder="username">
+                <i class="fa fa-user" aria-hidden="true"></i><br><br>
+                <input type="text" name="" id="email" placeholder="email">
+                <i class="fa fa-envelope" aria-hidden="true"></i><br><br>
+                <input type="text" name="" id="password2" placeholder="password" required>
+                <i class="fa fa-lock" aria-hidden="true"></i><br><br>
+                <p>forget password ?</p><br>
+                <button onclick="ragister()" class="btn2">Register</button><br>
+                <p>or register with special platforms </p><br>
+                <div class="logo2">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6K6IoIJgODdNyhVuaxM_TQF8byKR_VcjEKA&s"
+                        alt="">
+                    <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTPRCJta_U3PhkTgs9J6-DxpRvLBRZ7zx7EA&s">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSD_bSX17WslRYRGY30jd23m8_nd6V8-v4whw&s"
+                        alt="">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5ePOur61n5OnC4nNL5yBjlAOj-h4WGJBm3g&s"
+                        alt="">
+                </div>
+            </form>
+
+        </div>
+        <!-----toggle-box----->
+        <div class="toggle-box abc" id="tb">
+            <!--toggle-box left ---->
+            <div class="toggle-left">
+                <h1>Welcome Back!</h1><br>
+                <p>already have an account ?</p><br>
+                <button onclick="Login()" class="login">login</button>
+            </div>
+            <!-----toggle-box right---->
+            <div class="toggle-right">
+                <h1> Hello Welcome !</h1><br>
+                <p>Don't have an account ?</p><br>
+                <button onclick="Register()" class="register">register</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        let tb=document.getElementById('tb');
+        function Login(){
+            tb.classList.remove('abc');
+            tb.classList.add('xyz');
+        }
+        function Register(){
+            tb.classList.remove('xyz');
+            tb.classList.add('abc');
+        }
+    </script>
+</body>
+
+</html>

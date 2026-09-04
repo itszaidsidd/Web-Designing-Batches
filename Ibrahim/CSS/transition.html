@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main{
+            width: 95vw;
+            height:95vh;
+            border:2px solid black;
+        }
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: lightblue;
+            border:3px solid darkblue;
+            /* transition: all 3s ease 1s; */
+            transition: background-color 0.5s linear 1s;
+        }
+        .main:hover .box{
+            /* transform: translate(500px); */
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="box">Box</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Amount <input type="number" id="amt"><br><br>
+    Rate <input type="number" id="r"><br><br>
+    Time <input type="number" id="t"><br><br>
+    <button onclick="si()">OK</button>
+    <hr>
+    Simple Intrest <input type="number" id="si">
+    <script>
+        function si(){
+            let a=document.getElementById('amt').value;
+            let r=document.getElementById('r').value;
+            let t=document.getElementById('t').value;
+            let s=document.getElementById('si');
+            let si=a*r*t/100;
+            s.value=si;
+        }
+    </script>
+</body>
+</html>

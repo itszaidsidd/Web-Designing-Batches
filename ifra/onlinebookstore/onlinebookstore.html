@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Store.com</title>
+    <link rel="stylesheet" href="book.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <!--------starting   -------------->
+    <div class="Container">
+        <img src="https://cdn.pixabay.com/photo/2016/06/01/06/26/open-book-1428428_960_720.jpg">
+        <div class="logo"> 
+        <h2>Online Book Store</h2>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsY6U8TEdeLPM_TeXD3cgMPZXI2Qf0VeT3jQ&s">    
+        </div>
+        <!-------------navigation section----------->
+        <div class="nav">
+        <ul>
+            <li>Home</li>
+            <li id="reg">Registration</li>
+            <li id="pur">Purchase</li>
+            <li>Download</li>
+            <li>List Books</li>
+            <li>Admin</li>
+        </ul>
+        <!---------navigation section close----------->
+    </div>
+    <!-----boook intro   section------------->
+    <div class="bookint">
+        <h1>Book Store</h1><br><br>
+        <h2>Welcome To Our Site</h2><br>
+        <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum <br>
+             omnis repudiandae, excepturi doloribus illo quis vero consequatur. <br> Adipisci, delectus voluptates!
+        Lorem ipsum dolor sit amet consectetur <br> adipisicing elit. Laborum omnis repudiandae, excepturi doloribus illoojo <br> quis vero consequatur. Adipisci, delectus voluptates!</P><br><br>
+        <button id="viewbook" CLASS="viewbook">View All Books</button>
+        <!---------book intro end----------->
+    </div>
+    <!------------------registration form section----------->
+    <div class="form-box" id="regfrm">
+      <div class="icon">
+        <i class="fa-solid fa-xmark" id="formleft"></i>
+      </div>
+      <h2>Registration Form</h2>
+      <form action="register.jsp" method="post">
+        <div class="row">
+          <label>Registration No</label>
+          <input type="text" name="regno" required>
+        </div>
+
+        <div class="row">
+          <label>Name</label>
+          <input type="text" name="name" required>
+        </div>
+
+        <div class="row">
+          <label>Email ID</label>
+          <input type="email" name="email" required>
+        </div>
+
+        <div class="row">
+          <label>Password</label>
+          <input type="password" name="password" required>
+        </div>
+
+        <div class="row">
+          <label>Confirm Password</label>
+          <input type="password" name="confirmpassword" required>
+        </div>
+
+        <div class="row">
+          <label>Phone No</label>
+          <input type="text" name="phone" required>
+        </div>
+
+        <div class="row">
+          <label>Address</label>
+          <input type="text" name="address" required>
+        </div>
+
+        <div class="btns">
+          <input type="submit" value="Submit">
+          <input type="reset" value="Reset">
+        </div>
+      </form>
+      <!-------registration form end---------->
+    </div>
+    <?php
+    ?>
+    <!---------------books details section--------------------->
+    <div class="main" id="booklist">
+      <div class="bookinf">
+         <div class="logo2" id="logo2">
+        <i class="fa-solid fa-xmark"></i>
+        </div>
+        <div class="english b1"> <img src="https://img.freepik.com/free-vector/english-school-poster-template_23-2149527649.jpg?semt=ais_hybrid&w=740&q=80" alt="">
+            <div class="author">
+        <h2 class="sub">English</h2>
+        <h2>Author: Shashi raj</h2></div>
+        <div class="Price">
+        <h2>Price: ₹200</h2>
+       <Button> <a href="bookbuy.html" target="bookbuy.html">Buy now</a></Button>
+      </div>
+        <div class="id1">
+        <h2 class="id">Id:1123</h2>
+        <h2 class="left">Only 17 Book Left</h2></div>
+    </div>
+        <div class="hindi b1"><img src="https://images.jdmagicbox.com/quickquotes/images_main/generic-hindi-grammar-book-803111324-do8m6wcb.jpg" alt="">
+         <div class="author">
+        <h2 class="sub">Hindi</h2>
+        <h2>Author: manohur raj</h2></div>
+         <div class="Price">
+        <h2>Price: ₹300</h2>
+        <Button> <a href="bookbuy.html" target="bookbuy.html">Buy now</a></Button>
+      </div>
+        <div class="id1">
+        <h2 class="id">Id:112003</h2>
+        <h2 class="left">Only 7 Book Left</h2>
+      </div>
+    </div>
+        <div class="maths b1"> <img src="https://img.freepik.com/premium-vector/world-autism-awareness-day-poster-template-flat-illustration-editable-square-background-suitable-social-media-greetings-card_2175-3198.jpg?semt=ais_hybrid&w=740&q=80" alt="">            <div class="author">
+        <h2 class="sub">Maths</h2>
+        <h2>Author: Ifra Raj</h2></div>
+         <div class="Price">
+        <h2>Price: ₹500</h2>
+        <Button> <a href="bookbuy.html" target="bookbuy.html">Buy now</a></Button>
+      </div>
+        <div class="id1">
+        <h2 class="id">Id:799023</h2>
+        <h2 class="left">Only 10 Book Left</h2></div>
+       </div>
+        <div class="physics b1"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNJC6hzuCO-632Du8C4TZmhEbkFdyI7HfPZw&s" alt="">            <div class="author">
+        <h2 class="sub">Physics</h2>
+        <h2>Author: Shashi raj</h2></div>
+         <div class="Price">
+        <h2>Price: ₹200</h2>
+        <Button><a href="bookbuy.html" target="bookbuy.html">Buy now</a></Button>
+      </div>
+        <div class="id1">
+        <h2 class="id">Id:1123</h2>
+        <h2 class="left">Only 17 Book Left</h2></div>
+      </div>
+        <div class="chemistry b1"><img src="https://images-cdn.ubuy.co.in/6625aa07ea2ae0652f083798-chemistry-a-fundamental-overview-of.jpg" alt="">            <div class="author">
+        <h2 class="sub">English</h2>
+        <h2>Author: Shashi raj</h2></div>
+        <div class="Price">
+        <h2>Price: ₹200</h2>
+        <Button><a href="bookbuy.html" target="bookbuy.html">Buy now</a></Button>
+      </div>
+        <div class="id1">
+        <h2 class="id">Id:1123</h2>
+        <h2 class="left">Only 17 Book Left</h2></div>
+        </div>
+        <div class="biology b1"><img src="https://i.pinimg.com/originals/1e/08/a2/1e08a2bd6acf19fd9530717d84a4a86c.jpg" alt="">            <div class="author">
+        <h2 class="sub">English</h2>
+        <h2>Author: Shashi raj</h2></div>
+         <div class="Price">
+        <h2>Price: ₹200</h2>
+        <Button> <a href="bookbuy.html" target="bookbuy.html">Buy now</a></Button>
+      </div>
+        <div class="id1">
+        <h2 class="id">Id:1123</h2>
+         <h2 class="left">Only 17 Book Left</h2></div>
+      </div>
+        <div class="geography b1"><img src="https://cdn.vectorstock.com/i/1000v/18/34/cover-for-a-school-notebook-or-geography-book-vector-32001834.jpg" alt="">            <div class="author">
+        <h2 class="sub">English</h2>
+        <h2>Author: Shashi raj</h2></div>
+         <div class="Price">
+        <h2>Price: ₹200</h2>
+        <Button> <a href="bookbuy.html" target="bookbuy.html">Buy now</a></Button>
+      </div>
+        <div class="id1">
+        <h2 class="id">Id:1123</h2>
+        <h2 class="left">Only 17 Book Left</h2></div>
+       </div>
+        <div class="civics b1"><img src="https://i.pinimg.com/236x/3b/a2/7a/3ba27a47b2d79d973fb1691d356fb4f1.jpg" alt="">            <div class="author">
+        <h2 class="sub">English</h2>
+        <h2>Author: Shashi raj</h2></div>
+         <div class="Price">
+        <h2>Price: ₹200</h2>
+         <Button> <a href="bookbuy.html" target="bookbuy.html">Buy now</a></div>
+        <div class="id1">
+        <h2 class="id">Id:1123</h2>
+        <h2 class="left">Only 17 Book Left</h2></div></div>
+        <div class="history b1"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3lgQ9V47xe-qbl4gzk94VJZrApLCTyYYLwg&s" alt="">            <div class="author">
+        <h2 class="sub">English</h2>
+        <h2>Author: Shashi raj</h2></div>
+         <div class="Price">
+        <h2>Price: ₹200</h2>
+        <Button> <a href="bookbuy.html" target="bookbuy.html">Buy now</a>
+        </div>
+        <div class="id1">
+        <h2 class="id">Id:1123</h2>
+        <h2 class="left">Only 17 Book Left</h2></div>
+     </div>
+        <div class="economi b1"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSiumcR9B3g1LAN7phZ4DqB4d9qXUfcXmbyDA&s" alt="">            <div class="author">
+        <h2 class="sub">English</h2>
+        <h2>Author: Shashi raj</h2></div>
+         <div class="Price">
+        <h2>Price: ₹200</h2>
+         <Button> <a href="bookbuy.html" target="bookbuy.html">Buy now</a>
+        </div>
+        <div class="id1">
+        <h2 class="id">Id:1123</h2>
+        <h2 class="left">Only 17 Book Left</h2></div>
+      </div>
+        <div class="gk b1" ><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRSzK-xwiNqHPweJVJqxnFIMLldc3a9SurKw&s" alt="">            <div class="author">
+        <h2 class="sub">English</h2>
+        <h2>Author: Shashi raj</h2></div>
+         <div class="Price">
+        <h2>Price: ₹200</h2>
+        <Button> <a href="bookbuy.html" target="bookbuy.html">Buy now</a>
+        </div>
+        <div class="id1">
+        <h2 class="id">Id:1123</h2>
+        <h2 class="left">Only 17 Book Left</h2></div>
+       </div>
+        <div class="grm b1"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLwZeONyhNgLyvRo64arimRaslpXlERbtyMw&s" alt="">            <div class="author">
+        <h2 class="sub">English</h2>
+        <h2>Author: Shashi raj</h2></div>
+         <div class="Price">
+        <h2>Price: ₹200</h2>
+        <Button> <a href="bookbuy.html" target="bookbuy.html">Buy now</a>
+        </div>
+        <div class="id1">
+        <h2 class="id">Id:1123</h2>
+        <h2 class="left">Only 17 Book Left</h2></div>
+       </div>
+        <div class="computer b1"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDVg0C0k897m2EcbvXK6LJofu1xDY3De5enA&s" alt="">            <div class="author">
+        <h2 class="sub">English</h2>
+        <h2>Author: Shashi raj</h2></div>
+         <div class="Price">
+        <h2>Price: ₹200</h2>
+        <Button> <a href="bookbuy.html" target="bookbuy.html">Buy now</a>
+        </div>
+        <div class="id1">
+        <h2 class="id">Id:1123</h2>
+        <h2 class="left">Only 17 Book Left</h2></div>
+       </div>
+        <div class="story b1"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZmmoJB4juBm8pVUTk_Y0TqpfeVOOd6p_nhw&s" alt="">            <div class="author">
+        <h2 class="sub">English</h2>
+        <h2>Author: Shashi raj</h2></div>
+         <div class="Price">
+        <h2>Price: ₹200</h2>
+         <Button> <a href="bookbuy.html" target="bookbuy.html">Buy now</a>
+        </div>
+        <div class="id1">
+        <h2 class="id">Id:1123</h2>
+        <h2 class="left">Only 17 Book Left</h2></div>
+        </div>
+        <div class="drawing b1"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQX69y8kKvQb4Ds-b3-Ry6SDHmr6fg1rpL8ow&s" alt="">            <div class="author">
+        <h2 class="sub">English</h2>
+        <h2>Author: Shashi raj</h2></div>
+           <div class="Price">
+        <h2>Price: ₹200</h2>
+         <Button> <a href="bookbuy.html" target="bookbuy.html">Buy now</a>
+        </div>
+        <div class="id1">
+        <h2 class="id">Id:1123</h2>
+        <h2 class="left">Only 17 Book Left</h2></div>
+     </div>
+    </div>
+    <!---------boook details section close----------->
+    </div>
+    </div>
+    <!-------purshase boook section start ---------->
+    <div class="purchase" id="purchase">
+      <div class="puricn" id="puricon">
+         <i class="fa-solid fa-xmark"></i>
+      </div>
+      <form action="">
+        <label for="email">Email i.d</label>
+        <input type="text" name="" id=""><br>
+        <label for="pass"> Password</label>
+        <input type="text" name="" id=""><br><br>
+        <button class="verify">Verify</button>
+        <?php
+          if(issset()){
+            email
+            pass
+            $q="select * from reg where email='email' and pass='pass' ";
+            $result=con->query($q);
+            if($result->num_row>0){
+              ?>
+                
+              <?php
+            }
+            else{
+              echo "Invalid username or password";
+            }
+
+
+          }
+
+        ?>
+      </form>
+      
+    </div>
+    </div>
+    <!-------java script start-------------->
+    <!-----boook click section------->
+    <script>
+        let v=document.getElementById('viewbook')
+        let b=document.getElementById('booklist')
+        let l=document.getElementById('logo2')
+        v.addEventListener('click', function(){
+            b.style.display='block';
+        })
+          l.addEventListener('click', function(){
+            b.style.display='none';
+            b.style.background='transperent';
+        })
+    </script>
+    <!--------registration section ----------->
+    <script>
+         let r=document.getElementById('reg')
+        let rf=document.getElementById('regfrm')
+         let fl=document.getElementById('formleft')
+        r.addEventListener('click',function(){
+            rf.style.display="block";
+        })
+        fl.addEventListener('click',function(){
+            rf.style.display="none";
+        })
+    </script>
+    <!-----------purchase section start------->
+    <script>
+             let p=document.getElementById('pur')
+        let pr=document.getElementById('purchase')
+         let pi=document.getElementById('puricon')
+        p.addEventListener('click',function(){
+            pr.style.display="block";
+        })
+        pi.addEventListener('click',function(){
+            pr.style.display="none";
+        })
+    </script>
+</body>
+</html>

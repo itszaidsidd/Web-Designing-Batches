@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Enter Length <input type="number" id="l"><br><br>
+    Enter Breath <input type="number" id="b"><br><br>
+    <button onclick="area()">OK</button>
+    <script>
+        function area(){
+            let l=document.getElementById('l').value;
+            l=parseInt(l);
+            let b=parseInt(document.getElementById('b').value);
+            let ar=l*b;
+            let p=2*(l+b);
+            document.write("Area = "+ar);
+            document.write("<br>Parameter = "+p)
+        }
+    </script>
+</body>
+</html>

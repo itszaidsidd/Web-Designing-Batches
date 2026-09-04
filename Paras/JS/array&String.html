@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // String
+        // let name="Zaid";
+        // console.log(name.length)
+        // console.log(name.toUpperCase())
+        // console.log(name.toLowerCase())
+        // console.log(name[0])
+        // let sentence=`Hello "India" is great country`
+        // console.log(sentence)
+        // let s=`My name is ${name}`
+        // console.log(s)
+        // document.write(s)
+
+        // Array
+        // const fruits=["apple","banana","mango"]
+        // console.log(fruits)
+        // const a1=[101,"Paras",70.5,false]
+        // console.log(a1)
+
+        // a1[1]="Zaid"
+        // console.log(a1)
+
+        // let std = {
+        //     "rno": 101,
+        //     "name": "Paras",
+        //     "course": "MCA"
+        // }
+        // console.log(std)
+        // console.log(std["name"])
+
+        // for(let key in std){
+        //     console.log(key)
+        // }
+
+        // for(let i of a1){
+        //     console.log(i)
+        // }
+
+        // for(let j=0;j<a1.length;j++){
+        //     console.log(a1[j])
+        // }
+
+        let arr=[1,2,3,4,5]
+        console.log(arr)
+        arr.pop()
+        console.log(arr)
+        arr.push(9)
+        console.log(arr)
+        arr.shift()
+        console.log(arr)
+        arr.unshift(7)
+        console.log(arr)
+        delete arr[2]
+        console.log(arr)
+
+        let a=[9,6,3]
+        let b=[4,2,6]
+        let c=a.concat(b)
+        console.log(c)
+
+        let a1=[8,9,7]
+        console.log(a1.sort())
+
+        // c.forEach(function(c){
+        //     console.log(c)
+        // })
+        // c.forEach(function(item,index,arr){
+        //     console.log(`${index}:${item}`)
+        //     console.log("Pura Array :",arr)
+        // })
+
+        // c.map(function(n){
+        //     console.log(n)
+        // })
+
+        let double=a1.map(function(n){
+            return n*2
+        })
+        console.log(double)
+        let d=a1.map(n=>n*2)
+        console.log(d)
+
+        // let abc=()=>{
+            // Funciton Code
+        // }
+    </script>
+</body>
+</html>

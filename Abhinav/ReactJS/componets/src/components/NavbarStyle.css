@@ -1,0 +1,15 @@
+nav{
+    display: flex;
+    padding: 10px 40px;
+    justify-content: space-around;
+    background-color: navy;
+    color:white;
+    align-items: center;
+}
+ul{
+    display: flex;
+    gap:30px;
+}
+ul li{
+    list-style: none;
+}

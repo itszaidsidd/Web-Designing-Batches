@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        main{
+            width: 100%;
+            height: 100vh;
+            background-image: url("images/n5.jpg");
+            background-size: cover;
+        }
+        nav{
+            display: flex;
+            justify-content: space-between;
+            color:white;
+            padding: 10px 20px;
+            background-color: gray;
+        }
+        nav .logo{
+            font-size: 2em;
+            font-weight: bold;
+        }
+        nav ul{
+            display: flex;
+            gap:20px;
+            
+        }
+        nav ul li{
+            list-style: none;
+            border-radius: 7px;
+            /* background-color: red; */
+            padding: 10px 10px;
+            width: 100px;
+            text-align: center;
+        }
+        nav ul li a{
+            text-decoration: none;
+            color:white;
+        }
+        nav ul li:hover{
+            background-color: black;
+        }
+        
+    </style>
+</head>
+<body>
+    <main>
+        <nav>
+            <div class="logo">Online Book Store</div>
+            <ul>
+                <li><a href=index.html>Home</a></li>
+                <li><a href="modules/reg.html" target="frm">Registration</a></li>
+                <li><a href=#>Purchase</a></li>
+                <li><a href=#>List Book</a></li>
+                <li><a href=#>Admin</a></li>
+            </ul>
+        </nav>
+        <iframe src="" frameborder="0" name="frm" width="100%" height="91%"></iframe>
+    </main>
+</body>
+</html>

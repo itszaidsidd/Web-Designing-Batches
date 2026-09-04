@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        header{
+            background-color: green;
+            color:white;
+            padding:20px;
+        }
+        ul{
+            display: flex;
+            flex-direction: column;
+            /* gap: 30px; */
+            margin-top: 40px;
+        }
+        ul li{
+            border-bottom: 1px solid darkgoldenrod;
+            font-size:1.2rem;
+            padding: 15px 0;
+        }
+        ul li:hover{
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <header id="header">
+        <h1 id="title">Knowledge Zone</h1>
+        <h3 id="sub-title">Computer Center</h3>
+    </header>
+    <ul>
+        <li class="item">Graphic Designing</li>
+        <li class="item">Accounting</li>
+        <li class="item">Web Development</li>
+        <li class="item">Programming</li>
+    </ul>
+
+    <script>
+        let header=document.getElementById("header")
+        header.style.borderBottom="10px solid yellow"
+        let title=document.getElementById("title");
+        title.textContent="Academic of Career Education"
+        let sub_title=document.getElementsByTagName('h3')
+        console.log(sub_title[0])
+        sub_title[0].innerHTML="<h2>Computer Institute</h2>"
+        title.style.color='yellow'
+
+        let items=document.getElementsByClassName("item")
+        items[2].innerText="Web Designing"
+        items[1].style.background='yellow'
+
+        let i=document.querySelector("li")
+        console.log(i)
+        let j=document.querySelectorAll("li")
+        console.log(j)
+    </script>
+</body>
+</html>
+<!-- 
+Document Object Model (DOM)
+document.getElementById("id")
+document.getElementsByClassName("class")
+document.getElementsByTagName("tag")
+document.querySelector("element")
+document.querySelectorAll("element")
+
+
+for Text
+1. textContent
+2. innerText
+3. innerHTML
+-->

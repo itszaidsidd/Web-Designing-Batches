@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        Enter the no.<input type="Number" id="num"><br><br>
+        <button onclick="table()"> TABLE </button>
+    </form>
+    <Script>
+        function table(){
+            let n=document.getElementById("num").value;
+            for(let i=1;i<=10;i++){
+                document.write(n*i+"<br>")
+            }
+        }
+    </Script>
+</body>
+</html>

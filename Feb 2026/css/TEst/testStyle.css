@@ -1,0 +1,44 @@
+*{
+    margin:0;
+    padding: 0;
+}
+.header-nav{
+       height:80px;
+       width:100%;
+       background-color: rgb(3, 3, 122);
+       color:white;
+       padding: 8px;
+
+}
+.heading{
+    margin-left: 180px;
+}
+.nav-btn{
+    color:black;
+    background-color: rgb(255, 217, 0);
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+}
+.lower-nav{
+    color:rgb(10, 10, 10);
+    background-color: rgb(241, 241, 243);
+    width:100%;
+    height:50px;
+    padding: 8px;
+}
+.strip{
+    background-color: rgb(255, 217, 0);
+    width:100%;
+    height:6px;
+}
+.information-portal{
+    height:450px;
+    width:100%;
+     background-color: rgb(3, 3, 122);
+
+}
+.left-information{
+    padding-top:100px;
+    color:white;
+}

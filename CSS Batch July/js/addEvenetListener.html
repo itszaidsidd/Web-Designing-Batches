@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: blueviolet;
+            margin: 100px auto;
+            border:2px solid rgb(38, 0, 73)
+        }
+    </style>
+</head>
+<body>
+    <div class="box" id="box">
+
+    </div>
+    <script>
+        document.getElementById('box').addEventListener('mouseover',function (){
+            alert('Event activated');
+        })
+    </script>
+</body>
+</html>

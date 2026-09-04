@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .circle{
+            margin: 100px auto;
+            width: 300px;
+            height: 300px;
+            /* background-color: red; */
+            border: 18px solid rgba(0, 0, 255, 0.507);
+            border-top: 18px solid blue;
+            border-bottom: 18px solid blue;
+            border-radius: 50%;
+            animation: abc 1s linear infinite;
+            display: none;
+        }
+
+        @keyframes abc{
+            0%{
+                transform: rotate(0deg);
+            }
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <button id="click">Click here</button>
+    <div class="circle" id="circle">
+
+    </div>
+    <script>
+        let x=document.getElementById('click');
+        x.addEventListener('click',function(){
+            let y=document.getElementById('circle');
+            y.style.display='block';
+            setTimeout(function(){
+                y.style.display='none';
+            },5000);
+        })
+    </script>
+</body>
+</html>

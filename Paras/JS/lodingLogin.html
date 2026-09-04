@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            margin-top: 400px;
+            margin-left: 400px;
+        }
+        .loding{
+            width: 200px;
+            height: 200px;
+            /* background-color: red; */
+            position: fixed;
+            top:150px;
+            left:320px;
+            border-radius: 50%;
+            border:20px solid black;
+            border-color: rgb(72, 72, 157) rgb(103, 103, 168);
+            animation: anim 1s linear infinite;
+            display: none;
+        }
+
+        @keyframes anim{
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <button>Login</button>
+    <div class="loding"></div>
+    <script>
+        let btn=document.querySelector('button')
+        btn.addEventListener('click',()=>{
+            let l=document.querySelector('.loding')
+            l.style.display='block'
+            setTimeout(()=>{
+                l.style.display='none'
+            },5000)
+        })
+    </script>
+</body>
+</html>

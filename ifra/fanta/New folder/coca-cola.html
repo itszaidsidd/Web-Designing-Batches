@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .navbar {
+            width: 1500px;
+            background: #ffffff;
+            color: BLACK;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            border-radius: 50px;
+
+        }
+
+        .logo {
+            font-size: 3EM;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 100px;
+        }
+
+        .nav-links li {
+            position: relative;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: rgb(12, 12, 12);
+            font-size: 20px;
+            font-weight: bolder;
+        }
+
+        .nav-links a:hover {
+            color: #0f0f0f;
+        }
+
+        /* Dropdown */
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 35px;
+            left: 0;
+            background: #faf9f9;
+            list-style: none;
+            padding: 10px 0;
+            min-width: 150px;
+            border-radius: 5px;
+        }
+
+        .dropdown-menu li a {
+            display: block;
+            padding: 10px 20px;
+            color: rgb(16, 16, 16);
+        }
+
+        .dropdown-menu li a:hover {
+            background: #f30404;
+        }
+
+
+        .maincontent {
+            width: 100%;
+            height: 100vh;
+            background: linear-gradient(#580101,
+                    #c40000,
+                    #fdfdfd,
+                    rgb(151, 2, 2));
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .maincontent .title {
+            font-size: 19em;
+            color: white;
+            font-family: "Arial Black", Arial, Helvetica, sans-serif;
+        }
+
+        .flavour {
+
+            width: 100%;
+            height: 700px;
+            padding: 50px;
+            background-color: rgb(151, 2, 2);
+            color: white;
+        }
+
+        .box:hover {
+            box-shadow: 0 0 25px rgba(255, 255, 255);
+            background-color: #fc2020;
+            border: none;
+            border-radius: 20px;
+            animation: fadeup 1s infinite;
+
+        }
+
+        @keyframes fadeup {
+            0% {
+                box-shadow: 0 0 5px rgb(255, 255, 255);
+            }
+
+            50% {
+                box-shadow: 0 0 20px rgb(255, 255, 255);
+            }
+
+            100% {
+                box-shadow: 0 0 5px rgba(255, 255, 255, 0.988);
+            }
+        }
+
+        .flavour .box {
+            width: 900px;
+            padding: 100px 50px;
+            text-align: justify;
+            float: right;
+            border: 3px solid white;
+            border-radius: 20px;
+
+        }
+
+        .flavour .box h1 {
+            font-size: 3em;
+            margin: 20px;
+        }
+
+        .cola {
+            height: 700px;
+            width: 600px;
+            position: absolute;
+            top: 290px;
+            left: 650px;
+            transition: all 1s linear;
+        }
+
+        .cola-direction {
+            top: 1090px;
+            left: 70px;
+            transition: all 1s linear;
+        }
+
+        .ice {
+            height: 400px;
+            WIDTH: 400PX;
+            position: absolute;
+            top: 100px;
+            left: 100px;
+            transition: all 1s linear;
+        }
+
+        .ice-direction {
+            top: 1390px;
+            left: 520px;
+            transition: all 1s linear;
+        }
+
+        .cherry {
+            height: 400px;
+            WIDTH: 400PX;
+            position: absolute;
+            top: 170px;
+            left: 1500px;
+            transition: all 1s linear;
+        }
+
+        .cherry-direction {
+            top: 990px;
+            left: 720px;
+            transition: all 1s linear;
+        }
+
+        .splash {
+            height: 330px;
+            WIDTH: 330PX;
+            position: absolute;
+            top: 109px;
+            left: 777px;
+            transition: all 1s linear;
+        }
+
+        .splash-direction {
+            top: 910px;
+            left: 195px;
+            transition: all 1s linear;
+        }
+
+        .contact {
+            width: 100%;
+            height: 600px;
+            background: linear-gradient(rgb(151, 2, 2),
+                    #c40000,
+                    #ff0000,
+                    #7a0000);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .contact h1 {
+            font-size: 4em;
+            margin-bottom: 50px;
+        }
+
+        .contact-cards {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+        }
+
+        .card {
+            width: 280px;
+            padding: 40px 20px;
+            border: 3px solid white;
+            border-radius: 20px;
+            transition: 0.4s;
+            cursor: pointer;
+        }
+
+        .card:hover {
+            background: #510101;
+            box-shadow: 0 0 20px white;
+            transform: translateY(-10px);
+        }
+
+        .card h2 {
+            margin: 15px 0;
+        }
+
+        .all-images {
+    position: relative;
+    width: 100%;
+}
+@media (max-width: 768px) {
+
+    body {
+        overflow: hidden;
+    }
+
+    /* Navbar fix */
+    .navbar {
+        width: 100%;
+        flex-direction: column;
+        border-radius: 0;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    /* TITLE */
+    .maincontent .title {
+        font-size: 6em;
+        text-align: center;
+    }
+    
+           .cola { position:absolute; top:10px; left: 50px; }
+    .cola-direction { top: 600px; left: 30px; }
+
+    .ice {position:absolute; top: 80px; left: 20px; }
+    .ice-direction { top: 650px; left: 120px; }
+
+    .cherry { position:absolute;top: 90px; left: 200px; }
+    .cherry-direction { top: 550px; left: 100px; }
+
+    .splash {position:absolute; top: 70px; left: 120px; }
+    .splash-direction { top: 500px; left: 50px; }
+}
+
+    /* About box */
+    .flavour {
+        height: auto;
+        padding: 20px;
+    }
+
+    .flavour .box {
+        width: 100%;
+        padding: 25px;
+        float: none;
+    }
+
+    /* Contact */
+    .contact {
+        height: auto;
+    }
+
+    .contact-cards {
+        flex-direction: column;
+    }
+
+    .card {
+        width: 90%;
+    }
+
+
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="logo">COCA-COLA-SPLASH</div>
+        <ul class="nav-links">
+            <li><a href="coca-cola.html">Home</a></li>
+            <li><a href="#about">About</a></li>
+
+            <li class="dropdown">
+                <a href="#" onclick="toggleDropdown()">Services ▾</a>
+                <ul class="dropdown-menu" id="dropdown">
+                    <li><a href="coca-cola.html">CACA-COLA</a></li>
+                    <hr>
+                    <li><a href="Pepsi.html">PEPSI</a></li>
+                    <hr>
+                    <li><a href="fanta.html">FANTA</a></li>
+                </ul>
+            </li>
+
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div class="maincontent">
+            <div class="title">
+                COCA-COLA
+            </div>
+        </div>
+        <div class="flavour">
+            <div class="box" id="about">
+                <h1>ABOUT </h1>
+                <h1>COCA-COLA FLAVOUR</h1>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima laborum laboriosam quas obcaecati
+                    libero facere necessitatibus similique exercitationem impedit officia reprehenderit iste corporis
+                    ratione, odio saepe aut distinctio debitis doloribus voluptatum sapiente amet dolorem sed? Fugiat
+                    quo consequatur nostrum perferendis quas commodi dolorem eaque dolores reprehenderit doloribus ab
+                    non autem fugit sequi ex at necessitatibus, odit repellat, aliquid, voluptates explicabo assumenda
+                    voluptateLorem ipsum, dolor sit amet consectetur adipisicing elit. Minima laborum laboriosam quas
+                    obcaecati libero facere necessitatibus similique exercitationem impedit officia reprehenderit iste
+                    corporis ratione, odio saepe aut distinctio debitis doloribus voluptatum sapiente amet dolorem sed?
+                    Fugiat quo consequatur nostrum perferendis quas commodi dolorem eaque dolores reprehenderit
+                    doloribus ab non autem fugit sequi ex at necessitatibus, odit repellat, aliquid, voluptates
+                    explicabo assumenda voluptate. Dolor quas iste dolores delectus qui ratione optio culpa rerum eum
+                    deserunt odio quibusdam totam velit, blanditiis distinctio provident ab eaque consequatur itaque
+                    quidem! Molestiae quasi excepturi ab ipsa, deleniti exercitationem rem temporibus veritatis non quo
+                    numquam facere? </p>
+            </div>
+        </div>
+        <div class="all-images">
+            <img src="cola.png" alt="" id="cola" class="cola">
+            <img src="ice.png" alt="" id="ice" class="ice">
+            <img src="splash.png" alt="" id="splash" class="splash">
+            <img src="cherry.png" alt="" id="cherry" class="cherry">
+        </div>
+        <section class="contact" id="contact">
+            <h1>CONTACT US</h1>
+
+            <div class="contact-cards">
+
+                <div class="card">
+                    📞
+                    <h2>Call Us</h2>
+                    <p>+91 98765 43210</p>
+                </div>
+
+                <div class="card">
+                    📧
+                    <h2>Email</h2>
+                    <p>cola-colazone@gmail.com</p>
+                </div>
+
+                <div class="card">
+                    💬
+                    <h2>WhatsApp</h2>
+                    <p>Chat Now</p>
+                </div>
+
+            </div>
+        </section>
+    </main>
+    <script>
+        let cola = document.getElementById('cola');
+        let ice = document.getElementById('ice');
+        let splash = document.getElementById('splash');
+        let cherry = document.getElementById('cherry');
+        window.addEventListener("scroll", function () {
+            let scrollTop = window.scrollY;
+            if (scrollTop > 500) {
+                cola.classList.add('cola-direction');
+            }
+            else {
+                cola.classList.remove('cola-direction');
+            }
+            if (scrollTop > 500) {
+                ice.classList.add('ice-direction');
+            }
+            else {
+                ice.classList.remove('ice-direction');
+            }
+            if (scrollTop > 500) {
+                splash.classList.add('splash-direction');
+            }
+            else {
+                splash.classList.remove('splash-direction');
+            }
+            if (scrollTop > 500) {
+                cherry.classList.add('cherry-direction');
+            }
+            else {
+                cherry.classList.remove('cherry-direction');
+            }
+
+        });
+        function toggleDropdown() {
+            const dropdown = document.getElementById("dropdown");
+            dropdown.style.display =
+                dropdown.style.display === "block" ? "none" : "block";
+        }
+        window.onclick = function (e) {
+            if (!e.target.matches('.dropdown a')) {
+                const dropdown = document.getElementById("dropdown");
+                dropdown.style.display = "none";
+            }
+        };
+    </script>
+</body>
+
+</html>

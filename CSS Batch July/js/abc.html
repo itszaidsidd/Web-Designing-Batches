@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        Don't Copy this text
+    </p>
+    <script>
+        document.addEventListener('copy',function (){
+            // let x=confirm('Do you like my website')
+            // if(x==true){
+            //     alert('Thank you')
+            // }
+            // else{
+            //     alert('aapki ray kisne mangi')
+            // }
+            // let x=prompt('What is your name')
+            // x=prompt("Hello, Mr. "+x+"where are your from")
+            // alert(x)
+            navigator.clipboard.writeText("aapke baski bat nhi he copy krna");
+        })
+    </script>
+</body>
+</html>

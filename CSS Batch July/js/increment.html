@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>inc & dec box </title>
+    <Style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        
+        body {
+            background-size: cover;
+            background-image: url(https://static.vecteezy.com/system/resources/thumbnails/050/781/873/small_2x/beauty-purple-sunset-and-silhouette-from-tree-mirroring-reflection-on-ocean-water-photo.JPG);
+        }
+
+        .main {
+            width: 500px;
+            height: 450px;
+            background-color: rgb(0, 0, 0, 0.7);
+            margin: auto;
+            margin-top: 200px;
+            color: white;
+            padding: 20px;
+            padding-top: 20px;
+        }
+
+        h2 {
+            text-align: center;
+            font-family: cursive;
+            font-weight: bolder;
+        }
+
+        #num {
+            width: 300px;
+            height: 50px;
+            margin-left: 85px;
+            margin-top: 50px;
+            padding: 20px;
+            text-align: center;
+            background-color: transparent;
+            color: white;
+            font-size: 40px;
+            font-weight: bolder;
+            border: none;
+        }
+
+        button {
+            padding: 5px;
+            border-radius: 17px;
+            width: 170px;
+            height: 50px;
+            font-size: 25px;
+            font-weight: bolder;
+            margin-left: 50px;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        button:hover {
+            background: linear-gradient(rgba(116, 9, 158, 0.904), rgb(241, 72, 100), rgb(116, 116, 236));
+            color: white;
+        }
+
+        #click1 {
+            padding: 10px;
+            width: 100px;
+            height: 40px;
+            margin: 30px 10px;
+            text-align: center;
+            background: transparent;
+            border: none;
+            color: white;
+            font-size: 30px;
+        }
+
+        h3 {
+            text-align: center;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        #click2 {
+            padding: 10px;
+            width: 100px;
+            height: 40px;
+            margin: 20px 10px;
+            text-align: center;
+            background-color: transparent;
+            border: none;
+            color: white;
+            font-size: 30px;
+        }
+    </Style>
+</head>
+
+<body>
+    <div class="main">
+        <h2> Increment & Decrement Calculator</h2>
+        <input type="number" value="0" id="num"><br>
+        <button onclick="incr()" id="inc">increment</button>
+        <label for="inc"></label>
+        <button onclick="decr()" id="dec"> decrement </button>
+        <label for="dec"></label>
+        <h3> clicks on increment:- <input type="number" name="" id="click1" value="0"></h3>
+        <h3> clicks on decrement:- <input type="number" name="" id="click2" value="0"></h3>
+
+    </div>
+    <script>
+        let input = document.getElementById('num');
+        let inc=document.getElementById("click1");
+        let dec=document.getElementById("click2");
+        d = parseInt(d)
+        function incr() {
+            let i = parseInt(input.value);
+            input.value=i+1;
+            let j=parseInt(inc.value);
+            inc.value=j+1;
+        }
+        function decr() {
+            let i=parseInt(input.value)
+            i--;
+            input.value=i;
+            // let j=parseInt(dec.value);
+            // dec.value=j+1;
+            dec.value=parseInt(dec.value)+1;
+        }
+    </script>
+</body>
+
+</html>

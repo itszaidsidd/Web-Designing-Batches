@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 80vw;
+            height: 80vh;
+            border:10px solid blue;
+            background-color: rgb(232, 246, 251);
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+            border:5px solid red;
+            background-color: green;
+            color:white;
+            /* transition: all 2s ease-in-out 1s; */
+            transition-property: all;
+            transition-duration: 2s;
+            transition-timing-function: ease-in;
+            /* transition-delay: 1s; */
+            border-radius: 50%;
+            
+        }
+        .container:hover .abc{
+            background-color: purple;
+            transform: translateX(200px) rotate(360deg);
+            /* transform: rotate(360deg); */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box abc">Box</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,455 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+    integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+</head>
+<style>
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    background: linear-gradient(orange, rgb(255, 123, 0), rgb(255, 102, 0));
+  }
+
+  .navbar {
+    background: transparent !important;
+    box-shadow:
+      0 8px 0 #e65100,
+      0 15px 25px rgba(0, 0, 0, 0.35);
+
+  }
+
+  .navbar:hover {
+    box-shadow: 0 0 25px rgba(253, 250, 250, 0.6);
+
+  }
+
+  .navbar-brand {
+    font-size: 3rem;
+    color: white !important;
+    font-weight: bold;
+  }
+
+  .nav-link {
+    color: white !important;
+    font-weight: 600;
+  }
+
+  .dropdown-menu {
+    background: #ff9800;
+  }
+
+  .dropdown-item {
+    color: white;
+  }
+
+  .dropdown-item:hover {
+    background: #ff6f00;
+    color: white;
+  }
+
+  .nav-link:hover {
+    transform: translateY(-3px);
+    text-shadow:
+      2px 2px 0 #e65100,
+      4px 4px 12px rgba(0, 0, 0, 0.6);
+  }
+
+  .navbar-toggler {
+    border: none;
+  }
+
+  .navbar-toggler-icon {
+    filter: brightness(0) invert(1);
+  }
+
+  .main2 {
+    margin-top: 80px;
+    margin-left: -150px;
+  }
+
+  .fanta {
+    font-size: 29.8em;
+    color: white;
+    text-align: center;
+    margin-right: -100px;
+  }
+  
+  .fantaimg {
+    width: 790px;
+    height: 500px;
+    /* position: fixed; */
+    left: 660px;
+    top: 210px;
+    transform: rotateX('70deg'), rotateY('120deg');
+    transition: transform 0.1s linear;
+    z-index: 10;
+  }
+
+  .leaf {
+    height: 600px;
+    width: 900px;
+    position: fixed;
+    top: -60px;
+    left: -190px;
+    transform: rotate(120deg);
+    transition: transform 0.1s linear;
+  }
+
+  .halforange {
+    height: 290px;
+    width: 290px;
+    position: absolute;
+    top: 110px;
+    left: 650px;
+    z-index: -1;
+    transition: transform 0.1s linear;
+
+  }
+
+  .leaf2 {
+    height: 300px;
+    width: 300px;
+    position: absolute;
+    top: 100px;
+    right: 0px;
+    transform: rotate(-180deg);
+
+  }
+
+  .leaf3 {
+    height: 300px;
+    width: 300px;
+    position: absolute;
+    top: 100px;
+    right: 80px;
+    transform: rotate(-100deg);
+
+  }
+
+  .orange {
+    height: 400px;
+    width: 400px;
+    position: absolute;
+    top: 630px;
+    left: 1100px;
+  }
+
+  .readsection {
+    background-color: #6d2600;
+    margin-top: 190px;
+    margin-left: -503PX;
+    height: 70vh;
+    width: 99.2vw;
+
+  }
+
+  .flavour-box {
+    border: 3px solid black;
+    height: 500px;
+    width: 650px;
+    padding: 30px;
+    text-align: justify;
+    position: relative;
+    top: 100px;
+    left: 900px;
+    font-size: bold;
+    font-weight: 500;
+  }
+
+  .flavour-box:hover {
+    box-shadow: 0 0 25px rgba(253, 250, 250, 0.6);
+    background-color: #ff9800;
+    border: none;
+    border-radius: 20px;
+    animation: fadeup 1s infinite;
+
+  }
+
+  @keyframes fadeup {
+    0% {
+      box-shadow: 0 0 5px rgb(255, 255, 255);
+    }
+
+    50% {
+      box-shadow: 0 0 20px rgb(255, 255, 255);
+    }
+
+    100% {
+      box-shadow: 0 0 5px rgba(255, 255, 255, 0.988);
+    }
+  }
+
+  .flavour {
+    font-size: 3em;
+    color: white;
+    text-align: center;
+    margin-right: 100px;
+  }
+
+  p {
+    color: white;
+  }
+
+  .inform {
+    background-color: rgb(255, 140, 0);
+    height: 80vh;
+    width: 99.2vw;
+    margin-left: -503PX;
+
+  }
+
+  .pepsi {
+    background-color: white;
+    height: 650px;
+    width: 450px;
+    position: relative;
+    top: 150px;
+    left: 240px;
+    border-radius: 50px;
+  }
+
+  .pepsi:hover {
+    animation: pulse 1s infinite;
+
+  }
+
+  @keyframes pulse {
+    0% {
+      box-shadow: 0 0 5px rgba(219, 14, 11, 0.4);
+    }
+
+    50% {
+      box-shadow: 0 0 20px rgba(247, 4, 4, 0.9);
+    }
+
+    100% {
+      box-shadow: 0 0 5px rgba(5, 300, 236, 0.4);
+    }
+  }
+
+  .fanta-cane {
+    background-color: white;
+    height: 650px;
+    width: 460px;
+    position: relative;
+    bottom: 500px;
+    left: 810px;
+    border-radius: 50px;
+    z-index: 1;
+  }
+
+  .fanta-cane:hover {
+    animation: pulse 1s infinite;
+
+  }
+
+  @keyframes pulse {
+    0% {
+      box-shadow: 0 0 5px rgba(244, 2, 2, 0.4);
+    }
+
+    50% {
+      box-shadow: 0 0 20px rgba(247, 4, 4, 0.9);
+    }
+
+    100% {
+      box-shadow: 0 0 5px rgba(5, 300, 236, 0.4);
+    }
+  }
+
+  .coca-cola {
+    background-color: white;
+    height: 650px;
+    width: 450px;
+    position: relative;
+    bottom: 1150px;
+    left: 1390px;
+    border-radius: 50px;
+  }
+
+  .coca-cola:hover {
+    animation: pulse 1s infinite;
+
+  }
+
+  @keyframes pulse {
+    0% {
+      box-shadow: 0 0 5px rgba(248, 13, 13, 0.4);
+    }
+
+    50% {
+      box-shadow: 0 0 20px rgba(247, 4, 4, 0.9);
+    }
+
+    100% {
+      box-shadow: 0 0 5px rgba(247, 4, 4, 0.9);
+    }
+  }
+
+  .pepsiimg {
+    width: 700px;
+    height: 700px;
+
+  }
+
+  .cocaimg {
+    width: 500px;
+    height: 600px;
+
+
+  }
+
+  .halfpepsi {
+    height: 290px;
+    width: 290px;
+  }
+
+  .halfcoca {
+    height: 290px;
+    width: 290px;
+  }
+</style>
+
+<body>
+  <div class="container">
+    <div class="main">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light" id="nav">
+        <a class="navbar-brand" href="#">FANTA BLAST</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">HOME<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#product">PRODUCT</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                CONTACT
+              </a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">138901284</a>
+                <a class="dropdown-item" href="#">IFRA123@Gmaul.com</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">muzzafargar</a>
+              </div>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form>
+        </div>
+      </nav>
+    </div>
+    <div class="main2">
+      <h1 class="fanta">FANTA</h1>
+      <img class="leaf" src="images/leaf.png" alt="" id="leaf">
+      <img class="fantaimg" id="cane" src="images/fanta.png" alt="">
+      <img class="orange" src="images/orange.png" alt="">
+      <img class="leaf2" src="images/leaf2.png" alt="">
+      <img class="leaf3" src="images/leaf2.png" alt="">
+      <img class="halforange" src="images/orangehalf.png" alt="">
+    </div>
+    <div class="readsection">
+      <div class="flavour-box">
+        <h1 CLASS="flavour"> FLAVOUR UPDATED </h1>
+        <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum quis nobis quidem iste! Fugit, vitae atque. Fuga
+          quae blanditiis maiores veniam voluptate accusantium eum rerum nihil quis, asperiores velit deserunt, hic
+          impedit! Perspiciatis a maiores architecto itaque, placeat optio illum exercitationem doloribus suscipit enim
+          quae quas quibusdam aut necessitatibus autem expedita molestiae eaque maxime minus impedit consequatur
+          recusandae animi neque ex. Ipsa consequuntur sed nisi nihil unde, consequatur accusamus, debitis deleniti
+          temporibus itaque dicta, officiis dolor sunt laboriosam sapiente ad excepturi possimus rem illum aspernatur
+          praesentium modi doloremque! Beatae repellendus dolores cupiditate nam voluptas quisquam dignissimos
+          explicabo?
+          Fugit, debitis. Dignissimos.</P>
+      </div>
+    </div>
+    <div class="inform" id="product">
+      <div class="pepsi">
+        <h1>PEPSI</h1>
+        <button type="button" class="btn btn-warning">Warning</button>
+        <img class="halfpepsi" src="orangehalf.png" alt="">
+        <img class="pepsiimg" src="pepsi.png" alt="">
+      </div>
+      <div class="fanta-cane">
+        <H1 clASS="head">FANTA</H1>
+        <button type="button" class="btn btn-warning">Warning</button>
+      </div>
+      <div class="coca-cola">
+        <H1>COCA-COLA</H1>
+        <button type="button" class="btn btn-warning">Warning</button>
+        <img class="cocaimg" src="coca-cola.png" alt="">
+        <img class="halfcoca" src="orangehalf.png" alt="">
+      </div>
+    </div>
+  </div>
+  <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+    crossorigin="anonymous"></script>
+
+  <!-- Option 2: Separate Popper and Bootstrap JS -->
+  <!--
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+    -->
+  <script>
+    const leaf = document.getElementById("leaf");
+    const orange = document.getElementById("orange");
+    const can = document.getElementById("can");
+
+    window.addEventListener("scroll", () => {
+      const scrollY = window.scrollY;
+      const viewHeight = window.innerHeight;
+
+      // CAN moves slower then scroll (parallax effect)
+      can.style.transform = `
+    translate(-50%, ${scrollY * 0.5}px)
+    scale(${1 + scrollY / 2000})
+    rotate(${scrollY / 50}deg)
+  `;
+
+      // LEAF moves opposite direction slower trend
+      leaf.style.transform = `
+    translate(${scrollY * -0.3}px, ${scrollY * 0.3}px)
+    rotate(${scrollY / 80}deg)
+  `;
+
+      // ORANGE rotates & moves up little
+      orange.style.transform = `
+    translate(${scrollY * 0.2}px, ${scrollY * -0.2}px)
+    rotate(${scrollY / 30}deg)
+  `;
+
+      // OPTIONAL FADE
+      can.style.opacity = 1 - scrollY / (viewHeight * 1.5);
+      leaf.style.opacity = 1 - scrollY / (viewHeight * 1.8);
+      orange.style.opacity = 1 - scrollY / (viewHeight * 1.8);
+    });
+  </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="windowOpen()">Open Window</button>
+    <button onclick="windowClose()">Close Window</button>
+    <script>
+        let w;
+        function windowOpen(){
+            w=window.open("https://www.google.com/?zx=1756870496188&no_sw_cr=1","","width=600px,height=400px,top=100px,left=500px");
+        }
+        console.log(w);
+        function windowClose(){
+            w.close();
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        *{
+            margin: 0;
+            padding:0;
+        }
+        body{
+            background:rgb(92, 212, 241);
+            cursor: pointer;
+        }
+        .main{
+            width:620px;
+            height:660px;
+            background-color: rgb(32, 195, 245);
+            margin: auto;
+            margin-top: 100px;
+            padding:10px;
+            box-shadow:-8px -8px 15px rgb(83, 83, 83);
+             text-align: center;
+             cursor: pointer;
+           }
+        .login-box{
+            width:520px;
+            height:600px;
+            background-color: rgb(0, 99, 145);
+            text-align: center;
+            padding: 20px;
+            cursor: pointer;
+            margin: auto;
+            margin-top:15px;
+            border-radius: 2px;
+        }
+        input[type=text]{
+            padding:20px;
+            width:450px;
+            text-align: center;
+            cursor: pointer;
+            background: transparent;
+            font-size: 20px;
+            color: white;
+            border-bottom: 1px solid white;
+        }
+          input[type=number]{
+            padding:20px;
+            width:450px;
+            text-align: center;
+            cursor: pointer;
+            background: transparent;
+            font-size: 20px;
+            border-bottom: 1px solid white;
+            color: white;
+        }
+        input::placeholder{
+            color: white;
+            font-size: 20px;
+        }
+       .login-box img{
+            width:180px;
+            height:180px;
+            cursor: pointer;
+            
+        }
+        img{
+            width:50px;
+            height:50px;
+        }
+        p1{
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size:3.1em;
+            color: white;
+            font-weight: 100;
+        }
+        button{
+            width:450px;
+            padding:20px;
+            font-size: 2em;
+            color:white;
+            border-radius: 10px;
+            background-color: rgb(0,0, 0, 0.3);
+            border: none;
+        }
+        p2{
+            color:white;
+            font-size: 24px;
+            text-align: center;
+
+        }
+        i{
+            position:absolute;
+            top:540px;
+            left:680px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main" id="main">
+        <div class="login-box" id="login-box">
+            <img src="https://cdn-icons-png.flaticon.com/512/6681/6681204.png"><br>
+            <p1>user login</p1><br><br>
+            <input type="text" name="" placeholder="user name" id="user"><br><br><br>
+           <span><i onclick="click()" class="fa fa-eye-slash" aria-hidden="true" id="icon"></i></span>
+            <input type="number" name="" placeholder="password" id="password"><br><br>
+           <p2>forget password ?</p2><br><br>
+            <button onclick="login()">login</button>
+        </div>
+    </div>
+    <script>
+        function click(){
+        let p=document.getElementById('password');
+        alert
+        if(p.type==="password"){
+            p.type="text";
+            icon.textcontent="show";
+        }
+        else{
+            p.type="password";
+            icon.textcontent="hide";
+        }
+        }
+    </script>
+</body>
+</html>

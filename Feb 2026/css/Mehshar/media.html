@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        nav{
+            background-color: navy;
+            color:white;
+            display: flex;
+            justify-content: space-between;
+            padding: 1rem 6rem;
+            align-items: center;
+        }
+        .logo{
+            font-size: 2rem;
+        }
+        ul{
+            display: flex;
+            gap:30px;
+            font-size: 1.2rem;
+        }
+        ul li{
+            list-style: none;
+        }
+
+        
+        @media screen and (max-width : 520px) {
+            nav{
+                flex-direction: column;
+                padding: 1rem 5px;
+            }
+            .logo{
+                display: none;
+            }
+             ul{
+                width: 90%;
+                padding: 1rem 0;
+                /* background-color: black; */
+                flex-direction: column;
+                text-align: center;
+                font-size:1.7rem;
+             }
+            
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">Kowledge Zone</div>
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact Us</li>
+            <li>Login</li>
+            <li>Singup</li>
+        </ul>
+    </nav>
+</body>
+</html>

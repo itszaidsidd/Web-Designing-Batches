@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* .container{
+            width: 100vw;
+            height: 100vh;
+            background-color: lightgray;
+        } */
+        .box {
+            margin: 100px auto;
+            width: 60%;
+            height: 60%;
+            background-color: beige;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            border: 1px solid gray;
+        }
+
+        .left-arrow,
+        .right-arrow {
+            font-size: 3em;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .image-slider {
+            width: 800px;
+            height: 500px;
+
+            overflow: hidden;
+
+        }
+
+        .images {
+            /* width: 4000px; */
+            transform: translateX(0px);
+            transition: all 1s linear;
+            
+        }
+
+        img {
+            width: 800px;
+            height: 500px;
+            float: left;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+            <div class="left-arrow" id="left">
+                < </div>
+                    <div class="image-slider">
+                        <div class="images" id="images">
+                            <img src="../images/n1.jpg" alt="">
+                            <img src="../images/n2.jpg" alt="">
+                            <img src="../images/n3.jpg" alt="">
+                            <img src="../images/n4.jpg" alt="">
+                            <img src="../images/n5.jpg" alt="">
+                            <img src="../images/night.jpg" alt="">
+                        </div>
+
+                    </div>
+                    <div class="right-arrow" id="right">
+                        >
+                    </div>
+            </div>
+            <script>
+                let r = document.getElementById("right")
+                let l = document.getElementById('left')
+                let i = document.getElementById('images')
+                let ti = document.querySelectorAll('img').length;
+                // console.log(ti)
+                i.style.width = `${ti * 800}px`;
+                let pos = 0
+                r.addEventListener('click', function () {
+                    pos++;
+                    if (pos > ti - 1) {
+                        pos = 0;
+                    }
+                    i.style.transform = `translateX(-${pos * 800}px)`
+
+                })
+                l.addEventListener('click', function () {
+                    pos--;
+                    if (pos < 0) {
+                        pos = ti - 1;
+                    }
+                    i.style.transform = `translateX(-${pos * 800}px)`
+                })
+            </script>
+        </div>
+</body>
+
+</html>

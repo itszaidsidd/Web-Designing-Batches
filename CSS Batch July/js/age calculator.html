@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>age calculator file</title>
+    <style>
+        body{
+            display :flex;
+            gap:20px;
+            align-items:center;
+            justify-content: center;
+            background-color: rgb(49, 47, 47);
+            cursor: pointer;
+        }
+        .main{
+            width:500px;
+            /* height:500px; */
+            padding:20px;
+             box-shadow: 4px 5px 20px rgb(235, 130, 235),2px 4px 20px pink,2px 4px 20px rgb(18, 241, 18),2px 4px 10px rgb(214, 214, 50);
+            background-color: white;
+            margin-top:100px;
+            text-shadow:4px 5px 20px rgb(235, 130, 235),2px 4px 20px pink,2px 4px 20px rgb(149, 31, 160),2px 4px 10px rgb(104, 7, 214); 
+              text-align: center;
+        }
+        input{
+            width:450px;
+            height:20px;
+            padding:10px;
+            border-radius: 12px;
+             text-align: center;
+        }
+        button{
+            padding:10px;
+            font-size: 30px;
+         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+         font-weight: bolder;
+         width:300px;
+         background: black;
+         border-radius: 10px;
+         color:white;
+         border: 4px solid purple;
+        }
+        button:hover{
+            color:black;
+            background:linear-gradient(rgba(116, 9, 158, 0.904) ,rgb(116, 116, 236));
+            border: 2px solid black;
+        }
+        .output{
+            margin: 20px auto;
+            font-size:2em;
+            border:1px solid gray;
+            padding: 10px;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <h1>AGE CALCULATOR </h1><br>
+        <h2>ENTER YOUR DATE OF BIRTH</h2><br>
+        <input type="date" name="" id="text1">
+        <label for="text1"></label>
+        <br><br>
+        <h3> ENTER THE CURRENT DATE</h3><br>
+        <input type="date" name="" id="text2">
+         <label for="text2"></label>
+        <br><br><br>
+        <button onclick="calculate()">calculate</button>
+        <div class="output" id="output"></div>
+    </div>
+    <script>
+        function calculate(){
+            let dob=document.getElementById('text1').value;
+            let d=document.getElementById('text2').value;
+            dob=parseInt(dob.toString().slice(0,4))
+            d=parseInt(d.toString().slice(0,4))
+            // console.log("Your are "+String(d-dob)+" years old")
+            let out="Your are "+String(d-dob)+" years old";
+            document.getElementById('output').innerText=out;
+        }
+    </script>    
+</body>
+</html>

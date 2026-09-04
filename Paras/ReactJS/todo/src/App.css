@@ -1,0 +1,42 @@
+form{
+    width: 60%;
+    margin: 20px auto;
+    display: flex;
+    gap:20px;
+}
+form input{
+    width: 80%;
+    height: 50px;
+    font-size:1.3rem;
+    padding: 10px;
+}
+form button{
+    width: 20%;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+h1{
+    margin:20px;
+    text-align: center;
+}
+ul{
+    width: 60%;
+    margin: 10px auto;
+}
+ul li{
+    font-size: 1.3rem;
+    padding: 20px;
+    margin: 20px 0;
+    background-color: black;
+    color:white;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.completeTodo{
+    text-decoration: line-through;
+    color:red;
+    background-color: gray;
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+
+        }
+        body{
+            background-image: url('../images/n5.jpg');
+            background-size: cover;
+        }
+        .form{
+            width: 400px;
+            border-radius: 25px;
+            background-color: rgba(0,0,0,0.5);
+            margin: 100px auto;
+            padding: 30px;
+            font-size: 1.3em;
+            color:white;
+            display: flex;
+            flex-direction: column;
+            gap:20px;
+        }
+        input[type=text]{
+            font-size: 20px;
+            padding: 13px;
+            border-radius: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="form" id="form">
+        <h1>Java Script Keyboard Event</h1>
+        <label for="">On Key Up</label>
+        <input type="text" name="" id="" onkeyup="document.getElementById('form').style.background=this.value">
+        <label for="">On Key Down</label>
+        <input type="text" name="" id="" onkeydown="document.getElementById('form').style.background=this.value">
+        <label for="">On Key Press</label>
+        <input type="text" name="" id="" onkeypress="alert(this.value)">
+    </div>
+</body>
+</html>

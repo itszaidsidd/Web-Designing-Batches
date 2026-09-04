@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    nav{
+        background-color: black;
+        color:yellow;
+        width: 100%;
+        padding: 10px 0;
+        height: 30px;
+    }
+    nav ul{
+        display: flex;
+        gap:50px;
+        margin-left: 50px;
+    }
+    nav ul li{
+        list-style: none;
+        font-size:19px;
+        cursor:pointer;
+    }
+    .dropdown1{
+        background-color: rgb(0, 0, 0);
+        /* display: block; */
+        /* color:white; */
+        margin-top:19px;
+
+    }
+    .dropdown1 ul{
+        display: none;
+        margin:5px;
+        /* padding:5px; */
+    }
+    nav ul li:hover .dropdown1 ul{
+        display: block;
+    }
+</style>
+<body>
+    <nav>
+        <ul>
+            <li>Home</li>
+            <li>Courses
+                <div class="dropdown1">
+                    <ul>
+                        <li>Basic</li>
+                        <li>Tally</li>
+                        <li>Web Designing
+                            
+                        </li>
+                        <li>Java</li>
+                        <li>Python</li>
+                    </ul>
+                </div>
+            </li>
+            <li>About us</li>
+            <li>Contact</li>
+        </ul>
+    </nav>
+</body>
+</html>

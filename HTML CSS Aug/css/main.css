@@ -1,0 +1,9 @@
+body{
+    background-color: yellow;
+}
+h1{
+    color:red;
+    border:5px solid #96f;
+    /* background-color: rgb(200,150,200); */
+    background-color: rgba(0,0,0,.7);
+}

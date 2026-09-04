@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            margin: 100px auto;
+            width: 400px;
+            height: 400px;
+            background-color: greenyellow;
+            border:2px solid green;
+        }
+    </style>
+</head>
+<body>
+    <div class="box" onmouseout="abc()"></div>
+    <!-- Mouse event 
+    click               onclick="function_name()"
+    right click         oncontextmenu
+    double click        ondbclick
+    mouse down          onmousedown
+    mouse up            onmouseup
+    mouse over          onmoouseover
+    mouer outer         onmouseout
+    -->
+    <script>
+        function abc(){
+            alert('Event Activated');
+        }
+    </script>
+</body>
+</html>

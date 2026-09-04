@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loading in js </title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+       
+        .box{
+            width: 510px;
+            height: 320px;
+            background-color:rgb(185, 172, 172);
+            text-align: center;
+            margin-left:600px;
+            margin-top: 200px;
+            padding-top: 40px;
+            border-radius: 10px;
+        }
+        button{
+            width: 120px;
+            height: 50px;
+            background-color: blue;
+            color: white;
+            border: none;
+            font-weight: bold;
+            padding: 10px;
+            font-size: 20px;
+        
+        }
+        input{
+            padding:6px;
+            color: black;
+            padding: 10px;
+            font-size: 20px;
+            font-weight: 500;
+            border-radius: 10px;
+        }
+        .loader{
+            width: 50px;
+            height:50px;
+            border-radius: 50%;
+            margin-top:-45px;
+            margin-left:330px;
+            border: 9px solid rgba(98, 98, 255, 0.507);
+            border-top: 9px solid blue;
+            animation: circle 1s linear infinite ;
+            display: none;
+        }
+        @keyframes circle{
+            0%{
+                transform:rotate(0deg);
+
+            }
+            100%{
+                transform:rotate(360deg);
+                
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="box">
+       <h1>Mohammad Rehan</h1><br>
+            <input type="text"  id="user" placeholder="username"><br><br>
+          <input type="text" id="pass" placeholder="Password"><br><br>
+         <button onclick="Loader_User()" id="click" > Done </button>
+         <div class="loader" id="circle">
+            </div>
+    </div>
+    <script>
+        let x=document.getElementById('user').innerText;
+        let y=document.getElementById('pass').innerText;
+        // let l=document.getElementById('click');
+        // l.addEventListener('click', function(){
+        //     let c=document.getElementById('circle');
+        //     x='name'
+        //     y='password'
+        //     c.style.display='block';
+        //     setTimeout(function(){
+        //         c.style.display='none';
+        //     },2000);
+        // }) 
+        function load(){
+            let c=document.getElementById('circle');
+            c.style.display='block';
+            setTimeout(function(){
+                c.style.display='none';
+                window.location.href="abc.html";
+            },2000);
+        }
+        function Loader_User(){
+            let username=document.getElementById('user').value;        
+            let pass=document.getElementById('pass').value;
+            if(username=="abc" && pass=="123"){
+                load()
+                
+            }
+            else{
+                alert("Invalid username or password")
+            }
+        }
+    </script>
+</body>
+</html>

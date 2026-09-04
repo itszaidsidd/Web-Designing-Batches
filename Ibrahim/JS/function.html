@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // function abc(){
+        //     document.write('Hello<br>')
+        //     document.write('abc<br>')
+        //     document.write('xyz<br>')
+        // }
+        // abc()
+        // abc()
+        // abc()
+
+        // function table(){
+        //     let n=prompt('Enter a number ')
+        //     for(let i=1;i<=10;i++){
+        //         document.write(i*n+"<br>")
+        //     }
+        // }
+        // table()
+
+        function even_odd(n){
+            if(n%2==0){
+                alert('Even')
+            }
+            else{
+                alert('Odd')
+            }
+        }
+
+        function pos_neg(n){
+            if(n>0){
+                alert('+ve')
+            }
+            else if(n<0){
+                alert('-ve')
+            }
+            else{
+                alert('Zero')
+            }
+        }
+
+        function table(a){
+            for(let i=1;i<=10;i++){
+                document.write(i*a+"<br>")
+            }
+        }
+        let n=prompt('Enter a number')
+        table(n)
+        even_odd(n)
+        pos_neg(n)
+    </script>
+</body>
+</html>

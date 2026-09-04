@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            margin: 50px auto;
+            width: 80vw;
+            height: 80vh;
+            border:10px solid purple;
+            background-color: lightcyan;
+        }
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: lightpink;
+            border:5px solid red;
+            /* position: relative; */
+            position: absolute;
+            /* position: fixed; */
+            top:100px;
+            left:100px;
+        }
+        .text{
+            width: 500px;
+            margin: 20px auto;
+        }
+        .circle{
+            width: 80px;
+            height: 80px;
+            background-color: red;
+            border-radius:50%;
+            position: fixed;
+            right: 30px;
+            bottom: 20px;
+        }
+        .circle:hover{
+            background-color: green;
+            box-shadow: 2px 2px 2px gray;
+            border-radius: 0;
+        }
+        .box1{
+            z-index:1;
+        }
+        .box2{
+            background-color: green;
+            top:120px;
+            left:130px;
+            z-index: 2;
+        }
+        .box3{
+            background-color: blue;
+            top:140px;
+            left:150px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box box1">
+            Box
+        </div>
+        <div class="box box2">box2</div>
+        <div class="box box3">box3</div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam distinctio quasi necessitatibus laboriosam ullam. Eaque ipsam tempora earum repellat, sapiente delectus, dolores sunt dolorem tempore assumenda cupiditate non, inventore ullam.
+    </div>
+    <div class="circle">
+
+    </div>
+    <div class="text">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto dolore vel illum ut eligendi! Ratione, at corporis culpa officia suscipit, illo dignissimos eligendi, consectetur ad quasi numquam soluta reiciendis ex aliquam ab unde odit magni. Omnis sed eligendi enim, neque voluptate at fugit dolorem obcaecati distinctio ut asperiores alias dolor in et iure ipsa eum natus consequatur libero animi unde. Esse quibusdam deleniti, laboriosam quo minima quidem earum dolore, distinctio molestias similique ex quas quae, voluptatum labore consectetur a libero corporis. Facilis similique quibusdam nulla sapiente, quos esse cum id temporibus dignissimos eveniet reprehenderit illo. In omnis fuga, quaerat, incidunt veniam illo adipisci aliquam facere aspernatur, nesciunt suscipit. Consectetur quis sequi cum ratione magnam aliquid doloremque est minus corporis dolores labore ipsam nostrum suscipit a ut officiis error veniam ab earum provident voluptatibus rem doloribus, exercitationem debitis? Assumenda cumque dicta nemo, sint quisquam et eaque nostrum quis odio obcaecati minima dolor provident numquam ea veniam nihil pariatur dolores tempora, veritatis officiis! Sit doloremque cumque ab laudantium ex reiciendis maiores. Eligendi, aliquam consectetur. Quae veritatis non doloremque incidunt ab? Ipsum perferendis rem consequatur dicta, exercitationem, esse iste maiores libero, aliquam rerum incidunt voluptatum blanditiis nam placeat ad. Nostrum possimus saepe numquam?
+    </div>
+    <video playsinline controls autoplay muted loop width="100%">
+        <source src="../video/video1.mp4">
+    </video>
+</body>
+</html>

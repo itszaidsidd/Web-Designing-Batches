@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Martel+Sans:wght@200;300;400;600;700;800;900&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Martel Sans", sans-serif;
+        }
+        header .nav{
+            background-color: rgb(45, 45, 58);
+            color:white;
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.8rem;
+            align-items: center;
+            padding:0 100px;
+            /* position: sticky;
+            top:0px; */
+        }
+        header .nav ul{
+            display: flex;
+            gap:20px;
+
+        }
+        li{
+            list-style: none;
+        }
+        header .logo{
+            padding:5px 100px;
+        }
+        nav{
+            background-color: brown;
+            color:white;
+            padding: 6px;
+            height: 40px;
+            position: sticky;
+            top:0px;
+        }
+        nav ul{
+            display: flex;
+            gap:30px;
+            justify-content: center;
+        }
+        nav ol{
+            /* margin-top: 40px; */
+            padding: 5px;
+            background-color: white;
+            color:black;
+            width: 200px;
+            border:1px solid black;
+            border-radius: 10px;
+            display: none;
+        }
+        .courses:hover ol{
+            display: block;
+        }
+        .hero{
+            width: 100%;
+            height: 540px;
+            /* background-color: teal; */
+            display: flex;
+            justify-content: center;
+            gap:20px;
+            padding: 20px;
+        }
+        .left{
+            width: 50%;
+            height: 100%;
+            /* background-color: red; */
+            background-image: url("https://msuniversity.ac.in/uploads/banner/1781768396_b0a54e2c02603f8b8358.jpg");
+            background-size: 100% 100%;
+        }
+        .right{
+            width: 30%;
+            height: 100%;
+            background-color: lightblue;
+            padding: 20px;
+            overflow: hidden;
+        }
+        .notification{
+            padding: 6px 100px;
+            background-color: rgb(24, 173, 173);
+            color: white;
+            /* overflow: hidden; */
+
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="nav">
+            <ul>
+                <li>item 1</li>
+                <li>item 2</li>
+                <li>item 3</li>
+                <li>item 4</li>
+                <li>item 5</li>
+                <li>item 6</li>
+                <li>item 7</li>
+                <li>item 8</li>
+            </ul>
+            <div>Student Section</div>
+        </div>
+        <div class="logo">
+            <img src="https://msuniversity.ac.in/assets/images/logo.png" alt="">
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li>items 1</li>
+            <li class="courses">Courses
+                 <ol>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JS</li>
+                <li>ReactJS</li>
+            </ol>
+            </li>
+           
+            <li>items 3</li>
+            <li>items 4</li>
+            <li>items 5</li>
+            <li>items 6</li>
+            <li>items 7</li>
+            <li>items 8</li>
+            <li>items 9</li>
+            <li>items 10</li>
+            <li>items 11</li>
+            <li>items 12</li>
+            <li>items 13</li>
+            <li>items 14</li>
+            <li>items 15</li>
+        </ul>
+    </nav>
+    <div class="hero">
+        <div class="left"></div>
+        <div class="right">
+            <h2 class="title"> Press release & Notification</h2>
+            <marquee direction="up">
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga accusamus sint illum eius nulla vitae quia natus ipsum repellendus, ex cupiditate accusantium earum rerum vero, debitis, obcaecati magni amet libero!</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga accusamus sint illum eius nulla vitae quia natus ipsum repellendus, ex cupiditate accusantium earum rerum vero, debitis, obcaecati magni amet libero!</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga accusamus sint illum eius nulla vitae quia natus ipsum repellendus, ex cupiditate accusantium earum rerum vero, debitis, obcaecati magni amet libero!</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga accusamus sint illum eius nulla vitae quia natus ipsum repellendus, ex cupiditate accusantium earum rerum vero, debitis, obcaecati magni amet libero!</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga accusamus sint illum eius nulla vitae quia natus ipsum repellendus, ex cupiditate accusantium earum rerum vero, debitis, obcaecati magni amet libero!</p>
+            </marquee>
+        </div>
+    </div>
+    <marquee vspace="100px" class="notification">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga, eligendi placeat? Ipsa corrupti commodi atque, dolorem similique non, optio facere officia, harum sunt illo mollitia excepturi! Optio fugiat fugit sequi?</marquee>
+    <footer>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis esse veritatis ut, temporibus tempore est provident, deserunt accusantium nesciunt consectetur adipisci unde? Qui similique, aliquam adipisci laboriosam explicabo deleniti commodi.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis esse veritatis ut, temporibus tempore est provident, deserunt accusantium nesciunt consectetur adipisci unde? Qui similique, aliquam adipisci laboriosam explicabo deleniti commodi.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis esse veritatis ut, temporibus tempore est provident, deserunt accusantium nesciunt consectetur adipisci unde? Qui similique, aliquam adipisci laboriosam explicabo deleniti commodi.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis esse veritatis ut, temporibus tempore est provident, deserunt accusantium nesciunt consectetur adipisci unde? Qui similique, aliquam adipisci laboriosam explicabo deleniti commodi.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis esse veritatis ut, temporibus tempore est provident, deserunt accusantium nesciunt consectetur adipisci unde? Qui similique, aliquam adipisci laboriosam explicabo deleniti commodi.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis esse veritatis ut, temporibus tempore est provident, deserunt accusantium nesciunt consectetur adipisci unde? Qui similique, aliquam adipisci laboriosam explicabo deleniti commodi.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis esse veritatis ut, temporibus tempore est provident, deserunt accusantium nesciunt consectetur adipisci unde? Qui similique, aliquam adipisci laboriosam explicabo deleniti commodi.</p>
+    </footer>
+</body>
+</html>

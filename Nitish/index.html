@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            margin: 100px auto;
+            width: 400px;
+            height: 400px;
+            border: 12px solid green;
+            background-color: aquamarine;
+            /* background-color: red !important; */
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            gap:10px;
+            padding: 20px;
+        }
+        input[type=text]{
+            padding: 5px;
+            border-radius: 10px;
+            font-size:1.2em;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <form action="">
+            <h1>Key Board Events</h1>
+            <label for="n1">On key up</label>
+            <input type="text" id="n1" onkeyup="document.querySelector('.box').style.background=this.value">
+            <label for="n2">On key down</label>
+            <input type="text" name="" id="n2" onkeydown="document.querySelector('.box').style.background=this.value">
+            <label for="n3">On key press</label>
+            <input type="text" name="" id="n3" onkeypress="alert(this.value)">
+
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            padding: 20px;
+
+        }
+        .button{
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 20px;
+            border-radius: 20px;
+            background-color: black;
+            color:white;
+            display: inline-block;
+            cursor:pointer;
+        }
+        .content p{
+            text-align: justify;
+        }
+        .black{
+            background-color: black;
+            color:white;
+        }
+        .white{
+            background-color: white;
+            color:black
+        }
+    </style>
+</head>
+<body class="body">
+    <div class="button">Click & Change Color</div>
+    <div class="content">
+        <h1>Document Object Model</h1>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa voluptatum, hic quasi asperiores dolore fuga exercitationem at in illum repellendus aperiam odio dolorem tempora voluptas, dolorum et dignissimos. Cumque impedit est eveniet maxime, eaque quaerat similique consectetur aliquam nobis maiores repellendus assumenda voluptatum laudantium delectus cum natus vitae ipsum deleniti fugit adipisci libero beatae animi sit nostrum? Consectetur porro modi ipsam non perspiciatis recusandae expedita dolorem eum odit, soluta, eveniet tenetur amet, officia inventore! Nobis, eius incidunt impedit nisi quidem explicabo totam velit officiis asperiores rerum voluptate aperiam autem libero. Voluptates consequatur cumque ipsum inventore quasi, quidem minima ipsa facilis.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa voluptatum, hic quasi asperiores dolore fuga exercitationem at in illum repellendus aperiam odio dolorem tempora voluptas, dolorum et dignissimos. Cumque impedit est eveniet maxime, eaque quaerat similique consectetur aliquam nobis maiores repellendus assumenda voluptatum laudantium delectus cum natus vitae ipsum deleniti fugit adipisci libero beatae animi sit nostrum? Consectetur porro modi ipsam non perspiciatis recusandae expedita dolorem eum odit, soluta, eveniet tenetur amet, officia inventore! Nobis, eius incidunt impedit nisi quidem explicabo totam velit officiis asperiores rerum voluptate aperiam autem libero. Voluptates consequatur cumque ipsum inventore quasi, quidem minima ipsa facilis.</p>
+    </div>
+    <script>
+        let a=true;
+        let y=document.querySelector('.body');
+        let x=document.querySelector('.button');
+        x.addEventListener('click',()=>{
+            // if(a){
+            //     y.classList.add('black');
+            //     x.classList.add('white');
+            //     a=false;
+            // }
+            // else{
+            //     y.classList.remove('black');
+            //     x.classList.remove('white');
+            //     a=true;
+            // }
+            y.classList.toggle('black');
+            x.classList.toggle('white');
+            
+        })
+        // setTimeout(()=>{
+        //     y.classList.toggle('black');
+        //     x.classList.toggle('white');
+        // },3000)
+
+        // setInterval(()=>{
+        //     y.classList.toggle('black');
+        //     x.classList.toggle('white');
+        // },1000)
+    </script>
+</body>
+</html>

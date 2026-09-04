@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> delivery conformation form</title>
+    <style>
+        *{
+            padding:0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            background-color: rgba(255, 255, 255, 0.623);
+            position: absolute;
+            top:70px;
+            left:550px;
+            width:40vw;
+            height:85vh;
+            border:3px solid rgb(255, 217, 0);
+            padding:10px;
+            border-radius: 10px;
+            font-size: 25px;
+            font-weight: bolder;
+            display: flex;
+            flex-direction: column;
+            gap:15px;
+        }
+        input{
+            border:2px solid rgb(255, 187, 0);
+            border-radius: 5px;
+            padding: 5px;
+            color:black;
+            font-weight: 600;
+        }
+        h1{
+            text-align: center;
+        }
+        input::placeholder{
+            color:rgb(70, 69, 69);
+        }
+        button{
+            color:white;
+            background: rgb(255, 187, 0);
+            font-size: 20px;
+            font-weight: bold;
+            border: none;
+
+        }
+        select{
+            padding:5px;
+            border:2px solid rgb(255, 187, 0) ;
+            font-weight: bold;
+        }
+        img{
+            width:100%;
+            height:100vh;
+
+        }
+    </style>
+</head>
+<body>
+     <img src="https://cdn.pixabay.com/photo/2016/10/26/10/05/book-1771073_1280.jpg" alt="">
+    <div class="container">
+        <h1>Delivery confarmation form</h1>
+        <label for="fn">First name</label>
+        <input type="text" name="" id="" placeholder="first name" >
+        <label for="ln">Last name</label>
+        <input type="text" name="" id="" placeholder="last name">
+        <label for="ph">Phone no</label>
+        <input type="number" name="" id="" placeholder="phon number" required>
+        <label for="ei">Email id</label>
+        <input type="text" name="" id="" placeholder="email id" required>
+        <label for="ad">Address</label>
+        <input type="text" name="" id="" placeholder=" street address/village" required>
+         <input type="text" name="" id="" placeholder="street address line2 ">
+         <input type="text" name="" id="" placeholder="city" required>
+         <input type="text" name="" id="" placeholder="zip code/city code" required>
+         <input type="text" name="" id="" placeholder="region" required>
+         <select>
+            <option value="">INDIA</option>
+            <option value="">uk</option>
+              <option value="">America</option>
+              <option value="">england</option>
+              <option value="">australia</option>
+              <option value=""> france</option>
+              <option value="">germanny</option>
+              <option value="">poland</option>
+              <option value="">brazil</option>
+              <option value="">ukrain</option>
+              <option value="">denmark</option>
+              <option value="">paris</option>
+              <option value="">usa</option>
+              <option value="">vetnm</option>
+              <option value="">pakistan</option>
+              <option value="">china</option>
+              <option value="">japan</option>
+              <option value="">south korea</option>
+              <option value="">north korea</option>
+              <option value="">british</option>
+              <option value="">spain</option>
+              <option value="">switzerland</option>
+              <option value="">grrenland</option>
+              <option value="">bangladesh</option>
+              <option value="">afganistan</option>
+              <option value="">turkey</option>
+         </select>
+         <button> SEND  </button>
+    </div>
+</body>
+</html>

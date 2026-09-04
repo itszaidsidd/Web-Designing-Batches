@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .header{
+            background-color: green;
+            color:white;
+            padding: 20px;
+        }
+        .courses{
+            padding: 20px;
+            
+        }
+        ul{
+           display: flex;
+           flex-direction: column; 
+           gap:10px;
+        }
+        li{
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1 id="title">Knowledge Zone</h1>
+        <h3 id="sub-title">Coding Institute</h3>
+    </div>
+    <div class="courses">
+        <h2>Courses list</h2>
+        <hr size="8" color="yellow" width="50%" aling="left">
+        <br>
+        <ul >
+            <li class="course">Web designing</li>
+            <li class="course">Graphic designing</li>
+            <li class="course">Accounts</li>
+            <li class="course">Coding</li>
+        </ul>
+    </div>
+    <script>
+        let x=document.getElementById('title');
+        // x.textContent='Computer Center';
+        // x.innerText='KZ';
+        let y=document.getElementById('sub-title');
+        // y.innerHTML='<h2>Computer Center</h2>';
+        let h=document.getElementsByClassName('header');
+        h[0].style.background='teal';
+        h[0].style.borderBottom='5px solid red';
+        let l=document.getElementsByTagName('li');
+        l[1].style.color='red';
+        l[2].innerText='Tally Prime';
+        l[3].style.background='khaki';
+        l[0].addEventListener('click',()=>{
+            h[0].style.background='black';
+            h[0].style.borderBottom='5px solid yellow';
+        })
+        l[1].addEventListener('click',()=>{
+            h[0].style.background='green';
+            h[0].style.borderBottom='5px solid blue';
+        })
+        l[2].addEventListener('click',()=>{
+            h[0].style.background='red';
+            h[0].style.borderBottom='5px solid green';
+        })
+        l[3].addEventListener('dblclick',()=>{
+            h[0].style.background='teal';
+            h[0].style.borderBottom='5px solid pink';
+        })
+        
+    </script>
+</body>
+</html>

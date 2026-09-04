@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id='btn'>Button</button>
+    <input type="text" name="" id="abc">
+    <script>
+        let x=document.querySelector('#btn')
+        x.addEventListener('dblclick',function abc(){
+            alert('click')
+        })
+        // document.addEventListener('keyup',function (){
+        //     alert('Key press')
+        // })
+        let abc=document.querySelector('#abc')
+        abc.addEventListener('input',function(){
+            alert(this.value)
+        })
+    </script>
+</body>
+</html>

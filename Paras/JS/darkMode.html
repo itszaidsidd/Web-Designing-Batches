@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            padding: 50px;
+        }
+        button{
+            padding: 20px;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        p{
+            margin-top: 20px;
+            text-align: justify;
+            font-size: 1.1rem;
+        }
+        .white{
+            color:black;
+            background-color: white;
+        }
+        .black{
+            background-color: black;
+            color:white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <button class="black">Dark Mode</button>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo autem vero aliquam nisi, illum quae culpa
+            perspiciatis. Fugiat, quidem? Perspiciatis accusamus facilis temporibus laudantium sequi atque culpa ipsam
+            ipsum nobis eligendi! Quis explicabo nemo iste sed dignissimos accusamus veritatis nihil. Soluta ipsum
+            repellat eum sequi ab fugiat ut nesciunt hic assumenda maiores? Corrupti, assumenda perspiciatis culpa iusto
+            in quibusdam corporis provident exercitationem quia doloribus ducimus et eius quo. Labore corrupti
+            repudiandae debitis nihil aliquid velit. Delectus doloribus earum adipisci ducimus saepe! Nesciunt
+            accusantium, delectus vero facilis velit repellendus. Et provident laborum expedita atque, porro saepe quod
+            explicabo ipsa! Consequatur, asperiores! Officiis excepturi maiores illum architecto dolorum deserunt, quae
+            cumque nulla. Eveniet et doloribus consectetur error dolore at rerum impedit quod neque. Amet sit quidem
+            tempore. Quae tempore blanditiis odit culpa vitae et asperiores neque, optio nulla nam, aut eos beatae.
+            Maxime esse rerum, explicabo id vel dolorum laborum distinctio ipsa accusamus! Iusto illo delectus, hic in a
+            corporis, culpa fugit obcaecati asperiores sequi recusandae quidem dolor, modi voluptatibus vero illum
+            dolores enim ipsam placeat consequuntur vel quisquam nemo sed? Tenetur, atque asperiores soluta ratione
+            dolorum explicabo possimus quod quos, vitae laborum recusandae officia? Ipsum pariatur beatae aliquam odio
+            deleniti quidem.
+        </p>
+    </div>
+    <script>
+        let btn=document.querySelector('button')
+        let body=document.querySelector('body')
+        // console.log(btn.classList)
+        btn.addEventListener('click',()=>{
+            if(btn.classList=='black'){
+                body.classList.add('black')
+                btn.classList.remove('black')
+                btn.textContent='Light Mode'
+            }
+            else{
+                body.classList.remove('black')
+                btn.classList.add('black')
+                btn.textContent='Dark Mode'
+            }
+            // body.classList.toggle('black')
+            // btn.classList.toggle('black')
+        })
+    </script>
+</body>
+
+</html>

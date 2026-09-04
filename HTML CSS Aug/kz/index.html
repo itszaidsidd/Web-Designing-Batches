@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .nav{
+            /* background-color: rgba(8, 196, 224, 0.362); */
+            color:white;
+            width: 100%;
+            display: flex;
+            /* justify-content: space-between; */
+            align-items: center;
+            gap:30px;
+            padding: 7px 20px;
+            position: fixed;
+            z-index: 10;
+        }
+        .nav ul{
+            list-style: none;
+            display: flex;
+            gap:20px;
+        }
+        .nav .logo{
+            display: flex;
+            align-items: end;
+            gap:4px;
+        }
+        .main{
+            width: 100%;
+            height: 100vh;
+            background-color: red;
+            position: absolute;
+            top:0;
+            overflow: hidden;
+        }
+        .vid{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top:0;
+        }
+        .vid-overly{
+            width: 100%;
+            height: 100%;
+            background-color: rgb(9, 137, 227);
+            position: relative;
+            /* z-index: 2; */
+            opacity: 0.4;
+        }
+        .vid-content{
+            width: 100%;
+            height: 100%;
+            /* background-color: rgba(247, 1, 1, 0.199); */
+            position: absolute;
+            z-index: 2;
+            top:0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color:white;
+        }
+        .vid-content button{
+            background-color: red;
+            color:white;
+            padding: 7px 12px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <div class="logo">
+            <h1>Knowledge Zone</h1>
+            <small>Learn and Implementes</small>
+        </div>
+        <ul>
+            <li>Home</li>
+            <li>Courses</li>
+            <li>Payment Status</li>
+            <li>Login</li>
+            <li>Sign UP</li>
+            <li>Feedback</li>
+            <li>Contact</li>
+            
+        </ul>
+    </div>
+    <div class="main">
+        <div class="vid">
+            <video autoplay muted loop width="100%">
+                <source src="video/video1.mp4">
+            </video>
+        </div>
+        <div class="vid-overly"></div>
+        <div class="vid-content">
+            <h1>Welcome to Knowledge Zone</h1> <br>
+            <small>Learn and implements</small>
+            <button>Get Started</button>
+        </div>
+    </div>
+</body>
+</html>

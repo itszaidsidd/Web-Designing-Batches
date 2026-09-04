@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            /* margin: 100px auto; */
+            width: 200px;
+            height: 200px;
+            border:2px solid darkgreen;
+            background-color: lightgreen;
+            color:darkgreen;
+            /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+            /* animation: anim 2s linear 1s infinite alternate; */
+            /* animation: paras .8s linear infinite; */
+            animation: abc 3s linear infinite;
+        }
+        
+
+        @keyframes abc {
+            0%{
+                transform: translate(0);
+            }
+            25%{
+                transform: translate(500px);
+            }
+            50%{
+                transform: translate(500px,500px);
+            }
+            70%{
+                transform: translate(0,500px);
+            }
+            
+        }
+
+        @keyframes paras{
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes anim{
+            from{
+                background-color: lightpink;
+            }
+            to{
+                transform: translate(400px);
+                background-color: lightblue;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box">Box</div>
+</body>
+</html>

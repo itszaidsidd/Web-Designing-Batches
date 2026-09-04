@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+
+            box-sizing: border-box;
+        }
+        main{
+            padding: 100px;
+            border:2px dashed darkblue;
+            /* height: 400px; */
+        }
+        .btn,.btn-bg{
+            width: 100px;
+            height: 40px;
+            background-color: gray;
+            color:white;
+            padding: 10px;
+            text-align: center;
+            font-weight: bold;
+            border-radius: 6px;
+        }
+        .btn{
+            overflow: hidden;
+        }
+        .btn:hover{
+            color:gray;
+        }
+        .btn-bg{
+            background-color: blue;
+            transform: translate(-110px,-29px);
+            transition: all 1s linear;
+        }
+        .btn:hover .btn-bg{
+            transform: translate(-10px,-29px);
+        }
+        .card{
+            width: 300px;
+            height: 250px;
+            background-color: rgb(220, 217, 217);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .card-bg{
+             width: 300px;
+            height: 250px;
+            border-radius: 10px;
+            background-color: red;
+            transform: translateY(0);
+            transition: all 0.3s linear;
+        }
+        .card:hover .card-bg{
+            transform: translateY(-100%);
+        }
+        .card-content{
+            transform: translateY(-100%);
+             width: 300px;
+            height: 250px;
+            border-radius: 10px;
+            color:white;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <main>
+
+        <div class="btn btn1">Button 1
+            <div class="btn-bg">Button 1</div>
+        </div><br>
+        <div class="card">
+            <div class="card-bg"></div>
+            <div class="card-content">
+                <h1>Card Desing</h1>
+                <p>Animation Color Change Card</p>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

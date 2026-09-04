@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main{
+            background-color: yellowgreen;
+            color:white;
+            margin: 100px auto;
+            border:5px solid black;
+            width: 740px;
+            text-align: center;
+            padding: 20px;
+            border-radius: 30px;
+        }
+        .box{
+            display: flex;
+
+        }
+        input[type=number]{
+            padding: 15px;
+            font-size:1.5em;
+            color:black;
+            box-shadow: inset 2px 2px 2px black;
+            border-radius: 20px;
+            text-align: center;
+        }
+        label{
+            font-size:2em;  
+        }
+        h1{
+            font-size:4em;
+        }
+        .abc{
+            margin:30px 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <h1>Unit Converter</h1>
+        <div class="box">
+            <div class="inch">
+                <label for="inch">Inches</label><br>
+                <input type="number" name="" id="inch" value="0">
+            </div>
+            <h1 class="abc">=</h1>
+            <div class="feet">
+                <label for="feet">Feet</label><br>
+                <input type="number" name="" id="feet" value="0">
+            </div>
+        </div>
+        
+        
+    </div>
+    <script>
+        let feet=document.getElementById("feet");
+        let inch=document.getElementById("inch");
+        feet.addEventListener('input',function (){
+            let f=feet.value;
+            let i=f*12;
+            inch.value=i;
+        })
+        inch.addEventListener('input',function (){
+            let i=inch.value;
+            let f=i/12;
+            feet.value=f;
+        })
+    </script>
+</body>
+</html>

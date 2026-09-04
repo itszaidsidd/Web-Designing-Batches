@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hotel management</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+     <link rel="stylesheet" href="hotelmanagement.css">
+</head>
+<body>
+    <div class="container">
+        <div class="back-nav">
+            <div class="nav">
+                <div class="logo">
+                    <h1>H</h1>
+                    <h2>HOTEL <br>MIRANDA</h2>
+                </div>
+                <ul class="bar">
+                    <li>HOME </li>
+                    <li><a href="#about">ABOUT</a></li>
+                    <li> <a href="#room">ROOM</a></li>
+                    <li> <a href="#feature">FEATURE</a></li>
+                    <li>MENU</li>
+                    <li>NEWS</li>
+                </ul>
+            </div>
+        </div>
+        <p1 class="left">
+
+        </p1>
+        <div class="main">
+
+            <div class="slide-img">
+                <div class="img-box" id="img">
+                    <img class="img1" src="https://cdn.pixabay.com/photo/2017/09/21/16/12/holidays-2772364_640.jpg">
+                    <img class="img2"
+                        src="https://cdn.pixabay.com/photo/2015/09/25/22/17/greece-958333_1280.jpg">
+                    <img class="img3" src="https://cdn.pixabay.com/photo/2016/02/10/13/35/hotel-1191718_960_720.jpg"
+                        alt="">
+                    <img class="img4" src="https://cdn.pixabay.com/photo/2017/11/08/11/22/lounge-2930070_640.jpg "
+                        alt="">
+                    <img class="img5" src="https://cdn.pixabay.com/photo/2017/01/28/19/31/landscape-2016308_640.jpg"
+                        alt="">
+                    <img class="img6" src="https://cdn.pixabay.com/photo/2015/05/01/10/30/hotel-748185_640.jpg" alt="">
+                    <img class="img7" src="https://cdn.pixabay.com/photo/2014/07/21/19/20/lobby-398845_640.jpg" alt="">
+                </div>
+            </div>
+            <script>
+                let img=document.getElementById('img');
+                i=1;
+                setInterval(function(){
+                    img.style.transform=`translateX(-${i*100}vw)`;
+                    if(i<6){
+                        i++;
+                    }
+                    else{
+                        i=0
+                    }
+                    
+                    
+                },3000)
+            
+            </script>
+            <div class="logo2" id="logo">
+                <p1 class="line"> ABOUT US</p1><br>
+                <p2 class="line">THE PERFECT</p2><br>
+                <p3 class="line">BASE FOR YOU </p3><br>
+                <button class="line">Take A Tour</button>
+            </div>
+            <script>
+                let line = document.getElementsByClassName('line');
+                for(let i=0;i<4;i++){
+                    setTimeout(()=>{
+                        line[i].classList.add('line2');
+                    },(i+1)*1000)
+                }
+            </script>
+        </div>
+        <div class="data">
+            <h3>ARRIVAL DATE </h3>
+            <h3>DEPARTURE DATE</h1>
+                <h3>guests</h1>
+        </div>
+        <div class="input">
+            <input type="text" placeholder="your arrival date">
+            <input type="text" placeholder="your departure date">
+            <input type="text" placeholder="no of guests">
+            <button class="check"> check availability</button>
+        </div>
+    </div>
+    </div>
+    </div>
+    <div class="inform" id="about">
+        <div class="strong"><i class="fa-solid fa-user"></i><br><br>
+            <p class="team">Strong Team </p><br>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error, esse.
+        </div><br>
+        .<img class="room1" src="https://cdn.pixabay.com/photo/2016/09/18/03/28/travel-1677347_640.jpg" alt=""><br>
+        <img class="view" src="https://cdn.pixabay.com/photo/2018/02/24/17/17/window-3178666_640.jpg" alt=""><br>
+        <div class="luxury"><i class="fa-solid fa-calendar-week"></i><br><br>
+            <p class="item">Luxury Item</p><br>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius
+            necessitatibus nobis laboriosam deleniti suscipit earum eos!
+        </div>
+        <div class="discover">
+            <p>About us </p><br><br>
+            <p class="head">Discover Our <br> Underground </p><br><br>Lorem ipsum dolor sit amet consectetur adipisicing
+            elit. Aut nisi ratione quod suscipit natus officiis laborum. Eveniet tempora tenetur officia ratione, ipsam,
+            amet sapiente similique ipsa impedit asperiores fuga iure!<br>
+            <br><button class="book"> Book now</button>
+        </div><br>
+    </div>
+    </div>
+    <div class="bookroom">
+        <p> BOOK ROOMS</p>
+        <p class="hand">Hand Picked Rooms</p>
+        <div class="room" id="room" class="r1">
+            <img class="luxury1"  src="https://cdn.pixabay.com/photo/2020/02/01/06/12/living-room-4809587_640.jpg" alt="">
+            <img class="luxury2"  src="https://media.istockphoto.com/id/2169200951/photo/modern-bedroom-interior-with-bed-side-table-armchair-and-bookshelf.jpg?s=612x612&w=0&k=20&c=8yBjbY0iatSggSR99CouBvtZzLJtszRWLr1J0jxGaBw="
+                alt="">
+            <img class="luxury3"  src="https://media.istockphoto.com/id/2171671710/photo/young-woman-opening-up-curtains-in-the-bedroom-in-the-morning.jpg?s=612x612&w=0&k=20&c=2UPROm1PPvU1hC59mMdGCGSecqE7oyy_-MEQHeRNrII="
+                alt="">
+                 </div>
+        <div class="price1">
+            <div  class="familyroom"> Family Room <br>ipsum dolor sit, amet consectetur adipisicing, expedita! <br>
+                <p   class="rupee"> Price $ 500</p>
+            </div>
+            <div class="luxuryroom"> Luxury Room  <br>ipsum dolor sit, amet consectetur adipisicing, expedita! <br>
+                <p  class="rupee"> Price $ 800</p>
+            </div>
+            <div class="oneperson"> Single  Person Room<br> Lorem ipsum dolor sit, amet consectetur adipisicing,
+                expedita! <br>
+                <p  class="rupee"> Price $ 250</p>
+            </div>
+            </div>
+             <script>
+             let r = document.getElementsByClassName('r1');
+                 setTimeout(()=>{
+                    r[0].classList.add('r2');
+                },1000)
+                setTimeout(()=>{
+                    r[1].classList.add('r2');
+                },2000)
+                setTimeout(()=>{
+                    r[2].classList.add('r2');
+                },3000)
+                setTimeout(()=>{
+                    r[3].classList.add('r2');
+                },4000);
+        </script>
+            <div class="color">
+            <div class="blue">
+                <video class="blue-room" loop muted autoplay>
+                    <source src="https://media.istockphoto.com/id/1478976422/video/3d-interior-of-dark-bedroom-black-walls-luxury-room-apartment-hotel-idea-for-design-large-bed.mp4?s=mp4-640x640-is&k=20&c=eT9I5YpMnWVunZr6xt6bT4K7WeE9zuh51AzQfZJv9-s=">
+                </video>
+                
+                </div>
+                <div class="text">
+                    <p CLASS="intro">INTRO VIDEO</p>
+                 <p class="meethead">Meet With Our Luxuryous <br>Place </p> <br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quisquam ipsam dicta. <br> Possimus aliquam officiis nam, harum fuga tempora? Officia odit voluptates, voluptatum <br>fugit soluta iure sed nesciunt optio deserunt modi nemo ipsa, totam itaque ipsum nisi om<br> reprehenderit fuga.<br><br><button>Booknow</button><br>
+                 </div>
+                <div class="yellow"></div>
+                </div>
+            </div>
+        </div>
+            <div class="corefeature" id="feature">
+                <p class="facilty"> Facilty</p>
+                <p class="feature"> CORE FEATURE</p>
+                </div>
+                <div class="feature-inf">
+                    <div class="rating box"><i class="fa-regular fa-thumbs-up"></i><br><br><p class="head2">Have High Rating</p> <br><p1 class="loren">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, voluptate,<br> nisi voluptatem esse soluta adipisci veritatis dis, odio rerum.</p1></div>
+                    <div class="location box"><i class="fa-solid fa-location-dot"></i><br><br><p class="head2"> Best Location</p><br><p1 class="loren">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi praesentium atque esse nesciunt adipisci blanditiis, eius rerum mollitia molestiae eaque.</p1></div>
+                    <div class="cancel box"><i class="fa-solid fa-xmark"></i><br><br> <p class="head2">free cancellation</p><br><p class="head2"></p><p1 class="loren">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis non aspernatur id eaque incidunt similique architecto consectetur voluptate? Nesciunt, eum?</p1></div>
+                    <div class="payment box"><i class="fa-solid fa-credit-card"></i><br><br><p class="head2">Payment Option</p><br><p1 class="loren">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est quam et blanditiis eveniet, voluptate asperiores.</p1></div>
+                    <div class="offer box"><i class="fa-solid fa-tag"></i><br><br><p class="head2">Special Offer</p><br><p1 class="loren">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, ducimus.</p1></div>
+                    <div class="quite box"><i class="fa-regular fa-clock"></i><br><br><p class="head2"> Quite Hours</p><br><p1 class="loren">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores, ea! Suscipit veniam consectetur repellat vel!</p1></div>
+                </div>
+            </div>
+        </div>
+        <p>Menu</p>
+            <h1>OUR Food Menu</h1>
+        <div class="menu1">
+         <img class="food"  src="https://cdn.pixabay.com/photo/2018/05/25/02/34/breakfast-3428197_640.jpg" alt="">
+         <img class="food" src="https://cdn.pixabay.com/photo/2019/11/04/12/16/rice-4601049_640.jpg" alt="">
+         <img class="food" src="https://cdn.pixabay.com/photo/2021/09/29/14/38/hyderabadi-chicken-korma-6667608_640.jpg" alt="">
+         <img class="food" src="https://cdn.pixabay.com/photo/2020/07/02/07/32/chicken-5362065_640.jpg" alt="">
+         <img class="food" src="https://cdn.pixabay.com/photo/2022/11/24/18/09/butter-chicken-7614835_1280.jpg" alt="">
+         <div  class="food1-inf"></div>
+         <div  class="menu2"></div>
+         <img class="food" src="https://cdn.pixabay.com/photo/2017/09/18/11/52/coffe-2761469_640.jpg" alt="">
+         <img class="food" src="https://cdn.pixabay.com/photo/2015/04/06/16/21/korean-food-709606_640.jpg" alt="">
+         <img class="food" src="https://cdn.pixabay.com/photo/2017/04/03/18/41/dessert-2199271_640.jpg" alt="">
+         <img class="food" src="https://cdn.pixabay.com/photo/2017/08/06/06/44/pasta-2589585_640.jpg" alt="">
+         <div class="food2-inf"></div>
+
+
+        </div>
+    </div>
+    </div>
+    </div>
+    <script>
+    </script>
+</body>
+
+</html>

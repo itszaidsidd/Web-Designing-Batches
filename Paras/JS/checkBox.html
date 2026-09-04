@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Enter Salary <input type="number"  id="bs"><br><br>
+    <input type="checkbox"  id="hra"> HRA 20% <br><br>
+    <input type="checkbox" id="da"> DA 10% <br><br>
+    <input type="checkbox" id="ta"> TA 5% <br><br>
+    <button id="btn">OK</button>
+    <hr>
+    HRA <input type="number"  id="t1"><br><br>
+    DA <input type="number"  id="t2"><br><br>
+    TA <input type="number"  id="t3"><br><br>
+    Gross Salary <input type="number"  id="t4">
+
+    <script>
+        let btn=document.getElementById('btn')
+        btn.addEventListener('click',()=>{
+            let bs=document.getElementById('bs').value;
+            let hra=0;
+            let da=0
+            let ta=0
+            if(document.getElementById('hra').checked){
+                hra=bs*20/100;
+            }
+            if(document.getElementById('da').checked){
+                da=bs*10/100;
+            }
+            if(document.getElementById('ta').checked){
+                ta=bs*5/100
+            }
+            let gs=parseInt(bs)+parseInt(hra)+parseInt(da)+parseInt(ta);
+            document.getElementById('t1').value=hra
+            document.getElementById('t2').value=da
+            document.getElementById('t3').value=ta
+            document.getElementById('t4').value=gs
+        })
+    </script>
+</body>
+</html>

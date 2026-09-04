@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .navbar {
+            width: 1500px;
+            background: #ffffff;
+            color: BLACK;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            border-radius: 50px;
+
+        }
+
+        .logo {
+            font-size: 3EM;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 100px;
+        }
+
+        .nav-links li {
+            position: relative;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: rgb(12, 12, 12);
+            font-size: 20px;
+            font-weight: bolder;
+        }
+
+        .nav-links a:hover {
+            color: #0f0f0f;
+        }
+
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 35px;
+            left: 0;
+            background: #faf9f9;
+            list-style: none;
+            padding: 10px 0;
+            min-width: 150px;
+            border-radius: 5px;
+        }
+
+        .dropdown-menu li a {
+            display: block;
+            padding: 10px 20px;
+            color: rgb(16, 16, 16);
+        }
+
+        .dropdown-menu li a:hover {
+            background: #0804f3;
+        }
+
+
+        .maincontent {
+            width: 100%;
+            height: 100vh;
+            background-image: linear-gradient(rgb(0, 42, 255), rgb(252, 252, 252), rgb(65, 127, 250));
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .maincontent .title {
+            font-size: 25em;
+            color: white;
+            font-family: "Arial Black", Arial, Helvetica, sans-serif;
+            z-index: 100;
+        }
+
+        .flavour {
+
+            width: 100%;
+            height: 700px;
+            padding: 50px;
+            background-color: rgb(36, 130, 237);
+            color: white;
+        }
+
+        .box:hover {
+            background-color: #0c04fc;
+            border: none;
+            border-radius: 20px;
+            box-shadow: 0 0 20px white;
+            transform: translateY(-10px);
+
+        }
+
+
+        .flavour .box {
+            width: 900px;
+            padding: 100px 50px;
+            text-align: justify;
+            float: right;
+            border: 3px solid white;
+            border-radius: 20px;
+
+        }
+
+        .flavour .box h1 {
+            font-size: 3em;
+            margin: 20px;
+        }
+
+        .pepsi {
+            height: 700px;
+            WIDTH: 600PX;
+            position: absolute;
+            top: 270px;
+            left: 830px;
+            z-index: 100;
+            transition: all 1s linear;
+        }
+
+        .pepsi-direction {
+            top: 1090px;
+            left: 70px;
+            transition: all 1s linear;
+        }
+
+        .lemon {
+            height: 400px;
+            WIDTH: 400PX;
+            position: absolute;
+            top: 100px;
+            left: 830px;
+            transition: all 1s linear;
+        }
+
+        .lemon-direction {
+            top: 900px;
+            left: 100px;
+            transition: all 1s linear;
+        }
+
+        .ice {
+            height: 400px;
+            WIDTH: 400PX;
+            position: absolute;
+            top: 220px;
+            left: 100px;
+            transition: all 1s linear;
+        }
+
+        .ice-direction {
+            top: 1390px;
+            left: 520px;
+            transition: all 1s linear;
+        }
+
+        .lemonleaf {
+            height: 400px;
+            WIDTH: 400PX;
+            position: absolute;
+            top: 220px;
+            left: 1550px;
+            transform: rotate(60deg);
+            transition: all 1s linear;
+        }
+
+        .lemonleaf-direction {
+            top: 990px;
+            left: 400px;
+            transition: all 1s linear;
+        }
+
+        .contact {
+            width: 100%;
+            height: 600px;
+            background: linear-gradient(rgb(36, 130, 237), black);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .contact h1 {
+            font-size: 4em;
+            margin-bottom: 50px;
+        }
+
+        .contact-cards {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+        }
+
+        .card {
+            width: 280px;
+            padding: 40px 20px;
+            border: 3px solid white;
+            border-radius: 20px;
+            transition: 0.4s;
+            cursor: pointer;
+        }
+
+        .card:hover {
+            background: #0c04fc;
+            box-shadow: 0 0 20px white;
+            transform: translateY(-10px);
+        }
+
+        .card h2 {
+            margin: 15px 0;
+        }
+
+        @media (max-width: 768px) {
+
+            /* Navbar */
+            .navbar {
+                width: 100%;
+                flex-direction: column;
+                gap: 20px;
+                border-radius: 0;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                gap: 20px;
+                align-items: center;
+            }
+
+            .logo {
+                font-size: 2em;
+            }
+
+            /* Title */
+            .maincontent .title {
+                font-size: 8em;
+                text-align: center;
+            }
+
+            /* About box */
+            .flavour {
+                height: auto;
+            }
+
+            .flavour .box {
+                width: 100%;
+                float: none;
+                padding: 40px 20px;
+            }
+
+            /* Images hide (mobile clean look) */
+            .all-images img {
+                display: none;
+            }
+
+            /* Contact */
+            .contact {
+                height: auto;
+                padding: 60px 20px;
+            }
+
+            .contact-cards {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .card {
+                width: 90%;
+            }
+        }
+
+        @media (max-width: 1024px) {
+
+            .navbar {
+                width: 100%;
+            }
+
+            .nav-links {
+                gap: 40px;
+            }
+
+            .maincontent .title {
+                font-size: 14em;
+            }
+
+            .flavour .box {
+                width: 100%;
+                float: none;
+            }
+
+            /* Resize images instead of hide */
+            .fanta {
+                height: 400px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            .orange,
+            .leaf,
+            .leaf2,
+            .leaf3,
+            .halforange {
+                height: 200px;
+                width: auto;
+            }
+
+            .contact-cards {
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="logo">PEPSI-ZONE</div>
+        <ul class="nav-links">
+            <li><a href="pepsi.html">Home</a></li>
+            <li><a href="#about">About</a></li>
+
+            <li class="dropdown">
+                <a href="#" onclick="toggleDropdown()">Services ▾</a>
+                <ul class="dropdown-menu" id="dropdown">
+                    <li><a href="coca-cola.html">CACA-COLA</a></li>
+                    <hr>
+                    <li><a href="Pepsi.html">PEPSI</a></li>
+                    <hr>
+                    <li><a href="fanta.html">FANTA</a></li>
+                </ul>
+            </li>
+
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div class="maincontent">
+            <div class="title">
+                PEPSI
+            </div>
+        </div>
+        <div class="flavour">
+            <div class="box" id="about">
+                <h1>ABOUT </h1>
+                <h1>PEPSI FLAVOUR</h1>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima laborum laboriosam quas obcaecati
+                    libero facere necessitatibus similique exercitationem impedit officia reprehenderit iste corporis
+                    ratione, odio saepe aut distinctio debitis doloribus voluptatum sapiente amet dolorem sed? Fugiat
+                    quo consequatur nostrum perferendis quas commodi dolorem eaque dolores reprehenderit doloribus ab
+                    non autem fugit sequi ex at necessitatibus, odit repellat, aliquid, voluptates explicabo assumenda
+                    voluptateLorem ipsum, dolor sit amet consectetur adipisicing elit. Minima laborum laboriosam quas
+                    obcaecati libero facere necessitatibus similique exercitationem impedit officia reprehenderit iste
+                    corporis ratione, odio saepe aut distinctio debitis doloribus voluptatum sapiente amet dolorem sed?
+                    Fugiat quo consequatur nostrum perferendis quas commodi dolorem eaque dolores reprehenderit
+                    doloribus ab non autem fugit sequi ex avelit, blanditiis distinctio provident ab eaque consequatur
+                    itaque
+                    quidem! Molestiae quasi excepturi ab ipsa, deleniti exercitationem rem temporibus veritatis non quo
+                    numquam facere? </p>
+            </div>
+        </div>
+        <div class="all-images">
+            <img src="pepsi.png" alt="" id="pepsi" class="pepsi">
+            <img src="lemon.png" alt="" id="lemon" class="lemon">
+            <img src="ice.png" alt="" id="ice" class="ice">
+            <img src="lemonleaf.png" alt="" id="lemonleaf" class="lemonleaf">
+        </div>
+        <section class="contact" id="contact">
+            <h1>CONTACT US</h1>
+
+            <div class="contact-cards">
+
+                <div class="card">
+                    📞
+                    <h2>Call Us</h2>
+                    <p>+91 98765 43210</p>
+                </div>
+
+                <div class="card">
+                    📧
+                    <h2>Email</h2>
+                    <p>pepsizone@gmail.com</p>
+                </div>
+
+                <div class="card">
+                    💬
+                    <h2>WhatsApp</h2>
+                    <p>Chat Now</p>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+    <script>
+        let pepsi = document.getElementById('pepsi');
+        let lemon = document.getElementById('lemon');
+        let ice = document.getElementById('ice');
+        let lemonleaf = document.getElementById('lemonleaf');
+        window.addEventListener("scroll", function () {
+            let scrollTop = window.scrollY;
+            if (scrollTop > 500) {
+                pepsi.classList.add('pepsi-direction');
+            }
+            else {
+                pepsi.classList.remove('pepsi-direction');
+            }
+            if (scrollTop > 500) {
+                lemon.classList.add('lemon-direction');
+            }
+            else {
+                lemon.classList.remove('lemon-direction');
+            }
+            if (scrollTop > 500) {
+                ice.classList.add('ice-direction');
+            }
+            else {
+                ice.classList.remove('ice-direction');
+            }
+            if (scrollTop > 500) {
+                lemonleaf.classList.add('lemonleaf-direction');
+            }
+            else {
+                lemonleaf.classList.remove('lemonleaf-direction');
+            }
+        });
+        function toggleDropdown() {
+            const dropdown = document.getElementById("dropdown");
+            dropdown.style.display =
+                dropdown.style.display === "block" ? "none" : "block";
+        }
+        window.onclick = function (e) {
+            if (!e.target.matches('.dropdown a')) {
+                const dropdown = document.getElementById("dropdown");
+                dropdown.style.display = "none";
+            }
+        };
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <table border="2px" bordercolor="black" cellpadding="20px" cellspacing="0">
+        <caption>Students Data</caption>
+        <tr>
+            <th>S.no</th>
+            <th>Name</th>
+            <th>Course</th>
+            <th>School</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Muskan</td>
+            <td>MCA</td>
+            <td rowspan="2">SRGC</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td colspan="2">Ayan</td>
+            <!-- <td>BCA</td> -->
+        </tr>
+    </table>
+    <ul type="disc">
+        <li>abc</li>
+        <li>xyz</li>
+        <li>pqr</li>
+    </ul>
+    <ol start="11">
+        <li>abc</li>
+        <li>xyz</li>
+        <li>pqr</li>
+    </ol>
+    <!-- <a href="images/n1.jpg" download="">click here</a> -->
+    <!-- <a href="images/n1.jpg" target="_blank">click here</a><br> -->
+    <!-- <a href="images/n1.jpg" target="frm">click here</a><br>
+    <iframe frameborder="1" name="frm" width="800px" height="500px"></iframe> -->
+    <form action="">
+        <label for="name" >Name</label>
+        <input type="text" name="name" id="name" value="Enter Your Name" required readonly>
+        <label for="email">Email</label>
+        <input type="email" name="email" placeholder="Enter your email" id="email">
+        <h2>Select your gender</h2>
+        <label for="male">Male</label>
+        <input type="radio" name="gen" id="male" checked>
+        <label for="female">Female</label>
+        <input type="radio" name="gen" id="female">
+        <h2>Select your languages</h2>
+        <input type="checkbox" name="" id="">Hindi
+        <input type="checkbox" name="" id="">English
+        <input type="checkbox" name="" id="">Urdu
+        <h2>Select Photo</h2>
+        <input type="file" name="" id="">
+        <br>
+        <br>
+        <input type="submit" value="SUBMIT">
+    </form>
+</body>
+
+</html>

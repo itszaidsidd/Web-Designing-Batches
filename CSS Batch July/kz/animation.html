@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 60vw;
+            height: 70vh;
+            background-color: teal;
+        }
+        .box{
+            width: 100px;
+            height: 60px;
+            background-color: red;
+            /* animation-name: abc;
+            animation-duration: 3s;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: infinite;
+            animation-direction:alternate;
+            animation-delay: 1s; */
+            
+            animation: abc 4s ease-in-out 1s infinite;
+        }   
+
+        @keyframes xyz{
+            
+
+        }
+
+        @keyframes abc{
+            25%{
+                transform: translateX(700px);
+            }
+            50%{
+                transform: translateX(700px) translateY(400px);
+            }
+            75%{
+                transform: translateY(400px);
+            }
+            100%{
+                transform: translate(0);
+            }
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+
+        </div>
+    </div>
+</body>
+</html>

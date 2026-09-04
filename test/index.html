@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <Style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .main {
+            width: 400px;
+            height: 400px;
+            background-color: rgb(138, 179, 4);
+            padding: 20px;
+            text-align: center;
+            margin: auto;
+            margin-top: 100px;
+        }
+
+        input {
+            width: 310px;
+            padding: 20px;
+            text-align: center;
+            font-size: 20px;
+            border-radius: 20px;
+            border: 2px solid darkgreen;
+        }
+
+        button {
+            width: 150px;
+            border-radius: 10px;
+            padding: 10px;
+            background-color: green;
+            border: none;
+            font-size: 20px;
+            color: white;
+        }
+
+        #result {
+            background-color: black;
+            color: white;
+            height: 50px;
+            border: none;
+            border-radius: 40px;
+            margin-top: 20px;
+            font-size: 1.3em;
+            padding: 10px;
+        }
+    </Style>
+</head>
+
+<body>
+    <div class="main">
+        <h1>Mohammad Rehan<br><br> Prime Number Finder </h1><br><br>
+        <input type="number" id="Num" placeholder="Enter the no you want to check"><br><br>
+        <button onclick="Clear()">Clear</button>
+        <button onclick="check_prime()">Submit</button><br><br>
+        <!-- <input type="text" id="result" placeholder="result" readonly> -->
+        <div class="output" id="result"></div>
+    </div>
+    <script>
+        let x=document.getElementById('result');
+        function check_prime() {
+            let n=document.getElementById('Num').value;
+            let c=true;
+            for(let i=2;i<n;i++){
+                if(n%i==0){
+                    c=false;
+                    break;
+                }
+            }
+            if(c==true){
+                x.innerText='Its Prime number';
+            }
+            else{
+                x.innerText='Its not Prime';
+            }
+        }
+        function Clear(){
+            document.getElementById('Num').value='';
+            x.innerText='';
+        }
+    </script>
+</body>
+
+</html>

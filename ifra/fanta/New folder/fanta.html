@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .navbar {
+            width: 1500px;
+            background: #ffffff;
+            color: BLACK;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            border-radius: 50px;
+
+        }
+
+        .logo {
+            font-size: 3EM;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 100px;
+        }
+
+        .nav-links li {
+            position: relative;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: rgb(12, 12, 12);
+            font-size: 20px;
+            font-weight: bolder;
+        }
+
+        .nav-links a:hover {
+            color: #0f0f0f;
+        }
+
+        /* Dropdown */
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 35px;
+            left: 0;
+            background: #faf9f9;
+            list-style: none;
+            padding: 10px 0;
+            min-width: 150px;
+            border-radius: 5px;
+        }
+
+        .dropdown-menu li a {
+            display: block;
+            padding: 10px 20px;
+            color: rgb(16, 16, 16);
+        }
+
+        .dropdown-menu li a:hover {
+            background: #f39004;
+        }
+
+
+        .maincontent {
+            width: 100%;
+            height: 100vh;
+            background-image: linear-gradient(orange, rgb(255, 123, 0), rgb(255, 102, 0));
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .maincontent .title {
+            font-size: 25em;
+            color: white;
+            font-family: "Arial Black", Arial, Helvetica, sans-serif;
+        }
+
+        .flavour {
+            width: 100%;
+            height: 700px;
+            padding: 50px;
+            background-color: rgb(131, 55, 0);
+            color: white;
+        }
+
+        .box:hover {
+            box-shadow: 0 0 25px rgba(253, 250, 250, 0.6);
+            background-color: #ff9800;
+            border: none;
+            border-radius: 20px;
+            animation: fadeup 1s infinite;
+
+        }
+
+        @keyframes fadeup {
+            0% {
+                box-shadow: 0 0 5px rgb(255, 255, 255);
+            }
+
+            50% {
+                box-shadow: 0 0 20px rgb(255, 255, 255);
+            }
+
+            100% {
+                box-shadow: 0 0 5px rgba(255, 255, 255, 0.988);
+            }
+        }
+
+        .flavour .box {
+            width: 900px;
+            padding: 100px 50px;
+            text-align: justify;
+            float: right;
+            border: 3px solid white;
+            border-radius: 20px;
+        }
+
+        .flavour .box h1 {
+            font-size: 3em;
+            margin: 20px;
+        }
+
+        .fanta {
+            height: 600px;
+            position: absolute;
+            top: 270px;
+            left: 650px;
+            transition: all 1s linear;
+            z-index: 100;
+        }
+
+        .fanta-direction {
+            top: 1100px;
+            left: 90px;
+            transition: all 1s linear;
+        }
+
+        .leaf {
+            height: 600px;
+            width: 900px;
+            position: absolute;
+            top: -60px;
+            left: -190px;
+            transform: rotate(120deg);
+            transition: all 1s linear;
+        }
+
+        .leaf-direction {
+            top: 900px;
+            left: -250px;
+            transform: rotate(150deg);
+            transition: all 1s linear;
+        }
+
+        .halforange {
+            height: 290px;
+            width: 290px;
+            position: absolute;
+            top: 110px;
+            left: 650px;
+            transition: all 1s linear;
+
+        }
+
+        .halforange-direction {
+            top: 930px;
+            left: 340px;
+            z-index: 1;
+            transition: all 1s linear;
+        }
+
+        .leaf2 {
+            height: 300px;
+            width: 300px;
+            position: absolute;
+            top: 100px;
+            right: 0px;
+            transform: rotate(-180deg);
+
+        }
+
+        .leaf2-direction {
+            top: 1100px;
+            left: 90px;
+            transition: all 1s linear;
+        }
+
+        .leaf3 {
+            height: 300px;
+            width: 300px;
+            position: absolute;
+            top: 100px;
+            right: 80px;
+            transform: rotate(-100deg);
+
+        }
+
+        .leaf3-direction {
+            top: 1100px;
+            left: 90px;
+            transition: all 1s linear;
+        }
+
+        .orange {
+            height: 400px;
+            width: 400px;
+            position: absolute;
+            top: 630px;
+            left: 1100px;
+            transition: all 1s linear;
+        }
+
+        .orange-direction {
+            top: 1300px;
+            left: 640px;
+            transition: all 1s linear;
+
+        }
+
+        .contact {
+            width: 100%;
+            height: 600px;
+            background: linear-gradient(orange, #ff7b00, #ff4d00);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .contact h1 {
+            font-size: 4em;
+            margin-bottom: 50px;
+        }
+
+        .contact-cards {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+        }
+
+        .card {
+            width: 280px;
+            padding: 40px 20px;
+            border: 3px solid white;
+            border-radius: 20px;
+            transition: 0.4s;
+            cursor: pointer;
+        }
+
+        .card:hover {
+            background: #5f2d01;
+            box-shadow: 0 0 20px white;
+            transform: translateY(-10px);
+        }
+
+        .card h2 {
+            margin: 15px 0;
+        }
+
+        @media (max-width: 768px) {
+
+            /* Navbar */
+            .navbar {
+                width: 100%;
+                flex-direction: column;
+                gap: 20px;
+                border-radius: 0;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                gap: 20px;
+                align-items: center;
+            }
+
+            .logo {
+                font-size: 2em;
+            }
+
+            /* Title */
+            .maincontent .title {
+                font-size: 8em;
+                text-align: center;
+            }
+
+            /* About box */
+            .flavour {
+                height: auto;
+            }
+
+            .flavour .box {
+                width: 100%;
+                float: none;
+                padding: 40px 20px;
+            }
+
+            /* Images hide (mobile clean look) */
+            .all-images img {
+                display: none;
+            }
+
+            /* Contact */
+            .contact {
+                height: auto;
+                padding: 60px 20px;
+            }
+
+            .contact-cards {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .card {
+                width: 90%;
+            }
+        }
+
+    .navbar {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 15px;
+    }
+        @media (min-width: 768px) {
+
+            /* Navbar */
+            .navbar {
+                width: 100%;
+                flex-direction: column;
+                gap: 20px;
+                border-radius: 0;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                gap: 20px;
+                align-items: center;
+            }
+
+            .logo {
+                font-size: 2em;
+            }
+
+            /* Title */
+            .maincontent .title {
+                font-size:4em;
+                text-align: center;
+            }
+
+            /* About box */
+            .flavour {
+                height: auto;
+            }
+
+            .flavour .box {
+                width: 100%;
+                float: none;
+                padding: 40px 20px;
+            }
+
+            /* Images hide (mobile clean look) */
+            .all-images img {
+                display: none;
+            }
+
+            /* Contact */
+            .contact {
+                height: auto;
+                padding: 60px 20px;
+            }
+
+            .contact {
+                gap: 20px;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <!------navbar--------->
+    <nav class="navbar">
+        <div class="logo">FANTA-VIBE</div>
+        <ul class="nav-links">
+            <li><a href="fanta.html">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li class="dropdown">
+                <a href="#" onclick="toggleDropdown()">Services ▾</a>
+                <ul class="dropdown-menu" id="dropdown">
+                    <li><a href="coca-cola.html">CACA-COLA</a></li>
+                    <hr>
+                    <li><a href="pepsi.HTML">PEPSI</a></li>
+                    <hr>
+                    <li><a href="fanta.html">FANTA</a></li>
+                </ul>
+            </li>
+
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <main>
+        <!------title--------->
+        <div class="maincontent">
+            <div class="title">
+                FANTA
+            </div>
+        </div>
+        <!------flavour--------->
+        <div class="flavour">
+            <div class="box" id="about">
+                <h1>ABOUT </h1>
+                <h1>FANTA FLAVOUR </h1>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima laborum laboriosam quas obcaecati
+                    libero facere necessitatibus similique exercitationem impedit officia reprehenderit iste corporis
+                    ratione, odio saepe aut distinctio debitis doloribus voluptatum sapiente amet dolorem sed? Fugiat
+                    quo consequatur nostrum perferendis quas commodi dolorem eaque dolores reprehenderit doloribus ab
+                    non autem fugit sequi ex at necessitatibus, odit repellat, aliquid, voluptates explicabo assumenda
+                    voluptateLorem ipsum, dolor sit amet consectetur adipisicing elit. Minima laborum laboriosam quas
+                    obcaecati libero facere necessitatibus similique exercitationem impedit officia reprehenderit iste
+                    corporis ratione, odio saepe aut distinctio debitis doloribus voluptatum sapiente amet dolorem sed?
+                    Fugiat quo consequatur nostrum perferendis quas commodi dolorem eaque dolores reprehenderit
+                    doloribus ab non autem fugit sequi ex at necessitatibus, odit repellat, aliquid, voluptates
+                    explicabo assumenda voluptate. Dolor quas iste dolores delectus qui ratione optio culpa rerum eum
+                    deserunt odio quibusdam totam velit, blanditiis distinctio provident ab eaque consequatur itaque
+                    quidem! Molestiae quasi excepturi ab ipsa, deleniti exercitationem rem temporibus veritatis non quo
+                    numquam facere?</p>
+            </div>
+        </div>
+        <div class="all-images">
+            <img src="fanta.png" class="fanta" id="fanta" alt="">
+            <img class="leaf" src="leaf.png" alt="" id="leaf">
+            <img class="orange" src="orange.png" alt="" id="orange">
+            <img class="leaf2" src="leaf2.png" alt="" id="leaf2">
+            <img class="leaf3" src="leaf2.png" alt="" id="leaf3">
+            <img class="halforange" src="orangehalf.png" alt="" id="halforange">
+        </div>
+        <section class="contact" id="contact">
+            <h1>CONTACT US</h1>
+
+            <div class="contact-cards">
+
+                <div class="card">
+                    📞
+                    <h2>Call Us</h2>
+                    <p>+91 98765 43210</p>
+                </div>
+
+                <div class="card">
+                    📧
+                    <h2>Email</h2>
+                    <p>fantazone@gmail.com</p>
+                </div>
+
+                <div class="card">
+                    💬
+                    <h2>WhatsApp</h2>
+                    <p>Chat Now</p>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+    <script>
+        let fanta = document.getElementById('fanta');
+        let orange = document.getElementById('orange');
+        let leaf2 = document.getElementById('leaf2');
+        let leaf3 = document.getElementById('leaf3');
+        let halforange = document.getElementById('halforange');
+
+        window.addEventListener("scroll", function () {
+            let scrollTop = window.scrollY;
+            if (scrollTop > 500) {
+                fanta.classList.add('fanta-direction');
+            }
+            else {
+                fanta.classList.remove('fanta-direction');
+            }
+            if (scrollTop > 500) {
+                leaf.classList.add('leaf-direction');
+            }
+            else {
+                leaf.classList.remove('leaf-direction');
+            }
+            if (scrollTop > 550) {
+                orange.classList.add('orange-direction');
+            }
+            else {
+                orange.classList.remove('orange-direction');
+            }
+            if (scrollTop > 550) {
+                halforange.classList.add('halforange-direction');
+            }
+            else {
+                halforange.classList.remove('halforange-direction');
+            }
+        });
+        function toggleDropdown() {
+            const dropdown = document.getElementById("dropdown");
+            dropdown.style.display =
+                dropdown.style.display === "block" ? "none" : "block";
+        }
+        window.onclick = function (e) {
+            if (!e.target.matches('.dropdown a')) {
+                const dropdown = document.getElementById("dropdown");
+                dropdown.style.display = "none";
+            }
+        };
+    </script>
+</body>
+
+</html>

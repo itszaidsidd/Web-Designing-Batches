@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        nav{
+            background-color: rgb(200, 200, 244);
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 10px;
+        }
+
+        nav ul{
+            display: flex;
+            gap:30px;
+        }
+        nav ul li{
+            list-style-type: none;
+            /* font-weight: 600; */
+        }
+        nav button{
+            padding: 5px;
+            border-radius: 5px;
+            /* background-color: black; */
+            /* color:white; */
+            font-weight: bold;
+            cursor: pointer;
+        }
+        p{
+            padding: 50px;
+        }
+        .dark{
+            background-color: black;
+            color:white;
+        }
+        .light{
+            background-color: white;
+            color:black;
+        }
+    </style>
+</head>
+<body id="body">
+    <nav>
+        <div class="logo"><h2>ACE</h2></div>
+        <ul>
+            <li>Home</li>
+            <li>Payment</li>
+            <li>Login</li>
+            <li>About us</li>
+            <li>Contact</li>
+        </ul>
+        <!-- <button class="dark" onclick="mode()">Dark Mode</button> -->
+        <button class="dark" id="btn">Dark Mode</button>
+    </nav>
+    <p id="content">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, doloremque! Neque non, delectus repudiandae minima sequi voluptas esse iste, aperiam reiciendis veritatis soluta pariatur? Possimus libero quia aliquid quos odio quis a iste totam eum beatae quidem modi, adipisci earum voluptate deleniti illum repellat vero eius, magnam recusandae? Consequatur, accusamus optio! Exercitationem similique ad minima, adipisci facilis officiis in impedit animi, saepe tempora veritatis rem fuga laborum iure iusto harum temporibus nihil voluptatibus fugit enim incidunt consequatur, dolore totam. Velit hic adipisci unde aspernatur! Aliquam magni consequatur veniam magnam vel pariatur reiciendis mollitia itaque, enim incidunt labore perferendis corrupti nihil.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam facere quam voluptatem eligendi cupiditate esse numquam necessitatibus quae eaque officia eum voluptate vel incidunt commodi, ex sint nobis nisi eius ab blanditiis veritatis asperiores similique optio voluptas. Possimus maxime ea beatae doloribus, nobis sit earum excepturi laborum accusamus temporibus molestias quos quia at consectetur, architecto, laudantium inventore. Porro dolorem at beatae eum nihil odit corporis optio nemo reprehenderit maiores totam aperiam dignissimos facilis neque iure magnam, inventore saepe mollitia numquam consectetur ipsam voluptatem repellat. Vero, itaque repellat! Ducimus doloribus itaque corrupti possimus praesentium quae amet at nemo, ab accusantium odit perferendis eligendi veniam magnam non delectus illo, nesciunt incidunt! Expedita at cum assumenda iure fugit, excepturi itaque nobis, ex illum nemo delectus. Odit sit mollitia unde quod rem, modi ducimus illo delectus totam temporibus nihil. Sunt, velit asperiores. Natus a voluptatem illo, quidem voluptas aliquid, saepe totam consequuntur perspiciatis, odio ex soluta optio doloribus error pariatur molestiae. Nostrum animi magnam doloremque ducimus ad praesentium ullam eligendi odit, quidem non, corporis tempore, dolor asperiores? Adipisci, voluptatum porro. Nihil, quaerat? Voluptatem accusantium veniam maiores. Quia inventore, atque, fugit eum aperiam ipsam ea, ut aspernatur nulla cumque consectetur animi excepturi id tempore earum?
+    </p>
+    <script>
+        let btn=document.querySelector('#btn')
+
+        // btn.addEventListener('click',mode)
+
+        // function mode(){
+        //     let c=document.getElementById('body')
+        //     let b=document.getElementsByTagName('button')
+        //     let n=document.getElementsByTagName('nav')
+        //     // console.log(b[0].className)
+        //     // body.classList.add('dark')
+        //     if(b[0].className=="dark"){
+        //         b[0].classList.add('light')
+        //         b[0].classList.remove('dark')
+        //         c.classList.add('dark')
+        //         n[0].style.background='navy'
+        //         b[0].innerText="Light Mode"
+        //     }
+        //     else{
+        //         b[0].classList.add('dark')
+        //         b[0].classList.remove('light')
+        //         c.classList.remove('dark')
+        //         n[0].style.background='rgb(200, 200, 244)'
+        //         b[0].innerText="Dark Mode"
+        //     }
+        // }
+
+        
+        btn.addEventListener('click',()=>{
+            let c=document.getElementById('body')
+            let b=document.getElementsByTagName('button')
+            let n=document.getElementsByTagName('nav')
+            // console.log(b[0].className)
+            // body.classList.add('dark')
+            if(b[0].className=="dark"){
+                // b[0].classList.add('light')
+                // b[0].classList.remove('dark')
+                b[0].classList.replace('dark','light')
+                c.classList.add('dark')
+                n[0].style.background='navy'
+                b[0].innerText="Light Mode"
+            }
+            else{
+                b[0].classList.add('dark')
+                b[0].classList.remove('light')
+                c.classList.remove('dark')
+                n[0].style.background='rgb(200, 200, 244)'
+                b[0].innerText="Dark Mode"
+                
+            }
+            // b[0].classList.toggle('dark')
+            // c.classList.toggle('dark')
+        }
+    )
+        
+        </script>
+        </body>
+</html>
+
+
+<!-- DOM classList
+1. add - add new class  -> variable.classList.add('active')
+2. remove - remove class -> variable.classList.remove('active')
+3. contains - Check class is exist or not -> variable.classList.contains('active')
+4. toggle - if class is exist then remove it otherwise add -> variable.classList.toggle('active')
+5. replace - replace class name -> variable.classList.replace('old','new') -->

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Enter Amount <input type="number" name="" id="amt" ><br><br>
+    Enter Rate  <input type="number" name="" id="rate" ><br><br>
+    Enter Time <input type="number" id="time" ><br><br>
+    <button id="btn">Submit</button>
+    <hr>
+    Simple Intrest <input type="number" id="si" readonly>
+    <script>
+        let btn=document.querySelector("#btn");
+        btn.addEventListener('click',()=>{
+            let p=document.querySelector('#amt').value;
+            let r=document.querySelector('#rate').value;
+            let t=document.querySelector('#time').value;
+            let si=p*r*t/100;
+            document.querySelector("#si").value=si;
+
+        })
+    </script>
+</body>
+</html>

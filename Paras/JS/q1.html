@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Enter name <input type="text" placeholder="Enter your name" id="name"><br><br>
+    Enter age <input type="number" placeholder="Enter your age" id="age"><br><br>
+    <button class="ok">OK</button>
+    <input type="text" id="test">
+    <script>
+        let b=document.querySelector('.ok')
+        b.addEventListener('click',()=>{
+            let name=document.querySelector('#name').value
+            let age=document.querySelector('#age').value;
+            // console.log('Hello Mr.',name,' you are ',age,' year old')
+            // document.write(`Hello ${name} you are ${age} years old`)
+
+            let t=document.getElementById('test')
+            t.value=`Hello ${name} you are ${age} years old`
+        })
+    </script>
+</body>
+</html>

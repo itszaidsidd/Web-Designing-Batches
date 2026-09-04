@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Enter Name <input type="text" id="name"><br><br>
+    <input type="radio" id="gen" name="gen" checked>Male
+    <input type="radio" name="gen">Female <br><br>
+    <button onclick="abc()">Ok</button>
+    <script>
+        function abc(){
+            let name=document.getElementById('name').value;
+            let gen=document.getElementById('gen').checked;
+            if(gen==true){
+                document.write("Hello Mr. "+name)
+            }
+            else{
+                document.write("Hello Ms. "+name)
+            }
+        }
+    </script>
+</body>
+</html>

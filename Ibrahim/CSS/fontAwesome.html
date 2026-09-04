@@ -1,0 +1,68 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css" integrity="sha512-ApSLB1Pd3/bZN8fWB/RG9YhN/7bd9Hkf3AGaE2mPfebjrxagjuBtx2GcgdqIlJkUzwylBo61r9Xa9NmgBI0swA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+            }
+            nav{
+                padding: 20px;
+                background-color: navy;
+                color:white;
+            }
+            ul{
+                display: flex;
+                justify-content: space-around;
+            }
+            ul li{
+                list-style-type: none;
+                font-size: 1.5rem;
+            }
+            .box{
+                margin: 100px;
+                border-radius: 50%;
+                /* border:2px solid red; */
+                width: 100px;
+                padding: 20px;
+                text-align: center;
+                background-color: red;
+                color:white;
+                animation: blink 2s linear infinite;
+            }
+
+            @keyframes blink{
+                50%{
+                    background-color: transparent;
+                    color:transparent;
+                    /* visibility: hidden; */
+                }
+                100%{
+                    /* visibility: visible; */
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <nav>
+            <ul>
+                <li><i class="fa-regular fa-house"></i> Home</li>
+                <li><i class="fa-solid fa-book-bookmark"></i> Courses</li>
+                <li><i class="fa-regular fa-user"></i> Login</li>
+                <li><i class="fa-solid fa-key"></i> Change Password</li>
+            </ul>
+        </nav>
+
+        <div class="box">new design</div>
+    </body>
+    </html>
+
+    <!-- font-awesome cdn -->
+    <!-- https://cdnjs.com/libraries/font-awesome -->
+
+    <!-- font-awesome icons -->
+    <!-- https://fontawesome.com/ -->

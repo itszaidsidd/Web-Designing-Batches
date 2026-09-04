@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .bulb{
+            width: 150px;
+            height: 30px;
+            background-color: black;
+            display: inline-block;
+            border-radius: 0 50% 50% 0;
+            position: absolute;
+            top:315px;
+            left:600px;
+            color:white;
+        }
+        .tourch{
+            width: 550px;
+            height: 200px;
+            /* background-color: yellow; */
+            background-image: linear-gradient(to left,rgb(255, 255, 46),rgb(255, 255, 175));
+            display: inline-block;
+            position: absolute;
+            top:230px;
+            left:48px;
+            overflow: hidden;
+            display: none;
+        }
+        .top{
+            background-color: white;
+            width: 120%;
+            height: 90px;
+            transform: rotate(8deg) translatey(-40px);
+        }
+        .bottom{
+            background-color: white;
+            width: 120%;
+            height: 90px;
+            transform: rotate(-8deg) translatey(62px);
+        }
+        
+    </style>
+</head>
+<body id="body">
+    <div class="bulb" id="bulb"></div>
+    <div class="tourch" id="tourch">
+        <div class="top" id="top"></div>
+        <div class="bottom" id="bottom"></div>
+    </div>
+    <script>
+        let b=document.getElementById('bulb');
+        let t=document.getElementById('tourch');
+        let o=true;
+        b.addEventListener('click',()=>{
+            if(o==true){
+                t.style.display='block';
+                document.getElementById('body').style.background='gray';
+                document.getElementById('top').style.background='gray';
+                document.getElementById('bottom').style.background='gray';
+                o=false;
+            }
+            else{
+                t.style.display='none';
+                document.getElementById('body').style.background='white';
+                document.getElementById('top').style.background='white';
+                document.getElementById('bottom').style.background='white';
+                o=true;
+            }
+            
+        })
+    </script>
+</body>
+</html>

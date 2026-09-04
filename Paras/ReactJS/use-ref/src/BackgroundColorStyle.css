@@ -1,0 +1,15 @@
+nav{
+    background-color: lightblue;
+    padding: 5px 0;
+}
+nav ul{
+    display: flex;
+    justify-content: space-around;
+}
+nav ul li{
+    list-style: none;
+}
+main{
+    border:2px solid black;
+    height: 500px;
+}

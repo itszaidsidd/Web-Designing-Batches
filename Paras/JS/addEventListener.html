@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #img{
+            display:none;
+        }
+    </style>
+</head>
+<body>
+    <button id="btn">Click here</button>
+    <img id="img">
+    <script>
+        let btn=document.querySelector('#btn')
+
+        // Type 1
+        // btn.onclick=function (){
+        //     alert('clicked')
+        // }
+
+        // Type 2
+        // btn.addEventListener(event,function abc(){})
+
+        // btn.addEventListener('click',()=>{
+        //     // alert('clicked')
+
+        // })
+
+        
+        let img=document.getElementById('img')
+        img.setAttribute('src','images/n1.jpg')
+        // let abc=img.getAttribute('src')
+        // console.log(abc)
+
+        // img.style.display='none'
+        // img.style.display='block'
+
+        btn.addEventListener('click',()=>{
+            img.style.display='block'
+        })
+    </script>
+    
+</body>
+</html>

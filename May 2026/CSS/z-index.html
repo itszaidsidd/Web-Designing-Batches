@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 300px;
+            height: 300px;
+            border:2px solid black;
+            color:white;
+            position: absolute;
+        }
+        .box1{
+            background-color: red;
+            top:100px;
+            left:100px;
+            z-index:5;
+            overflow: auto;
+        }
+        .box2{
+            background-color: blue;
+            top:140px;
+            left:140px;
+            z-index:4;
+        }
+        .box3{
+            background-color: yellow;
+            top:180px;
+            left:180px;
+            z-index:1;
+        }
+        .box4{
+            background-color: green;
+            top:220px;
+            left:220px;
+            z-index:4;
+        }
+        img{
+            width: 400px;
+            /* filter:opacity(50%) */
+            opacity: 90%;
+        }
+    </style>
+</head>
+<body>
+    <div class="box box1">
+        <img src="../images/n4.jpg" alt="">
+    </div>
+    <div class="box box2">Box 2</div>
+    <div class="box box3">Box 3</div>
+    <div class="box box4">Box 4</div>
+</body>
+</html>

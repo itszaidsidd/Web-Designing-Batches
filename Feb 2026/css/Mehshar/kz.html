@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Martel+Sans:wght@200;300;400;600;700;800;900&family=Outfit:wght@100..900&display=swap');
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Outfit", sans-serif;
+        }
+        nav{
+            width: 100%;
+            background-color: rgba(0,0,0,0.1);
+            color:white;
+            display: flex;
+            padding: 1rem 3rem;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            z-index: 10;
+        }
+        ul{
+            display: flex;
+            gap:2rem;
+        }
+        ul li{
+            list-style: none;
+            font-size: 1.2rem;
+
+        }
+        main{
+            width: 100%;
+            height: 100vh;
+            background-color: red;
+            position:absolute;
+            top:0;
+            overflow: hidden;
+        }
+        video{
+            width: 100%;
+            /* height: 100%; */
+            /* opacity: 0.5; */
+        }
+        .vid-overly{
+            background-color: rgb(3, 43, 136);
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top:0;
+            z-index: 1;
+            opacity: 0.6;
+        }
+        .vid-content{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top:0;
+            z-index: 2;
+            color:white;
+            display: flex;
+            flex-direction: column;
+            gap:5px;
+            justify-content: center;
+            align-items: center;
+        }
+        .get-started{
+            padding: .5rem 1rem;
+            border-radius: 5px;
+            background-color: red;
+            color:white;
+            font-weight: 600;
+            /* text-transform: uppercase; */
+            font-size: 1.1rem;
+        }
+        .main2{
+            width: 100%;
+            height: 500px;
+            position: absolute;
+            top:100vh;
+            /* background-color: green; */
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <h1>Knowledge Zone</h1>
+        <ul>
+            <li>Home</li>
+            <li>Courses</li>
+            <li>Payment Status</li>
+            <li>Login</li>
+            <li>Sign up</li>
+            <li>Contact</li>
+            <li>About</li>
+        </ul>
+    </nav>
+    <main>
+        <video autoplay loop muted>
+            <source src="video/video2.mp4">
+        </video>
+        <div class="vid-overly"></div>
+        <div class="vid-content">
+            <h1>Welcome to Knowledge Zone</h1>
+            <small>Learn & Implements</small>
+            <br>
+            <button class="get-started">Get Started</button>
+        </div>
+    </main>
+    <div class="main2">
+        asdg
+    </div>
+</body>
+</html>

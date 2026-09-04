@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Google like Loader</title>
+  <style>
+    html,body {
+      height: 100%;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #fff;
+    }
+    .main{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 18px;
+    }
+    .loader {
+        background-color: white;
+      width: 300px;  
+      height:300px;
+      border-radius: 50%;
+      border-left:10px solid #4285F4 ;
+        border-right:10px solid  #34A853 ;
+          border-top:10px solid #f7f300 ;
+            border-bottom:10px solid   #EA4335 ;
+      animation: spin 1s linear infinite;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    }
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+    .text {
+      font-size:22px;
+      color: #b9b8b8;
+    }
+    .button{
+      display:flex;
+      gap:15px;
+    }
+    .btn {
+          box-shadow:
+        0 10px 15px rgba(0, 0, 0, 0.3),
+        0 20px 30px rgba(0, 0, 0, 0.2);
+        font-size: 20px;
+   font-weight: bolder;
+      padding:20px;
+      border-radius:8px;
+      border: none;
+      cursor:pointer;
+      background:#f1f1f1;
+    }
+  </style>
+</head>
+<body>
+  <div class="main">
+    <div class="loader" id="loader" aria-hidden="true"></div>
+    <div class="text">Loading…</div>
+    <div class="button">
+      <button class="btn" id="show">Show</button>
+      <button class="btn" id="hide">Hide</button>
+    </div>
+  </div>
+  <script>
+    const loader = document.getElementById('loader');
+    document.getElementById('hide').addEventListener('click', () => {
+      // loader.style.display = 'none';
+      loader.style.visibility='hidden';
+    });
+    document.getElementById('show').addEventListener('click', () => {
+      // loader.style.display = 'block';
+      loader.style.visibility='visible';
+    });
+  </script>
+</body>
+</html>

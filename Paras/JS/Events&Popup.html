@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .div{
+            width: 400px;
+            height: 400px;
+            border-radius: 10px;
+            background-color: lightgreen;
+            border:5px solid green;
+            margin: 100px auto;
+            cursor: pointer;
+        }
+
+        body{
+            background-image: url("images/n5.jpg");
+            background-size:cover;
+        }
+        .form{
+            margin: 100px auto;
+            border-radius: 25px;
+            padding: 30px;
+            width: 400px;
+            background-color: rgba(0,0,0,0.5);
+            color:white;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            gap:20px;
+        }
+        input{
+            padding: 7px;
+            font-size:1.2rem;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <!-- <div class="div" onmouseup="alert('clicked')"></div> -->
+    <!-- All Clicks -->
+     <!-- 
+        click  -> left click
+        ondblclick -> double click
+        oncontextmenu -> right click
+        onmouseover -> 
+        onmouseout ->
+        onmouseup  ->
+        onmousedown ->
+     -->
+     <!-- <button onclick="abc()">abc</button> -->
+
+     <div class="form" id="form">
+        <h1>Keyboard Events</h1>
+        <form>
+            <label for="t1">On key down</label>
+            <!-- <input type="text" onkeydown="alert(this.value)" id=t1> -->
+            <input type="text" onkeydown="document.getElementById('form').style.background=this.value" id=t1>
+            <label for="t2">On key up</label>
+            <!-- <input type="text" id="t2" onkeyup="alert(this.value)"> -->
+            <input type="text" id="t2" onkeyup="document.getElementById('form').style.backgroundColor=this.value">
+            <label for="t3">On key press</label>
+            <input type="text" id="t3" onkeypress="alert(this.value)">
+        </form>
+     </div>
+
+    <script>
+        // function abc(){
+        //     alert('adadsg')
+        // }
+        // alert() show a popup msg
+        // confirm() show popup and input yes or no
+        // prompt() input a msg by alert
+
+        // alert('Hello Wolrd')
+        // let x=confirm('Do you like my website?')
+        // console.log(x)
+        // if(x){
+        //     alert('Thanks and visit again')
+        // }
+        // else{
+        //     alert("Aapki ray nhi chahiye")
+        // }
+
+        // let x=prompt("Whats your name?")
+        // console.log(x)
+        // document.write(`Hello Mr. ${x}`)
+
+        // let age=prompt('Enter your age?')
+        // if(age>18){
+        //     document.write("You are elegible for vote")
+        // }
+        // else{
+        //     document.write('You are not elegible for vote')
+        // }
+    </script>
+    
+</body>
+</html>

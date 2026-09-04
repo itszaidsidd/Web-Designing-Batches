@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .header{
+            background-color: green;
+            color:white;
+            padding: 20px;
+        }
+        .courses{
+            padding: 20px;
+            
+        }
+        ul{
+           display: flex;
+           flex-direction: column; 
+           gap:10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1 id="title">Knowledge Zone</h1>
+        <h3 id="sub-title">Coding Institute</h3>
+    </div>
+    <div class="courses">
+        <h2>Courses list</h2>
+        <hr size="8" color="yellow" width="50%" aling="left">
+        <br>
+        <ul >
+            <li class="course">Web designing</li>
+            <li class="course">Graphic designing</li>
+            <li class="course">Accounts</li>
+            <li class="course">Coding</li>
+        </ul>
+    </div>
+    <script>
+        let x=document.getElementById('title');
+        x.style.color='yellow';
+        let y=document.getElementById('sub-title');
+        y.innerHTML="<H2>Programming Languages</h2>";
+        // let z=document.getElementsByClassName('course');
+        let z=document.getElementsByTagName('li')
+        z[0].style.backgroundColor='yellow';
+        z[1].innerText='DTP'
+        let a=document.querySelector('.header');
+        a.style.borderBottom='5px solid red'
+    </script>
+</body>
+</html>

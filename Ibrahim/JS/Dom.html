@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        header{
+            padding: 20px;
+            background-color: green;
+            color:white;
+        }
+        ul{
+            display: flex;
+            flex-direction: column;
+            gap:20px;
+        }
+        ul li{
+            border-bottom: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <header id="header">
+        <h1 class="title" id="title">Knowledge Zone</h1>
+        <h3 class="sub-title" id="sub-title">Computer Center</h3>
+    </header>
+    <ul>
+        <li class="item">HTML</li>
+        <li class="item">CSS</li>
+        <li class="item">JavaScript</li>
+        <li class="item">ReactJS</li>
+    </ul>
+    <button onclick="abc()">Change Color</button>
+    <script>
+        let title=document.getElementById("title")
+        title.innerText='Academic of Career Education'
+        title.textContent='KZ Institue'
+        let sub_title=document.getElementById('sub-title')
+        sub_title.innerHTML='<h2>Coaching Center</h2>'
+        let h=document.getElementById('header')
+        // h.style.backgroundColor='red'
+        h.style.borderBottom='5px solid yellow'
+
+        let li=document.getElementsByClassName('item')
+        li[2].style.backgroundColor='yellow'
+        li[1].style.color='red'
+
+        let item=document.getElementsByTagName('li')
+        item[3].innerText='Python'
+
+        function abc(){
+            h.style.backgroundColor='teal'
+        }
+    </script>
+</body>
+</html>

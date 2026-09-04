@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+        }
+        .main{
+            width:580px;
+            height: 480px;
+            background-color: aqua;
+            margin: auto;
+            margin-top:100px;
+            text-align: center;
+            padding:20px;
+            border-radius: 10px;
+        }
+        .box{
+            width: 400px;
+            height: 270px;
+            background-color:white;
+            text-align: center;
+            padding: 20px;
+            border-radius: 10px;
+            margin: -430px 70px;
+            display: none;
+        }
+        img{
+            width: 150px;
+            height: 100px;
+            float: center;
+        }
+        button{
+            padding: 20px;
+            width:150px;
+            color:white;
+            background-color: steelblue;
+            border: none;
+            border-radius: 10px;
+            font-size: 20px;
+        }
+        h1{
+            color: blue;
+        }
+        #popup{
+            margin:190px 150px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+    <h1>Zoya noor</h1><br><br>
+    <h3>Click Below Button for PoPup</h3><br><br>
+    <div class="loader" id="circle">
+    <button onclick="ok()" id="popup">PoPup</button><br>
+    <div class="box" id="box">
+        <img src="https://media.istockphoto.com/id/1031925314/vector/check-mark-logo-vector-or-icon-t-approvement-or-cheklist-design.jpg?s=612x612&w=0&k=20&c=DiKwTooTBctgWNWu1G0oZ8Gql_N0yUVYQR2DLr11H98="><br>
+         <h1>You Have Subscribe</h1><br>
+        <button onclick="no()" id="close">Close</button>
+        </div>
+    </div>
+    </div>
+    <script>
+        let i=document.getElementById('box');
+        let a=document.getElementById('circle');
+        function ok(){
+            i.style.display='block';
+        }
+         function no(){
+            i.style.display='none';
+
+        }
+    </script>
+</body>
+</html>

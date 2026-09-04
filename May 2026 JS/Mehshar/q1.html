@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Enter Radius <input type="number" id="r">   <br><br>
+    <button id="area">AREA</button>
+    <button id="circum">CIRCUM</button>
+    <hr>
+    <script>
+        let a=document.querySelector('#area');
+        a.addEventListener('click',()=>{
+            let r=document.querySelector('#r').value;
+            document.write("Area of Cirlce : ",3.14*r*r)
+        })
+        
+        let c=document.querySelector('#circum');
+        c.addEventListener('click',()=>{
+            let r=document.querySelector('#r').value;
+            document.write("Circumference of Cirlce : ",2*3.14*r)
+        })
+
+    </script>
+</body>
+</html>

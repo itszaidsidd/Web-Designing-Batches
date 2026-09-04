@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Start Number <input type="number" id="start"> <br><br>
+    Last Number <input type="number" name="" id="last"><br><br>
+    <button onclick="table()">TABLE</button>
+    <table>
+    <script>
+        function table(){
+            let s=parseInt(document.getElementById("start").value);
+            let l=parseInt(document.getElementById("last").value);
+            for(let i=s;i<=l;i++){
+                for(let j=1;j<=10;j++){
+                    document.write(i*j+" ")
+                }
+                document.write("<br>")
+            }
+        }
+    </script>
+</body>
+</html>

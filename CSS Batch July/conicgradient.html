@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-image: url("images/night.jpg");
+            background-size: 100vw 100vh;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .box{
+            width: 300px;
+            height: 300px;
+            border:2px solid gray;
+            /* background-color: red; */
+            margin: 20px;
+            /* float:left; */
+            /* display: inline-block; */
+            border-radius: 50% ;
+        }
+        .b1{
+            background-image: conic-gradient(red, green,yellow);
+        }
+        .b2{
+            background-image: conic-gradient(from 40deg,red, green,yellow);
+        }
+        .b3{
+            background-image: conic-gradient(red, green,yellow,red);
+        }
+        .b4{
+            background-image: conic-gradient(at 20% 40%,red, green,yellow,red);
+        }
+        .b5{
+            background-image: repeating-conic-gradient(red 10%, green 20%,yellow 30%);
+        }
+        .b6{
+            background-size: 20px 20px;
+            background-image: repeating-conic-gradient(black 0,black 25%, yellow 25%,yellow 50%);
+            border-radius: 0;
+        }
+        .b7{
+            background-image: conic-gradient(from -45deg,red 0, red 25%,green 25%,green 50%,yellow 50%,yellow 75%,blue 75%, blue 100%);
+        }
+        .b8{
+            background-image: conic-gradient(from -45deg,red 0, red 25%,green 25%,green 50%,yellow 50%,yellow 75%,blue 75%, blue 100%);
+            animation: an 2s linear infinite;
+        }
+        .b8:hover{
+            animation-play-state: paused;
+        }
+    
+        @keyframes an{
+            from{
+
+            }
+            to{
+                transform: rotate(360deg);
+            }
+        }
+        /* @keyframes animate1{
+            10%{
+                transform: rotate(36deg);
+            }
+            20%{
+                transform: rotate(72deg);
+            }
+            30%{
+                transform: rotate(108deg);
+            }
+            40%{
+                transform: rotate(144deg);
+            }
+            50%{
+                transform: rotate(180deg);
+            }
+            60%{
+                transform: rotate(216deg);
+            }
+            70%{
+                transform: rotate(252deg);
+            }
+            80%{
+                transform: rotate(288deg);
+            }
+            90%{
+                transform: rotate(334deg);
+            }
+            100%{
+                transform: rotate(360deg);
+            } */
+        }
+    </style>
+</head>
+<body>
+    <div class="box b1"></div>
+    <div class="box b2"></div>
+    <div class="box b3"></div>
+    <div class="box b4"></div>
+    <div class="box b5"></div>
+    <div class="box b6"></div>
+    <div class="box b7"></div>
+    <div class="box b8"></div>
+</body>
+</html>

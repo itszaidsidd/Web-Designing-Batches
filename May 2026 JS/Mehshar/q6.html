@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Start Number <input type="number" name="" id="s" value="0"><br><br>
+    Last Number <input type="number" name="" id="l" value="0"><br><br>
+    Choice 
+    <select name="" id="c">
+        <option value="Increment">Increment</option>
+        <option value="Decrement">Decrement</option>
+    </select>
+    <br><br>
+    <button id="btn">Ok</button>
+    <hr>
+    <script>
+        let btn=document.querySelector('#btn')
+        btn.addEventListener('click',()=>{
+            let ch=document.getElementById('c').value;
+            let s=document.getElementById('s').value;
+            let l=document.getElementById('l').value;
+            if(ch=="Increment"){
+                for(let i=s;i<=l;i++){
+                    document.write('<br>',i)
+                }
+            }
+            else{
+                for(let i=l;i>=s;i--){
+                    document.write('<br>',i)
+                }      
+            }
+        })
+    </script>
+</body>
+</html>
