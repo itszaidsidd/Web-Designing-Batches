@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Enter Name <input type="text" id="name"><br><br>
+    Enter age <input type="number" id="age"><br><br>
+    <button id="btn">Ok</button><br><br>
+    <div id="output"></div>
+    <script>
+        let btn=document.getElementById('btn')
+        btn.addEventListener('click',()=>{
+            let name=document.getElementById('name').value;
+            let age=document.getElementById('age').value;
+            // document.write('Hello '+name+' you are '+age+' years old')
+            let o=document.getElementById('output')
+            o.innerText='Hello '+name+' you are '+age+' years old'
+        })
+    </script>
+</body>
+</html>
