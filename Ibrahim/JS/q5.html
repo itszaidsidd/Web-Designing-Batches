@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="name">Enter name</label>
+    <input type="text" id="name"><br><br>
+    <input type="radio" name="gen" id="m" checked>
+    <label for="m">Male</label>
+    <input type="radio" name="gen" id="f">
+    <label for="f">Female</label><br><br>
+    <button id="btn">Submit</button>
+    <hr>
+    <div id="out"></div>
+    <script>
+        let btn=document.getElementById('btn')
+        let o=document.getElementById('out')
+        btn.addEventListener('click',()=>{
+            let n=document.getElementById('name').value;
+            let g=document.getElementById('m').checked;
+            if(g){
+                o.innerText='Hello Mr. '+n
+            }
+            else{
+                o.innerText='Hello Ms. '+n
+            }
+        })
+    </script>
+</body>
+</html>
