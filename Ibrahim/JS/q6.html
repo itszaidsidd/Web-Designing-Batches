@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            margin: 100px auto;
+            padding: 20px;
+            width: 300px;
+            text-align: center;
+            border:2px solid black;
+        }
+        #si{
+            background-color: rgb(236, 232, 212);
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+
+            Amount <input type="number" id="a" required><br><br>
+            Rate <input type="number" name="" id="r" required><br><br>
+            Time <input type="number" name="" id="t" required><br><br>
+            <button id="btn">Submit</button>
+            <hr>
+            Simple Intrest <input type="number" value="0" id="si" readonly>
+        </div>
+    <script>
+        let btn=document.getElementById('btn')
+        btn.addEventListener('click',()=>{
+            let p=document.getElementById('a').value;
+            let r=document.getElementById('r').value;
+            let t=document.getElementById('t').value;
+            let si=parseInt(p)*parseInt(r)*parseInt(t)/100;
+            let s=document.getElementById('si')
+            s.value=si;
+        })
+    </script>
+</body>
+</html>
