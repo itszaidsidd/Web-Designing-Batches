@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: rgb(247, 241, 232);
+        }
+        nav {
+            background-color: rgb(34, 34, 48);
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            padding: 5px 40px;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li {
+            list-style-type: none;
+        }
+
+        header .logo {
+            padding: 5px 50px;
+        }
+
+        header .nav {
+            background-color: brown;
+            color: white;
+            padding: 8px 30px;
+        }
+
+        header .nav ul {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        header .nav ul li {
+            list-style: none;
+
+        }
+
+        .hero {
+            background-color: white;
+            height: 540px;
+            padding: 50px;
+            display: flex;
+            gap: 50px;
+            justify-content: center;
+        }
+
+        .hero .left {
+            /* background-color: green; */
+            background-image: url('https://msuniversity.ac.in/uploads/banner/1767599566_94d8dbf1f45d531772ca.jpg');
+            height: 100%;
+            width: 50%;
+        }
+
+        .hero .right {
+            background-color: rgb(221, 238, 245);
+            height: 100%;
+            width: 30%;
+            font-size: 1.1rem;
+            padding: 10px;
+            overflow: hidden;
+        }
+
+        .hero .right .content {
+            padding: 10px;
+            text-align: justify;
+        }
+
+        .nav3 {
+            background-color: rgb(73, 152, 152);
+            color: white;
+            /* height: 50px; */
+            padding: 10px 150px;
+            text-align: center;
+        }
+
+        .b1 {
+            display: flex;
+            width: 40px;
+            background-color: chocolate;
+        }
+        .boxes{
+            padding: 20px;
+            display: flex;
+            justify-content: space-around;
+            height: 115px;
+            /* background-color: darkgoldenrod; */
+        }
+        .boxes div{
+            width: 80px;
+            background-color: red;
+            border-radius: 10px;
+        }
+        .boxes .b1{
+            background-color: burlywood;
+        }
+        .boxes .b2{
+            background-color: cornflowerblue;
+        }
+         .boxes .b3{
+            background-color: rgb(100, 237, 207);
+        }
+         .boxes .b4{
+            background-color: rgb(237, 100, 127);
+        }
+         .boxes .b6{
+            background-color: rgb(100, 237, 130);
+        }
+         .boxes .b7{
+            background-color: rgb(237, 171, 100);
+        }
+         .boxes .b8{
+            background-color: rgb(237, 100, 100);
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li>item 1</li>
+            <li>item 2</li>
+            <li>item 3</li>
+            <li>item 4</li>
+            <li>item 5</li>
+            <li>item 6</li>
+            <li>item 7</li>
+            <li>item 8</li>
+        </ul>
+        <span>Student Section</span>
+    </nav>
+    <header>
+        <div class="logo">
+            <img src="https://msuniversity.ac.in/assets/images/logo.png" alt="">
+        </div>
+        <div class="nav">
+            <ul>
+                <li>items 1</li>
+                <li>items 2</li>
+                <li>items 3</li>
+                <li>items 4</li>
+                <li>items 5</li>
+                <li>items 6</li>
+                <li>items 7</li>
+                <li>items 8</li>
+                <li>items 9</li>
+                <li>items 10</li>
+            </ul>
+        </div>
+    </header>
+    <div class="hero">
+        <div class="left"></div>
+        <div class="right">
+            <h2>Press release & Notification</h2>
+            <div class="content">
+                <marquee behavior="" direction="up">
+
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas excepturi praesentium est totam
+                        cupiditate optio voluptate cum fugit! Rem quaerat blanditiis est ratione aliquam voluptatibus
+                        possimus eveniet at suscipit nobis.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas excepturi praesentium est totam
+                        cupiditate optio voluptate cum fugit! Rem quaerat blanditiis est ratione aliquam voluptatibus
+                        possimus eveniet at suscipit nobis.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas excepturi praesentium est totam
+                        cupiditate optio voluptate cum fugit! Rem quaerat blanditiis est ratione aliquam voluptatibus
+                        possimus eveniet at suscipit nobis.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas excepturi praesentium est totam
+                        cupiditate optio voluptate cum fugit! Rem quaerat blanditiis est ratione aliquam voluptatibus
+                        possimus eveniet at suscipit nobis.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas excepturi praesentium est totam
+                        cupiditate optio voluptate cum fugit! Rem quaerat blanditiis est ratione aliquam voluptatibus
+                        possimus eveniet at suscipit nobis.</p>
+                </marquee>
+            </div>
+        </div>
+    </div>
+    <div class="nav3">
+        <marquee>
+            A quick brown jumps right over the lazy dog , A quick brown jumps right over the lazy dog
+        </marquee>
+
+    </div>
+    <div class="boxes">
+
+        <div class="b1">
+            petter
+        </div>
+        <div class="b2">
+            Ayan
+        </div>
+        <div class="b3">
+            Aksha
+        </div>
+        <div class="b4">
+            Shahbaz
+        </div>
+        <div class="b5">
+            Amreen
+        </div>
+        <div class="b6">
+            zoya
+        </div>
+        <div class="b7">
+            Subhan
+        </div>
+        <div class="b8">
+            Sheetal
+        </div>
+    </div>
+</body>
+
+</html>
