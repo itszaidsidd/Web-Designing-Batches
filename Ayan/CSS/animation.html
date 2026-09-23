@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        main{
+            width: 95vw;
+            height: 95vh;
+            border:2px solid darkred;
+        }
+        .box{
+            width: 150px;
+            height: 150px;
+            border: 5px dashed darkblue;
+            background-color: lightblue;
+            border-color: red green yellow blue;
+            color:blue;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+            /* animation: abc 3s ease 1s infinite alternate; */
+            animation: xyz 4s linear infinite;
+        }
+
+
+        @keyframes xyz{
+            25%{
+                transform: translate(560px) rotate(-360deg);
+                /* background-color: red; */
+            }
+            50%{
+                transform: translate(560px,530px) rotate(-720deg);
+                /* background-color: green; */
+            }
+            75%{
+                transform: translate(0,530px) rotate(-1080deg);
+                /* background-color: blue; */
+            }
+            100%{
+                transform: translate(0) rotate(-1440deg);
+            }
+        }
+
+        @keyframes abc{
+            from{
+                background-color: green;
+            }
+            to{
+                background-color: red;
+                transform: translate(500px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="box">Box</div>
+    </main>
+</body>
+</html>
