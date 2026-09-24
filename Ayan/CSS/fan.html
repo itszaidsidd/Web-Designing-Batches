@@ -10,6 +10,7 @@
             width: 500px;
             height: 700px;
             border: 2px solid black;
+            background-color: rgb(146, 9, 32);
         }
         .rect{
             width: 20px;
@@ -42,7 +43,11 @@
             height: 40px;
             border-radius: 50%;
             margin-left: 240px;
-            margin-top: -180px;
+            margin-top: 80px;
+            transform: translate(-110px,50px);
+        }
+        .fan{
+            transform: translate(-110px,50px);
         }
         .wing1{
             transform: rotate(180deg);
@@ -54,7 +59,7 @@
         }
         .wing2{
             transform: translate(360px,-320px) rotate(90deg);
-            background-color: bisque;
+            background-color: rgb(217, 27, 157);
             width: 40px;
             height: 130px;
             border-radius: 50%;
@@ -79,8 +84,8 @@
             transform: translate(240px, -560px);
 
         }
-        main:hover .fan{
-            animation: fan 1s linear infinite;
+        main:hover .circle{
+            animation: fan .5s linear infinite;
         }
 
         @keyframes fan{
@@ -93,34 +98,34 @@
 <body>
     <main> 
         <div class="box">
-            fan
-        </div>
-        <div class="rect">
-            rect
-        </div>
-        <div class="footer">
-            f
-        </div>
-        <div class="circle">
-            c
-        </div>
-        <div class="gol">
             
         </div>
-        <div class="fan">
-            <div class="wing1">
-                wing1
-            </div>
-            <div class="wing2">
-                wing2
-            </div>
-            <div class="wing3">
-                wing3
-            </div>
-            <div class="wing4">
-                wing4
-            </div>
+        <div class="rect">
+            
         </div>
+        <div class="footer">
+            
+        </div>
+        <div class="circle">
+            
+            <div class="gol">
+                
+            </div>
+            <div class="fan">
+                <div class="wing1">
+                    
+                </div>
+                <div class="wing2">
+                    
+                </div>
+                <div class="wing3">
+                    
+                </div>
+                <div class="wing4">
+                    
+                </div>
+            </div>
+            </div>
     </main>
 </body>
 </html>
