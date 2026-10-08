@@ -5,48 +5,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        header{
-            padding: 20px;
-            background-color: green;
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        main{
+            padding: 30px;
+            width: 100%;
+            height: 100vh;
+        }
+        button{
+            margin-top:20px;
+            padding: 10px;
+            font-weight: bold;
+            font-size: 1.2rem;
+            border-radius: 20px;
+        }
+        .black{
+            background-color: black;
             color:white;
         }
-        ul{
-            display: flex;
-            flex-direction: column;
-            gap:20px;
-        }
-        ul li{
-            border-bottom: 1px solid black;
+        p{
+            margin-top: 40px;
+            text-align: justify;
         }
     </style>
 </head>
 <body>
-    <header id="header">
-        <h1 class="title" id="title">Knowledge Zone</h1>
-        <h3 class="sub-title">Computer Center</h3>
-    </header>
-    <ul>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>JavaScript</li>
-        <li>ReactJS</li>
-    </ul>
+    <main id="main">
+        <button class="black" id="btn">Click and Change Color</button>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error dolore temporibus sit, assumenda quidem sapiente ullam nulla et fugiat architecto tenetur, eaque rem! Sit ut dicta ipsam sint. Reprehenderit eligendi iure quis. Impedit, minus. Suscipit iste eveniet earum reiciendis asperiores molestiae, unde beatae corrupti repellat qui ad quasi tenetur maiores voluptate pariatur tempore doloribus fugiat enim ut perspiciatis dicta impedit obcaecati autem. Error ipsam itaque dolorum quas molestias perspiciatis minus alias, neque mollitia aspernatur! Reprehenderit, earum et nam animi deserunt doloribus exercitationem facilis, perspiciatis nostrum rem impedit, a sequi dicta veritatis! Nemo porro alias ut similique distinctio nisi voluptas labore illum explicabo sit earum rem cupiditate, quam impedit est sint libero itaque tenetur repellat reprehenderit perferendis enim hic molestias? Optio dolore unde odit qui perspiciatis facilis ipsa iure voluptatibus omnis voluptate in provident hic quo accusantium, vitae maxime quibusdam repellat iste a error commodi nisi ipsum voluptatem doloribus? Nam adipisci, fugit sunt architecto nostrum id asperiores beatae enim culpa sapiente iusto maiores voluptatem veritatis quo soluta itaque tenetur provident ea! Alias ex assumenda quo dolor delectus aut, sunt doloribus modi repellat tempora non quis quisquam quia facere sit odit saepe officia eos. Fuga quis, omnis dicta ratione placeat incidunt possimus.</p>
+    </main>
+
     <script>
-        let x=document.getElementById('header');
-        // console.log(x)
-        let title=document.getElementById('title')
-        // console.log(title)
-        title.innerText='Academic of Carreer Education'
-        let sub_title=document.getElementsByClassName('sub-title')
-        sub_title[0].innerHTML='<h2>Computer Institute</h2>'
-    
-        let li=document.getElementsByTagName('li')
-        li[1].style.color='red'
-        li[2].style.backgroundColor='yellow'
-        li[3].textContent='Angular'
-
-        // li[2].style.display='none'
-
+        let main=document.getElementById('main');
+        let btn=document.getElementById('btn')
+        btn.addEventListener('click',()=>{
+            // if(btn.classList=='black'){
+            //     main.classList.add('black')
+            //     btn.classList.remove('black')
+            // }
+            // else{
+            //     main.classList.remove('black')
+            //     btn.classList.add('black')
+            // }
+            main.classList.toggle('black')
+            btn.classList.toggle('black')
+        })
     </script>
 </body>
 </html>

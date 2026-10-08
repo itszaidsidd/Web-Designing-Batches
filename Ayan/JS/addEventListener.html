@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="t1">
+    <button id="btn">Click</button>
+    <script>
+        let btn=document.getElementById('btn')
+        btn.addEventListener('click',()=>{
+            let t=document.getElementById('t1')
+            // console.log(t.value)
+            alert(t.value)
+        })
+    </script>
+</body>
+</html>
