@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        header{
+            padding: 20px;
+            background-color: green;
+            color:white;
+        }
+        ul{
+            display: flex;
+            flex-direction: column;
+            gap:20px;
+        }
+        ul li{
+            border-bottom: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <header id="header">
+        <h1 class="title" id="title">Knowledge Zone</h1>
+        <h3 class="sub-title">Computer Center</h3>
+    </header>
+    <ul>
+        <li class="item">HTML</li>
+        <li class="item">CSS</li>
+        <li class="item">JavaScript</li>
+        <li class="item">ReactJS</li>
+    </ul>
+
+    <script>
+        let title=document.getElementById('title')
+        // console.log(title)
+        // title.innerText='Academic of Career Education'
+        title.textContent="KZ Computer Center"
+        // title.innerHTML='<u><h2>ACE Institue</h2></u>'
+        title.style.color='yellow'
+        let x=document.getElementById('header')
+        x.style.backgroundColor='red'
+        
+        let i=document.getElementsByClassName('item')
+        i[2].style.backgroundColor='Yellow'
+
+        let y=document.getElementsByTagName('li')
+        y[3].innerText='ExpressJS'
+
+        
+    </script>
+    
+</body>
+</html>

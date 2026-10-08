@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            /* margin: 0%; */
+            /* padding: 0%; */
+        }
+
+        .nav {
+            background-color: rgb(36, 175, 222);
+            color: white;
+            display: flex;
+            justify-content: right;
+            height: 50px;
+        }
+
+        button {
+            margin: 10px 10px;
+            margin-right: 50px;
+            border-radius: 5px;
+            box-shadow: 2px 2px 3px gray;
+        }
+
+        main {
+            border: 4px solid red;
+            margin: 20px 40px;
+            text-align: justify;
+            padding: 20px 20px;
+            height: 600px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="nav" id="nav">
+        <button id="light" onclick="abc()"> Dark Mode </button>
+    </div>
+    <main id="main">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam, ipsam cupiditate quibusdam aspernatur sed
+        nam fugit ipsum ducimus corrupti, nisi dolore omnis iure neque vel? Officia quis fugiat esse ratione.
+        <br><br>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe id ratione assumenda dolorem consequuntur? Animi
+        et ab perferendis id odit dolor eius, asperiores voluptatum inventore ipsum velit dicta ratione modi.
+    </main>
+    <script>
+        function abc() {
+            let nav = document.getElementById('nav')
+            let btn = document.getElementById('light')
+            let m = document.getElementById('main')
+            if (btn.innerText == 'Dark Mode') {
+                btn.innerText = 'Light Mode'
+                m.style.color = 'white'
+                m.style.background = 'black'
+                nav.style.background = 'navy'
+                btn.style.background='black'
+                btn.style.color='white'
+                m.style.border='5px solid gray'
+            } else {
+                btn.style.background='white'
+                btn.style.color='black'
+                nav.style.background = 'lightblue'
+                btn.innerText = 'Dark Mode'
+                m.style.background = 'white'
+                m.style.color = 'black'
+                m.style.border='5px solid blue'
+            }
+
+        }
+    </script>
+</body>
+
+</html>

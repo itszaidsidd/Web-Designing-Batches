@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        header{
+            padding: 20px;
+            background-color: green;
+            color:white;
+        }
+        ul{
+            display: flex;
+            flex-direction: column;
+            gap:20px;
+        }
+        ul li{
+            border-bottom: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <header id="header">
+        <h1 class="title" id="title">Knowledge Zone</h1>
+        <h3 class="sub-title">Computer Center</h3>
+    </header>
+    <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>ReactJS</li>
+    </ul>
+    <script>
+        let x=document.getElementById('header');
+        // console.log(x)
+        let title=document.getElementById('title')
+        // console.log(title)
+        title.innerText='Academic of Carreer Education'
+        let sub_title=document.getElementsByClassName('sub-title')
+        sub_title[0].innerHTML='<h2>Computer Institute</h2>'
+    
+        let li=document.getElementsByTagName('li')
+        li[1].style.color='red'
+        li[2].style.backgroundColor='yellow'
+        li[3].textContent='Angular'
+
+        // li[2].style.display='none'
+
+    </script>
+</body>
+</html>

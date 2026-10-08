@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        nav{
+            background-color: lightblue;
+            padding: 10px;
+            display: flex;
+            justify-content: space-around;
+        }
+        button{
+            padding: 4px 10px;
+            font-weight: bold;
+            border-radius: 5px; 
+            color:white; 
+        }
+        #red{
+            background-color: red;
+        }
+        #green{
+            background-color: green;
+        }
+        #blue{
+            background-color: blue;
+        }
+        #khaki{
+            background-color: khaki;
+        }
+
+        main{
+            width: 80%;
+            height: 500px;
+            border: 2px solid black;
+            border-radius: 10px;
+            margin: 60px auto;
+            box-shadow: 5px 5px 5px gray;
+            padding: 15px;
+            text-align: justify;
+        }
+        body{
+            background-color: beige;
+        }
+
+    </style>
+</head>
+<body>
+    <nav>
+        <button id="red" onclick="abc('red')">RED</button>
+        <button id="green" onclick="abc('green')">GREEN</button>
+        <button id="blue" onclick="abc('blue')">BLUE</button>
+        <button id="khaki" onclick="abc('khaki')">KHAKI</button>
+    </nav>
+    <main id="main">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur nihil ad consequatur modi, odit labore voluptatum tempora harum, eligendi similique, nobis aperiam molestias? Impedit distinctio iusto laborum aperiam dolor quidem, sunt eum. Recusandae beatae, commodi illo debitis odit pariatur reiciendis iure, nostrum id maxime esse voluptatem, qui ducimus! Corporis accusamus cum autem doloremque quibusdam libero assumenda at esse delectus non. Minima eligendi recusandae est mollitia nesciunt totam delectus iste, laboriosam, officiis corrupti quasi veniam excepturi vel? Non porro tempore ad veniam? Quisquam, modi ex magnam facere tempora, in ipsam unde ipsa eum ullam amet facilis illo? Blanditiis enim necessitatibus optio, impedit similique, magnam odit fuga tempore veritatis accusantium neque quo quas voluptatum atque et libero odio possimus ex quidem, ab temporibus. Alias modi vel voluptates ex tempore sapiente non aut, culpa earum odio magni, possimus illum nobis eaque quas ipsam voluptatibus error obcaecati. Nesciunt ducimus, iusto maxime molestias nostrum non quidem. Quam dolorem omnis aliquid a incidunt? Error iste autem a minima exercitationem sint natus veritatis ullam, quos sed voluptatum consequuntur fuga. Et odio tempore exercitationem iusto quis mollitia atque sint quibusdam obcaecati, ex iste omnis excepturi blanditiis eum maiores? Unde voluptatum accusamus laboriosam vero soluta dolor nostrum natus quasi?</p>
+    </main>
+    <script>
+        function abc(n){
+            document.getElementById('main').style.background=n
+            document.getElementById('main').style.color='white'
+
+        }
+    </script>
+</body>
+</html>
