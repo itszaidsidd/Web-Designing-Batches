@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            border: 3px solid black;
+            width: 400px;
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            margin: auto;
+            /* background-color: black; */
+            padding: 50px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div id="div">
+        <img class="box">
+            <img src="https://img.magnific.com/free-vector/realistic-lit-light-bulb-isolated_1284-41774.jpg?semt=ais_hybrid&w=740&q=80" id="img"> bulb </img>
+        </div>
+        <button id="btn" onclick="on()"> ON </button>
+    </main>
+    <script>
+         function on(){
+            let img=document.getElementById('img')
+            img.src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Gluehlampe_01_KMJ.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=original"
+            
+         }
+    </script>
+</body>
+</html>
