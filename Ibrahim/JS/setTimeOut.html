@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="btn">Button</button>
+    <button id="start">Start</button>
+    <button id="btn2">Clear</button>
+    <div id="output"></div>
+    <script>
+        let o = document.getElementById('output')
+        let btn = document.getElementById('btn')
+        btn.addEventListener('click', () => {
+            setTimeout(() => {
+                alert('Hello')
+            }, 2000)
+        })
+
+        let x;
+        let n=1;
+        let start = document.getElementById('start')
+        start.addEventListener('click', () => {
+            x = setInterval(() => {
+                // document.write('Hello<br>')
+                o.innerHTML = o.innerHTML + n+" Hello<br>"
+                n++
+            }, 300)
+        })
+
+        btn2 = document.getElementById('btn2')
+        btn2.addEventListener('click', () => {
+
+            clearInterval(x)
+        })
+
+    </script>
+</body>
+
+</html>

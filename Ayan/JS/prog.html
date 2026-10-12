@@ -8,27 +8,32 @@
         .header{
             display: flex;
             gap: 30px;
-            background-color: bisque;
+            background-color: white;
             width: 600px;
             height: 100px;
+            margin-left: 200px;
         }
         .button1{
             background-color: red;
-            width: 50px;
-            height: 30px;
+            width: 200px;
+            /* height: 200px; */
         }
         .button2{
              background-color: green;
+             width: 200px;
         }
         .button3{
             background-color: blue;
+        width: 200px;
 
         }
        .button4{
         background-color: yellow;
+        width: 200px;
        }
     .box{
-        background-color: rgb(183, 89, 89);
+        background-color: rgb(236, 228, 228);
+        border: 3px solid black;
         margin-left: 200px;
         margin-top: 30px;
         width: 300px;
@@ -38,13 +43,33 @@
 </head>
 <body>
   <div class="header">
-      <div class="button1"> red </div>
-      <div class="button2"> green </div>
-      <div class="button3"> blue </div>
-      <div class="button4"> yellow </div>
+      <div class="button1" id="btn1"> red </div>
+      <div class="button2" id="btn2"> green </div>
+      <div class="button3" id="btn3"> blue </div>
+      <div class="button4" id="btn4"> yellow </div>
 </div>
-<div class="box">
+<div class="box" id="box">
     this is box
 </div>
+<script>
+    let box=document.getElementById('box')
+    let btn=document.getElementById('btn1')
+    btn.addEventListener('click',()=>{
+        box.style.background='red'
+    })
+    let btn2=document.getElementById('btn2')
+    btn2.addEventListener('click',()=>{
+        box.style.background='green'
+    })
+    let btn3=document.getElementById('btn3')
+    btn3.addEventListener('click',()=>{
+        box.style.background='blue'
+    })
+    let btn4=document.getElementById('btn4')
+    btn4.addEventListener('click',()=>{
+        box.style.background='yellow'
+    })
+    
+</script>
 </body>
 </html>
