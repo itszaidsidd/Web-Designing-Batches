@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading</title>
+    <style>
+        .form{
+            margin: 100px auto;
+            width: 400px;
+            border:2px solid black;
+            padding: 30px;
+            background-color: bisque;
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            gap:30px;
+            align-items: center;
+        }
+        .form .inp{
+            display: flex;
+            flex-direction: column;
+        }
+        input,button{
+            padding: 5px;
+            width: 350px;
+            font-size: 1.2rem;
+            border-radius: 10px;
+        }
+        button{
+            background-color: navy;
+            width: 370px;
+            color:white;
+            font-style: bold;
+
+        }
+        .loader{
+            margin: -400px auto;
+            width: 200px;
+            height: 200px;
+            border: 20px solid rgb(144, 144, 226);
+            position: relative;
+            border-radius: 50%;
+            border-top: 20px solid blue;
+            animation: loader 1s linear infinite;
+            display: none;
+        }
+
+        @keyframes loader {
+            100%{
+                transform: rotate(360deg);
+            }
+            
+        }
+
+        .alert{
+            width: 360px;
+            height: 260px;
+            background-color: lightblue;
+            border-radius: 20px;
+            margin: -450px auto;
+            position: relative;
+            text-align: center;
+            padding: 20px;
+            color:green;
+            display: none;
+        }
+        .alert-danger{
+            margin: -570px auto;
+            width: 600px;
+            padding: 20px;
+            text-align: center;
+            font-weight: bold;
+            background-color: rgb(255, 200, 200);
+            border-radius: 10px;
+            color:red;
+            font-size: 2rem;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="form" id="form">
+        <h1>Login Form</h1>
+        <div class="inp">
+            <label for="username">Enter username</label>
+            <input type="text" id="username">
+        </div>
+        <div class="inp">
+            <label for="password">Enter password</label>
+            <input type="text" id="password">
+        </div>
+        <button id="btn">SUBMIT</button>
+    </div>
+    <div class="loader" id="loader"></div>
+    <div class="alert" id="alert">
+        <h1>Successfully Login</h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe, tempora deserunt itaque molestias rem qui similique fuga porro esse maiores modi quae! Ducimus soluta tenetur voluptatibus, nam inventore laborum. Quidem?</p>
+    </div>
+    <div class="alert-danger" id="alert-danger">
+        Invalid Id or Password, Please try again
+    </div>
+    <script>
+        let form=document.getElementById('form')
+        let loader=document.getElementById('loader')
+        let btn=document.getElementById('btn')
+        let a=document.getElementById('alert')
+        let da=document.getElementById('alert-danger')
+        btn.addEventListener('click',()=>{
+            let user=document.getElementById('username').value;
+            let pass=document.getElementById('password').value;
+            form.style.opacity='0.3'
+            loader.style.display='block'
+            setTimeout(()=>{
+                form.style.opacity='1'
+                loader.style.display='none'
+                if(user=="abc" && pass=="123"){
+                    a.style.display='block' 
+                }
+                else{
+                    da.style.display='block'
+                    setTimeout(()=>{
+                         da.style.display='none'
+                    },2000)
+                }
+            },2000)
+
+        })
+    </script>
+</body>
+</html>
