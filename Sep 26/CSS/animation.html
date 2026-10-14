@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: green;
+            border:2px solid black;
+            /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+            /* animation: abc 2s linear 1s infinite alternate; */
+            /* animation: xyz 4s linear infinite; */
+            margin: 200px;
+            animation: pqr 1s linear infinite;
+        }
+
+        @keyframes pqr{
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes xyz{
+            25%{
+                transform: translate(600px);
+            }
+            50%{
+                transform: translate(600px,600px);
+            }
+            75%{
+                transform: translate(0,600px);
+            }
+        }
+
+        @keyframes abc{
+            from{
+                background-color: red;
+            }
+            to{
+                transform: translate(500px);
+                background-color: yellow;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        Box
+    </div>
+</body>
+</html>
