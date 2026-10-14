@@ -96,6 +96,7 @@
     <div class="alert" id="alert">
         <h1>Successfully Login</h1>
         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe, tempora deserunt itaque molestias rem qui similique fuga porro esse maiores modi quae! Ducimus soluta tenetur voluptatibus, nam inventore laborum. Quidem?</p>
+        <button id="sbtn"> Ok </button>
     </div>
     <div class="alert-danger" id="alert-danger">
         Invalid Id or Password, Please try again
@@ -109,6 +110,7 @@
         btn.addEventListener('click',()=>{
             let user=document.getElementById('username').value;
             let pass=document.getElementById('password').value;
+            let sbtn=document.getElementById('sbtn')
             form.style.opacity='0.3'
             loader.style.display='block'
             setTimeout(()=>{
@@ -116,6 +118,12 @@
                 loader.style.display='none'
                 if(user=="abc" && pass=="123"){
                     a.style.display='block' 
+                    sbtn.addEventListener('click',()=>{
+                        setTimeout(()=>{
+
+                            a.style.display='none'
+                        },100)
+                    })
                 }
                 else{
                     da.style.display='block'
