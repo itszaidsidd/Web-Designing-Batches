@@ -65,11 +65,11 @@
           height: 300px;
           padding: 10px;
           text-align: center;
-          margin: 40px 180px;
+          margin: -340px 180px;
           position: relative;
           display: none;
     }
-    .d-alert{
+    .dalert{
         background-color: red;
         color: white;
         width: 500px;
@@ -78,33 +78,54 @@
         justify-content: center;
         align-items: center;
         margin: -520px 170px;
-        display: none;
+        display: none; 
     }
 
 </style>
 <body>
     <main>
         <p class="title"> Login page </p>
-        <div class="box">
+        <div class="box" id="box">
             Eneter username : <br> <input type="text" class="inpuser" id="user" placeholder="enter username"> <br> <br>
             Eneter Password : <br> <input type="number" class="inpuser" id="pass" placeholder="enter Password">
             <br><br>
             <button id="btn"> submit </button>
         </div>
-        <div class="loader">
+        <div class="loader" id="loader">
             
         </div>
-        <div class="alert">
+        <div class="alert" id="alert1">
             <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio dignissimos illum molestias ea vel omnis, illo impedit  a.</p>
         </div>
-        <div class="d-alert">
+        <div class="dalert" id="dalert">
             <h3> incorrect id or Password </h3>
         </div>
     </main>
     <script>
         let btn=document.getElementById('btn')
+        let alert1=document.getElementById
+        ('alert1')
+        let loader=document.getElementById('loader')
+        let box=document.getElementById('box')
+        let dalert=document.getElementById('dalert')
         btn.addEventListener('click',()=>{
-            
+            loader.style.display='block'
+            box.style.opacity='0.5'
+            let user=document.getElementById('user').value;
+            let pass=document.getElementById('pass').value;
+            setTimeout(()=>{
+               box.style.opacity='1'
+               loader.style.display='none' 
+               if(user=="abc" && pass=="123"){
+                alert1.style.display='block'
+               }
+               else{
+                   dalert.style.display='block'
+               }
+            },2000)
+        })
+        document.addEventListener('click',()=>{
+            alert1.style.display='none'
         })
         
     </script>
