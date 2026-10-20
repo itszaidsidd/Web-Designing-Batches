@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="value">0</div>
+    <button id="btn">Click me</button>
+    <script>
+        document.getElementById('btn').addEventListener('click',()=>{
+            let n=parseInt(document.getElementById('value').innerText);
+            document.getElementById('value').innerText=n+1
+        })
+    </script>
+</body>
+</html>
+
+
+<!-- 
+npx create-react-app my-app -> for creating a raect app
+npm start -> for running react app
+-->
