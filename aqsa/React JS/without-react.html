@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .div{
+            margin-top: 300px;
+            text-align: center;
+            font-size: 3rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="div">
+        <div id="value">0</div>
+        <button id="btn">Click me</button>
+        <script>
+            document.getElementById('btn').addEventListener('click',()=>{
+                let x=document.getElementById('value')
+                x.innerText=parseInt(x.innerText)+1
+            })
+        </script>
+    </div>
+</body>
+</html>
