@@ -1,0 +1,11 @@
+.counter{
+  height: 100vh;
+  font-size: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.counter button{
+  font-size: 2rem;
+}
