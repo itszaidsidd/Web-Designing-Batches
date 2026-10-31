@@ -1,86 +1,210 @@
- main{
-    background-color: rgb(2, 2, 26);
-    color: white;
-   }
-   nav{
-    background-color: rgb(34, 4, 63);
-    height: 90px;
-    display: flex;
-    gap: 600px;
-    justify-content: space-around;
+/* --- बेस रिसेट और बॉक्स साइजिंग --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-   }
-   nav h1{
-    display: flex;
-    margin-left: 70px; 
-    font-weight: bold;
-   }
-   nav h1:hover{
-    color: aqua;
-    border-radius: 20px;
-   }
-   nav ul{
-    display: flex;
-    gap: 40px;
-    list-style: none;
-    margin-right: 200px;
-    justify-content: right;
-    align-items: center;
-   }
-   nav ul li{
-    font-size: 25px;
-   }
-   nav ul li:hover{
-    background-color: white;
-    color: black;
-    border-radius: 5px;
-    height: 35px;
-   }
-   .home{
-    display: flex;
-    gap: 100px;
-   }
-   .home .left{
-    /* background-color: red; */
-    width: 750px;
-    height: 600px;
-    margin-left: 100px;
-    margin-top: 60px;
-   }
-   .home .left h5{
-    background-color: rgb(47, 47, 202);
-    border-radius: 10px;
-    padding: 10px;
-    width: 250px;
-    display: flex;
+body {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background-color: rgb(2, 2, 26);
+  color: white;
+}
+
+main {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* --- नेविगेशन बार (Navbar) --- */
+nav {
+  background-color: rgb(34, 4, 63);
+  min-height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5%;
+}
+
+nav h1 {
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+nav h1:hover {
+  color: aqua;
+}
+
+nav ul {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+  align-items: center;
+}
+
+nav ul li {
+  font-size: 18px;
+  padding: 8px 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+nav ul li:hover {
+  background-color: white;
+  color: black;
+}
+
+/* --- होम सेक्शन (Hero Section) --- */
+.home {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+  padding: 60px 8%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* बायाँ कंटेंट (Text Area) */
+.home .left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* एलिमेंट्स के बीच सही गैप */
+}
+
+.home .left h5 {
+  background-color: rgb(29, 10, 57);
+  border-radius: 10px;
+  padding: 10px 20px;
+  width: max-content;
+  color: rgb(186, 186, 192);
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.home .left h2 {
+  color: rgb(204, 196, 196);
+  font-size: 28px;
+}
+
+.home .left h1 {
+  font-size: 64px;
+  font-weight: 900;
+  line-height: 1.1;
+}
+
+.home .left h3 {
+  font-size: 24px;
+  color: #00ffff; /* थोड़ा मॉडर्न लुक देने के लिए */
+}
+
+.left .line {
+  background-color: blue;
+  width: 330px;
+  height: 3px;
+  margin-top: 10px;
+}
+.left .work{
+  width: 150px;
+  height: 60px;
+  border-radius: 10px;
+  background-color: rgb(60, 60, 223);
+  border: 5px solid rgb(8, 7, 7);
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+}
+.left .cv{
+  width: 150px;
+  height: 60px;
+  border-radius: 10px;
+  background-color: rgb(72, 72, 76);
+  border: 5px solid rgb(8, 7, 7);
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+/* दायाँ कंटेंट (Image Area) */
+.home .right {
+  width: 400px;
+  height: 450px;
+  background-image: url("pic2.jpeg");
+  background-size: cover;
+  background-position: center;
+  border: 8px solid rgb(80, 80, 80);
+  border-radius: 15px;
+  flex-shrink: 0; /* इमेज को सिकुड़ने से रोकेगा */
+  box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+}
+
+/* --- 📱 मोबाइल और टैबलेट रेस्पॉन्सिव मीडिया क्वेरीज़ --- */
+
+/* टैबलेट के लिए (Tablets - 1024px से कम) */
+@media (max-width: 1024px) {
+  .home {
+    padding: 40px 5%;
+    gap: 30px;
+  }
+  .home .left h1 {
+    font-size: 48px;
+  }
+  .home .right {
+    width: 320px;
+    height: 380px;
+  }
+}
+
+/* मोबाइल के लिए (Mobile - 768px से कम) */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    padding: 15px;
+    gap: 15px;
+    height: auto;
+  }
+  
+  nav ul {
+    gap: 15px;
+    flex-wrap: wrap;
     justify-content: center;
-    color: rgb(186, 186, 192);
-   }
-   .home .left h2{
-    color: rgb(204, 196, 196);
-    margin-left: 20px;
-    position: relative;
-    top: 50px;
-    font-size: 40px;
+  }
 
-   }
-   .home .left h1{
-    font-size: 90px;
-    font-weight: bolder;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-   }
-   .home .left h3{
-    position: relative;
-    top: -60px;
-    font-size: 30px;
-   }
-   .home .right{
-    background-image: url("pic2.jpeg");
-    background-size: cover;
-    width: 400px;
-    height: 450px;
-    margin-top: 60px;
-    border: 12px solid gray;
-    border-radius: 10px;
-    
-   }
+  nav ul li {
+    font-size: 16px;
+    padding: 6px 12px;
+  }
+
+  .home {
+    flex-direction: column-reverse; /* मोबाइल पर इमेज ऊपर या नीचे (यहाँ नीचे आएगी) */
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+  .home .left {
+    align-items: center; /* टेक्स्ट को मोबाइल पर सेंटर करेगा */
+  }
+
+  .home .left h1 {
+    font-size: 36px;
+  }
+
+  .home .left h2 {
+    font-size: 22px;
+  }
+
+  .home .left h3 {
+    font-size: 18px;
+  }
+
+  .home .right {
+    width: 100%;
+    max-width: 320px;
+    height: 320px;
+  }
+}
