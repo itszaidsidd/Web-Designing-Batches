@@ -24,6 +24,9 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 0 5%;
+  position: fixed;
+  top:0;
+  width: 100%;
 }
 
 nav h1 {
@@ -51,7 +54,16 @@ nav ul li {
   border-radius: 5px;
   transition: all 0.3s ease;
 }
+nav a{
+  text-decoration: none;
+  color:white;
+}
+/* nav a:hover{
+  color:black;
+} */
+/* nav li:hover{
 
+} */
 nav ul li:hover {
   background-color: white;
   color: black;
@@ -135,7 +147,7 @@ nav ul li:hover {
 .home .right {
   width: 400px;
   height: 400px;
-  background-image: url("pic2.jpeg");
+  background-image: url("../images/pic2.jpeg");
   background-size: cover;
   background-position: center;
   border: 8px solid rgb(80, 80, 80);
