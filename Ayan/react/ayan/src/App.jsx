@@ -8,11 +8,11 @@ import Crystal from './crystal'
 function App() {
 
   return (
-    <>
-      <Practice/>
-      <Crystal/>
-    </>
+    <div className='main'>
+    
+    </div>
   )
 }
 
 export default App
+
