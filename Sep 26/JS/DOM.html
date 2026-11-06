@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        header{
+            background-color: green;
+            color:white;
+            padding: 20px;
+            
+        }
+        ul{
+            display: flex;
+            flex-direction: column;
+            gap:30px;
+        }
+        ul li{
+            padding-bottom: 10px;
+            border-bottom: 1px solid gray;
+
+        }
+    </style>
+</head>
+<body>
+    <header id="header">
+        <h1 id="title">Academic of Career Education</h1>
+        <h2 id="sub-title">Computer Institute</h2>
+    </header>
+    <ul>
+        <li>Web Designing</li>
+        <li>Programming</li>
+        <li>Graphic Designing</li>
+        <li>Accounting</li>
+    </ul>
+    <script>
+        let title=document.getElementById('title')
+        let sub_title=document.getElementById('sub-title')
+        // console.log(title)
+        // title.innerText='KZ Computer Center'
+        sub_title.innerHTML='<h3>Cauching Center</h3>'
+        title.textContent="KZ Computer Center"
+        let h=document.getElementById('header')
+        h.style.borderBottom='5px solid yellow'
+    </script>
+</body>
+</html>
