@@ -29,10 +29,10 @@
         <h2 id="sub-title">Computer Institute</h2>
     </header>
     <ul>
-        <li>Web Designing</li>
-        <li>Programming</li>
-        <li>Graphic Designing</li>
-        <li>Accounting</li>
+        <li class="item">Web Designing</li>
+        <li class="item">Programming</li>
+        <li class="item">Graphic Designing</li>
+        <li class="item">Accounting</li>
     </ul>
     <script>
         let title=document.getElementById('title')
@@ -43,6 +43,16 @@
         title.textContent="KZ Computer Center"
         let h=document.getElementById('header')
         h.style.borderBottom='5px solid yellow'
+
+        // let i=document.getElementsByClassName("item")
+        // i[0].textContent="Web Development"
+        // i[3].style.color="red"
+        // i[3].style.backgroundColor='wheat'
+       
+        let it=document.getElementsByTagName('li')
+        it[2].style.backgroundColor="green"
+        it[2].style.color='white'
+        it[2].textContent="DTP"
     </script>
 </body>
 </html>
