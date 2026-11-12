@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-image: url("images/n5.jpg");
+            background-size: cover;
+        }
+        .form{
+            width: 400px;
+            margin: 100px auto;
+            border-radius: 10px;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            color:white;
+        }
+        form{
+            margin-top: 50px;
+            display: flex;
+            flex-direction: column;
+            gap:20px;
+        }
+        input{
+            padding: 7px 10px;
+            border-radius: 5px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="form" id="form">
+        <h1>Keyboard Event Example</h1>
+        <form action="">
+            On key up
+            <!-- <input type="text" onkeyup="alert(this.value)"> -->
+            <input type="text" onkeyup="document.getElementById('form').style.backgroundColor=this.value">
+            On key down
+            <!-- <input type="text" onkeydown="alert(this.value)"> -->
+            <input type="text" onkeydown="document.getElementById('form').style.backgroundColor=this.value">
+            On key press
+            <input type="text" onkeypress="alert(this.value)">
+        </form>
+    </div>
+</body>
+</html>
