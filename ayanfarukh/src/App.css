@@ -1,0 +1,26 @@
+.todo{
+  border: 5px solid red;
+  width: 480px;
+ height: 500px;
+ margin-top: 100PX;
+ margin-left: 400px;
+ background-color: white;
+}
+.body{
+  background-color: aqua;
+  height: 1000px;
+}
+input{
+  height: 30px;
+  width: 270px;
+  margin-top: 50px;
+}
+button{
+  height: 38px;
+  width: 50px;
+  font-weight: bold;
+  background-color: blue;
+}
+ul{
+  flex-direction: column;
+}

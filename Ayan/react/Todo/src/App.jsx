@@ -24,6 +24,7 @@ function App() {
         <div className="form">
           <input type="text" 
           // className={!todo && "err-border"} value={todo} 
+          
           onChange={()=>{setTodo(event.target.value)}}  />
           <button onClick={addTodo}>Add</button>
         </div>

@@ -2,7 +2,6 @@ import { useState } from "react";
 
 function Todo() {
   const [todoList,setTodoList]=useState([])
-  const [status,setStatus]=useState(false);
   const saveTodoList=(event)=>{
     const todo=event.target.todo.value;
     if(!todoList.includes(todo)){
@@ -29,6 +28,7 @@ function Todo() {
       <ul>
         {
           todoList.map((value,index)=>{
+            const [status,setStatus]=useState(false);
             return(
               <li key={index} className={status?"completeTodo":""} onClick={()=>setStatus(!status)}>{index+1} {value} <span onClick={()=>{deleteRow(index)}}>&times;</span></li>
             )
