@@ -1,28 +1,45 @@
 import { useState } from 'react'
-import heroImg from './assets/hero.png'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
 import './App.css'
 
 function App() {
-  const [ayan, lubna] = useState(["Azil","Lubna"])
+  const [ayan, lubna] = useState([])
 
+  const saveTodo=()=>{
+    const t=event.target.todo.value;
+    if(t){
+      if(!ayan.includes(t)){
+        lubna([...ayan,t])
+        event.target.todo.value=""
+      }
+      else{
+        alert('ToDo name already exist')
+      }
+      
+    }
+    event.preventDefault();
+  }
+
+  const deleteTodo=(i)=>{
+    const finalTodo=ayan.filter((_,index)=>index!=i)
+    lubna(finalTodo)
+  }
+  
   return (
     <div className='body'>
      <div className="todo">
-      <form action="">
-        <input type="text" />
-        <button >Add</button>
+      <form onSubmit={saveTodo}>
+        <input type="text" name="todo"  required/>
+        <button type='submit'>Add</button>
+      </form>
         <ul>
           {
-            ayan.map((a)=>{
+            ayan.map((a,i)=>{
               return(
-                <li>{a}</li>
+                <li>{i+1} {a} <span onClick={()=>deleteTodo(i)}>&times;</span></li>
               )
             })
           }
         </ul>
-      </form>
      </div>
     </div>
   )

@@ -1,26 +1,54 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 .todo{
   border: 5px solid red;
   width: 480px;
- height: 500px;
+ min-height: 500px;
  margin-top: 100PX;
  margin-left: 400px;
  background-color: white;
+ padding: 20px;
 }
 .body{
   background-color: aqua;
   height: 1000px;
 }
 input{
-  height: 30px;
-  width: 270px;
+  /* height: 30px; */
+  font-size: 1.5rem;
+  width: 83%;
+  padding: 10px;
+  border-radius: 5px;
   margin-top: 50px;
 }
 button{
-  height: 38px;
-  width: 50px;
+  /* height: 38px; */
+  font-size: 1.5rem;
+  /* width: 70%; */
+  padding: 10px;
+  border-radius: 5px;
+  /* width: 50px; */
   font-weight: bold;
   background-color: blue;
+  color:white;
 }
 ul{
+  list-style: none;
+  display: flex;
   flex-direction: column;
+  gap:10px;
+}
+li{
+  width: 100%;
+  /* background-color: gray; */
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.5rem;
+  padding: 10px;
+}
+li span{
+  cursor: pointer;
 }
