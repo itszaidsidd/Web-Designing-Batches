@@ -19,7 +19,7 @@ const Container = () => {
         <div className='container py-10 px-12'>
             <div class="form-field">
                 <label for="fieldTextarea" class="form-label">Message</label>
-                <textarea class="form-control" placeholder='Enter text here' id="fieldTextarea" rows="8" value={text} onChange={()=>{setText(event.target.value)}}></textarea>
+                <textarea class="form-control" placeholder='Enter text here' id="fieldTextarea" rows="8" value={text} onChange={(e)=>{setText(e.target.value)}}></textarea>
                
             </div>
             <div className="btns py-5 ">

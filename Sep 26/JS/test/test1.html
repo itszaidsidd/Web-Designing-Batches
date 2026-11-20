@@ -58,11 +58,13 @@
 </head>
 <body>
     <nav>
-        <button id="red" onclick="red()">RED</button>
-        <button id="green" onclick="green()">GREEN</button>
-        <button id="blue">BLUE</button>
-        <button id="wheat">WHEAT</button>
-        <button id="teal">TEAL</button>
+        <!-- <button id="red" onclick="red()">RED</button>
+        <button id="green" onclick="green()">GREEN</button> -->
+        <button id="red" onclick="changeColor('red')">RED</button>
+        <button id="green" onclick="changeColor('green')">GREEN</button>
+        <button id="blue" onclick="changeColor('blue')">BLUE</button>
+        <button id="wheat" onclick="changeColor('wheat')">WHEAT</button>
+        <button id="teal" onclick="changeColor('teal')">TEAL</button>
     </nav>
     <main>
         <div class="container" id="container">
@@ -72,13 +74,34 @@
     </main>
     <script>
         let container=document.getElementById("container")
-        function red(){
-            container.style.backgroundColor='red'
-            container.style.color='white'
-        }
-        function green(){
-            container.style.backgroundColor='green'
-            container.style.color='white'
+        // function red(){
+        //     container.style.backgroundColor='red'
+        //     container.style.color='white'
+        // }
+        // function green(){
+        //     container.style.backgroundColor='green'
+        //     container.style.color='white'
+        // }
+
+        // let blue=document.getElementById('blue')
+        // blue.addEventListener('click',()=>{
+        //     container.style.backgroundColor='blue'
+        //     container.style.color='white'
+        // })
+
+        // let wheat=document.getElementById('wheat')
+        // wheat.addEventListener('dblclick',()=>{
+        //     container.style.backgroundColor='wheat'
+        //     container.style.color='black'
+        // })
+
+        function changeColor(c){
+            container.style.backgroundColor=c;
+            if(c=='wheat'){
+                container.style.color='black'
+            }else{
+                container.style.color='white'
+            }
         }
     </script>
 </body>
