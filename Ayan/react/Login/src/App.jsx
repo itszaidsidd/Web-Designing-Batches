@@ -3,27 +3,27 @@ import Swal from 'sweetalert2'
 import './App.css'
 
 function App() {
-  const [user, setUser] = useState("")
-  const [pass, setPass] = useState("")
+    // const [user, setUser] = useState("")
+    // const [pass, setPass] = useState("")
 
-  const handleSubmit = () => {
-    if (user == 'ayan@test.com' && pass == 'admin') {
-      // alert('Successfull login')
-      Swal.fire({
-        title: "Successfully Login",
-        icon: "success",
-        confirmButtonText: 'Cool',
-        draggable: true
-      });
-    } else {
-      // alert('Invalid username or password')
-      Swal.fire({
-        icon: 'error',
-        title: 'Login Failed',
-        text: 'Invalid username or password. Please try again.',
-        confirmButtonText: 'Retry'
-      });
-    }
+    // const handleSubmit = () => {
+    //   if (user == 'ayan@test.com' && pass == 'admin') {
+    //     // alert('Successfull login')
+    //     Swal.fire({
+    //       title: "Successfully Login",
+    //       icon: "success",
+    //       confirmButtonText: 'Cool',
+    //       draggable: true 
+    //     });
+    //   } else {
+    //     // alert('Invalid username or password')
+    //     Swal.fire({
+    //       icon: 'error',
+    //       title: 'Login Failed',
+    //       text: 'Invalid username or password. Please try again.',
+    //       confirmButtonText: 'Retry'
+    //     });
+    //   }
 
     event.preventDefault();
   }

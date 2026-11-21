@@ -1,0 +1,21 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+nav{
+  background-color: navy;
+  color:white;
+}
+nav a{
+  color:white;
+  text-decoration: none;
+  
+}
+nav ul{
+  padding: 20px;
+  display: flex;
+  gap:50px;
+  list-style: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
